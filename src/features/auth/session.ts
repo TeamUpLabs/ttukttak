@@ -45,7 +45,7 @@ export function useSession(): Session | null {
 
 // ponytail: 목 로그인. Supabase 붙이면 supabase.auth.signInWithOAuth({ provider: 'github' })로 바꿔요.
 export async function signInWithGithub(): Promise<void> {
-  write(JSON.stringify({ handle: '@guest' } satisfies Session))
+  write(JSON.stringify({ handle: 'guest' } satisfies Session))
 }
 
 export function signOut() {
@@ -63,7 +63,9 @@ export function safeNext(next: string | null, origin = window.location.origin) {
   try {
     const url = new URL(next, origin)
     if (url.origin !== origin) return '/'
-    return url.pathname + url.search + url.hash
+    // "/.//evil.com"은 정규화되면 "//evil.com"이 돼요. 돌려줄 값도 다시 확인해요.
+    const path = url.pathname + url.search + url.hash
+    return path.startsWith('//') ? '/' : path
   } catch {
     return '/'
   }

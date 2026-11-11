@@ -10,7 +10,7 @@ test('사이트 안 경로는 그대로 돌려줘요', () => {
 })
 
 test('외부로 나가는 값은 모두 홈으로 바꿔요', () => {
-  for (const next of [null, '', 'https://evil.com', '//evil.com', '/\\evil.com', '/\t/evil.com', '/\n/evil.com', 'javascript:alert(1)']) {
+  for (const next of [null, '', 'https://evil.com', '//evil.com', '/\\evil.com', '/\t/evil.com', '/\n/evil.com', 'javascript:alert(1)', '/.//evil.com', '/%2e//evil.com', '/a/..//evil.com']) {
     assert.equal(safeNext(next, ORIGIN), '/', String(next))
   }
 })
