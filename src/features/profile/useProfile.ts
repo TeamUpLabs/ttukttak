@@ -1,12 +1,15 @@
 import { useNow } from '../../shared/hooks/useNow.ts'
+import type { FeedbackType } from '../../shared/ui/FeedbackType/types.ts'
 import users from '../../../mocks/users.json'
 import weekData from '../../../mocks/weeks.json'
 import submissions from '../../../mocks/submissions.json'
-import { profileStats, type Entry, type Track, type User, type WeekLite } from './profile.ts'
+import feedback from '../../../mocks/feedback.json'
+import { profileStats, type Entry, type Feedback, type Track, type User, type WeekLite } from './profile.ts'
 
-// ponytail: 목 데이터 고정. Supabase 붙이면 profiles·submissions 쿼리로 바꿔요.
+// ponytail: 목 데이터 고정. Supabase 붙이면 profiles·submissions·feedback 쿼리로 바꿔요.
 const weeks = weekData.weeks as WeekLite[]
 const weekById = new Map(weeks.map((w) => [w.id, w]))
+const submissionById = new Map(submissions.map((s) => [s.id, s]))
 export const trackLabels = weekData.labels.track as Record<Track, string>
 
 /** 핸들("jh.park")로 프로필과 통계를 찾아요. 없으면 null. */
@@ -21,5 +24,22 @@ export function useProfile(handle: string) {
     .map((s) => ({ weekId: s.weekId, title: s.title, track: s.track as Track, votes: s.voteCount, rank: null, submissionId: s.id }))
   const entries = [...live, ...user.history]
 
-  return { user, entries, now, weekOf: (id: string) => weekById.get(id), ...profileStats(weeks, entries, now) }
+  const feedbacks: Feedback[] = feedback
+    .filter((f) => f.handle === handle)
+    .flatMap((f) => {
+      const target = submissionById.get(f.submissionId)
+      if (!target) return []
+      return [{
+        id: f.id,
+        type: f.type as FeedbackType,
+        targetTitle: target.title,
+        targetHandle: target.handle.replace(/^@/, ''),
+        targetId: target.id,
+        body: f.body,
+        helpful: f.helpful,
+        createdAt: f.createdAt,
+      }]
+    })
+
+  return { user, entries, feedbacks, now, weekOf: (id: string) => weekById.get(id), ...profileStats(weeks, entries, now) }
 }

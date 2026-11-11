@@ -235,48 +235,6 @@
         "votes": 48,
         "rank": 1
       }
-    ],
-    "feedbacks": [
-      {
-        "id": "f-1",
-        "type": "code",
-        "targetTitle": "탭끼리 동기화되는 칸반",
-        "targetHandle": "taeho",
-        "targetId": "s-108",
-        "body": "BroadcastChannel이 없는 브라우저에선 storage 이벤트로 대신 맞출 수 있어요. 지금은 사파리 구버전에서 카드가 안 움직여요.",
-        "helpful": 18,
-        "createdAt": "2026-11-12T03:40:00+09:00"
-      },
-      {
-        "id": "f-2",
-        "type": "ux",
-        "targetTitle": "물 마신 잔 수 기록기",
-        "targetHandle": "minji.dev",
-        "targetId": "s-101",
-        "body": "실수로 눌렀을 때 되돌릴 방법이 없어요. 마지막 한 잔만이라도 취소할 수 있으면 좋겠어요.",
-        "helpful": 11,
-        "createdAt": "2026-11-11T21:10:00+09:00"
-      },
-      {
-        "id": "f-3",
-        "type": "kudo",
-        "targetTitle": "브라우저 속 SQLite 가계부",
-        "targetHandle": "kwon_beats",
-        "targetId": "s-104",
-        "body": "쿼리로 월별 지출을 뽑는 게 정말 편해요. 이번 주 주제를 제일 끝까지 밀어붙인 작품 같아요.",
-        "helpful": 24,
-        "createdAt": "2026-11-11T12:30:00+09:00"
-      },
-      {
-        "id": "f-4",
-        "type": "bug",
-        "targetTitle": "오프라인 메모장",
-        "targetHandle": "hyuk",
-        "targetId": "s-102",
-        "body": "태그에 공백이 들어가면 검색이 안 돼요. 저장할 때 trim이 빠진 것 같아요.",
-        "helpful": 9,
-        "createdAt": "2026-11-10T22:05:00+09:00"
-      }
     ]
   },
   {
@@ -290,8 +248,7 @@
     "joinedAt": "2026-11-12T04:00:00+09:00",
     "followers": 0,
     "following": 0,
-    "history": [],
-    "feedbacks": []
+    "history": []
   },
   {
     "handle": "minji.dev",
@@ -424,8 +381,7 @@
         "votes": 28,
         "rank": 14
       }
-    ],
-    "feedbacks": []
+    ]
   },
   {
     "handle": "hyuk",
@@ -628,8 +584,7 @@
         "votes": 73,
         "rank": 12
       }
-    ],
-    "feedbacks": []
+    ]
   },
   {
     "handle": "dana_k",
@@ -741,8 +696,7 @@
         "votes": 54,
         "rank": 4
       }
-    ],
-    "feedbacks": []
+    ]
   },
   {
     "handle": "kwon_beats",
@@ -875,8 +829,7 @@
         "votes": 82,
         "rank": 13
       }
-    ],
-    "feedbacks": []
+    ]
   },
   {
     "handle": "seoyeon",
@@ -988,8 +941,7 @@
         "votes": 14,
         "rank": 8
       }
-    ],
-    "feedbacks": []
+    ]
   },
   {
     "handle": "yuna_b",
@@ -1087,8 +1039,7 @@
         "votes": 45,
         "rank": 3
       }
-    ],
-    "feedbacks": []
+    ]
   },
   {
     "handle": "taeho",
@@ -1291,7 +1242,6 @@
         "votes": 13,
         "rank": 9
       }
-    ],
-    "feedbacks": []
+    ]
   }
 ]

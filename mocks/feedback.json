@@ -1,0 +1,112 @@
+[
+  {
+    "id": "f-14",
+    "submissionId": "s-108",
+    "handle": "kwon_beats",
+    "type": "kudo",
+    "body": "탭 두 개 띄워 놓고 카드 옮기는 게 마법 같아요. 서버 없이 이게 된다니요.",
+    "helpful": 15,
+    "replied": true,
+    "createdAt": "2026-11-12T03:55:00+09:00"
+  },
+  {
+    "id": "f-1",
+    "submissionId": "s-108",
+    "handle": "jh.park",
+    "type": "code",
+    "body": "BroadcastChannel이 없는 브라우저에선 storage 이벤트로 대신 맞출 수 있어요. 지금은 사파리 구버전에서 카드가 안 움직여요.",
+    "helpful": 18,
+    "replied": false,
+    "createdAt": "2026-11-12T03:40:00+09:00"
+  },
+  {
+    "id": "f-15",
+    "submissionId": "s-106",
+    "handle": "taeho",
+    "type": "bug",
+    "body": "사진을 연속으로 세 장 넣으면 두 번째 사진이 사라져요. 저장이 겹치는 것 같아요.",
+    "helpful": 5,
+    "replied": false,
+    "createdAt": "2026-11-12T00:30:00+09:00"
+  },
+  {
+    "id": "f-2",
+    "submissionId": "s-101",
+    "handle": "jh.park",
+    "type": "ux",
+    "body": "실수로 눌렀을 때 되돌릴 방법이 없어요. 마지막 한 잔만이라도 취소할 수 있으면 좋겠어요.",
+    "helpful": 11,
+    "replied": false,
+    "createdAt": "2026-11-11T21:10:00+09:00"
+  },
+  {
+    "id": "f-16",
+    "submissionId": "s-105",
+    "handle": "yuna_b",
+    "type": "kudo",
+    "body": "창 닫았다 열어도 그대로라 안심돼요. 딱 필요한 만큼만 있어요.",
+    "helpful": 3,
+    "replied": false,
+    "createdAt": "2026-11-11T20:45:00+09:00"
+  },
+  {
+    "id": "f-11",
+    "submissionId": "s-104",
+    "handle": "seoyeon",
+    "type": "ux",
+    "body": "카테고리별 쿼리를 버튼으로 몇 개 만들어 두면 SQL을 모르는 사람도 쓸 수 있을 것 같아요.",
+    "helpful": 12,
+    "replied": false,
+    "createdAt": "2026-11-11T19:02:00+09:00"
+  },
+  {
+    "id": "f-10",
+    "submissionId": "s-104",
+    "handle": "hyuk",
+    "type": "code",
+    "body": "OPFS를 못 쓰는 브라우저에선 메모리 DB로 떨어지는데, 그때 저장이 안 된다는 안내가 있으면 좋겠어요.",
+    "helpful": 7,
+    "replied": true,
+    "createdAt": "2026-11-11T15:20:00+09:00"
+  },
+  {
+    "id": "f-3",
+    "submissionId": "s-104",
+    "handle": "jh.park",
+    "type": "kudo",
+    "body": "쿼리로 월별 지출을 뽑는 게 정말 편해요. 이번 주 주제를 제일 끝까지 밀어붙인 작품 같아요.",
+    "helpful": 24,
+    "replied": false,
+    "createdAt": "2026-11-11T12:30:00+09:00"
+  },
+  {
+    "id": "f-13",
+    "submissionId": "s-102",
+    "handle": "minji.dev",
+    "type": "ux",
+    "body": "메모 목록에서 태그 색이 너무 비슷해서 구분이 어려워요.",
+    "helpful": 4,
+    "replied": false,
+    "createdAt": "2026-11-11T10:15:00+09:00"
+  },
+  {
+    "id": "f-4",
+    "submissionId": "s-102",
+    "handle": "jh.park",
+    "type": "bug",
+    "body": "태그에 공백이 들어가면 검색이 안 돼요. 저장할 때 trim이 빠진 것 같아요.",
+    "helpful": 9,
+    "replied": false,
+    "createdAt": "2026-11-10T22:05:00+09:00"
+  },
+  {
+    "id": "f-12",
+    "submissionId": "s-101",
+    "handle": "dana_k",
+    "type": "kudo",
+    "body": "버튼 하나라 아침마다 부담 없이 누르게 돼요. 잔이 쌓이는 모양이 귀여워요.",
+    "helpful": 6,
+    "replied": true,
+    "createdAt": "2026-11-10T08:40:00+09:00"
+  }
+]

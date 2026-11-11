@@ -22,7 +22,7 @@ function ProfileView({ handle }: { handle: string }) {
     )
   }
 
-  const { user, entries, now, weekOf, cells, streak, recentCount, top3, votes } = profile
+  const { user, entries, feedbacks, now, weekOf, cells, streak, recentCount, top3, votes } = profile
   const joined = new Date(user.joinedAt)
   const weeksTogether = Math.max(1, Math.floor(kstDaysBetween(joined, now) / 7) + 1)
 
@@ -36,7 +36,7 @@ function ProfileView({ handle }: { handle: string }) {
   const badges: { big: number; unit: string; ring: string; name: string; desc: string; tone: StampTone }[] = [
     { big: streak, unit: 'WEEKS', ring: 'WEEK STREAK · 연속 제출 · ', name: `연속 ${streak}주`, desc: streak ? '쉬지 않고 제출 중' : '이번 주부터 다시 시작해요', tone: 'signal' },
     { big: top3, unit: 'TIMES', ring: 'TOP THREE FINISH · 트랙 시상대 · ', name: `시상대 ${top3}회`, desc: '트랙 TOP 3에 오른 횟수', tone: 'night' },
-    { big: user.feedbacks.length, unit: 'NOTES', ring: 'FEEDBACK GIVER · 피드백 장인 · ', name: `피드백 ${user.feedbacks.length}개`, desc: '다른 사람 작업에 남긴 피드백', tone: 'sage' },
+    { big: feedbacks.length, unit: 'NOTES', ring: 'FEEDBACK GIVER · 피드백 장인 · ', name: `피드백 ${feedbacks.length}개`, desc: '다른 사람 작업에 남긴 피드백', tone: 'sage' },
     { big: weeksTogether, unit: 'WEEKS', ring: 'BUILDING TOGETHER · 함께 만든 시간 · ', name: `함께한 ${weeksTogether}주`, desc: `${kstYearMonth(joined)}부터 참여`, tone: 'sky' },
   ]
 
@@ -133,7 +133,7 @@ function ProfileView({ handle }: { handle: string }) {
         </div>
 
         {tab === 'acts' ? (
-          <FeedbackList feedbacks={user.feedbacks} now={now} />
+          <FeedbackList feedbacks={feedbacks} now={now} />
         ) : works.length === 0 ? (
           <p className="m-0 py-16 text-center text-(--tt-muted)">아직 제출작이 없어요. 이번 주 주제로 첫 작품을 올려 보세요.</p>
         ) : (

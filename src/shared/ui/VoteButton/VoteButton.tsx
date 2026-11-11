@@ -4,23 +4,31 @@ type VoteButtonProps = {
   count: number
   pressed: boolean
   onToggle: () => void
+  /** big: 제출작 상세 머리용. 56px, 도장 그림자, 누르면 내려앉아요. */
+  size?: 'md' | 'big'
+}
+
+const SIZES = {
+  md: 'gap-2 min-h-11 px-4 text-sm',
+  big: 'gap-3 min-h-14 px-6 text-lg shadow-(--tt-shadow-stamp) transition-[translate,box-shadow,background-color,color] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0_var(--tt-ink)] active:translate-x-1 active:translate-y-1 active:shadow-none',
 }
 
 /** 위쪽 화살표 + 투표 수 토글. 켜지면 잉크로 채워지고 화살표가 튀어요. */
-function VoteButton({ target, count, pressed, onToggle }: VoteButtonProps) {
+function VoteButton({ target, count, pressed, onToggle, size = 'md' }: VoteButtonProps) {
+  const icon = size === 'big' ? 18 : 14
   return (
     <button
       type="button"
       aria-pressed={pressed}
       aria-label={`${target} 투표${pressed ? ' 취소' : ''}`}
       onClick={onToggle}
-      className={`mono inline-flex items-center gap-2 min-h-11 px-4 rounded-full border-(length:--tt-stroke-bold) border-(--tt-ink) text-sm font-medium cursor-pointer transition-colors duration-(--tt-dur-quick) ${
-        pressed ? 'bg-(--tt-ink) text-(--tt-ground)' : 'hover:bg-(--tt-fill-quiet)'
+      className={`mono inline-flex items-center rounded-full border-(length:--tt-stroke-bold) border-(--tt-ink) font-medium cursor-pointer transition-colors duration-(--tt-dur-quick) ${SIZES[size]} ${
+        pressed ? 'bg-(--tt-ink) text-(--tt-ground)' : size === 'big' ? 'bg-(--tt-surface)' : 'hover:bg-(--tt-fill-quiet)'
       }`}
     >
       <svg
-        width="14"
-        height="14"
+        width={icon}
+        height={icon}
         viewBox="0 0 14 14"
         fill="none"
         stroke="currentColor"

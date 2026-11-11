@@ -1,5 +1,6 @@
+import type { FeedbackType } from '../../shared/ui/FeedbackType/types.ts'
+
 export type Track = 'beginner' | 'regular' | 'expert'
-export type FeedbackType = 'bug' | 'ux' | 'code' | 'kudo'
 
 /** 한 주에 낸 제출 하나. rank는 트랙 순위, 이번 주처럼 아직 집계 전이면 null. */
 export type Entry = {
@@ -12,6 +13,7 @@ export type Entry = {
   submissionId?: string
 }
 
+/** 이 사람이 남긴 피드백. 대상 제출작 정보를 붙여서 보여줘요. */
 export type Feedback = {
   id: string
   type: FeedbackType
@@ -32,7 +34,6 @@ export type User = {
   followers: number
   following: number
   history: Entry[]
-  feedbacks: Feedback[]
 }
 
 /** 통계에 필요한 주차 정보만 */

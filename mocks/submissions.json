@@ -1,10 +1,703 @@
 [
-  { "id": "s-101", "weekId": "2026-w46", "handle": "@minji.dev", "track": "beginner", "title": "물 마신 잔 수 기록기", "summary": "한 잔 마실 때마다 한 번 눌러요. 기록은 이 브라우저에만 남아요.", "caption": "+1 CUP", "voteCount": 128, "submittedAt": "2026-11-09T21:40:00+09:00" },
-  { "id": "s-102", "weekId": "2026-w46", "handle": "@hyuk", "track": "regular", "title": "오프라인 메모장", "summary": "비행기 모드에서도 써지는 메모장. 태그로 검색해요.", "caption": "OFFLINE", "voteCount": 113, "submittedAt": "2026-11-10T13:05:00+09:00" },
-  { "id": "s-103", "weekId": "2026-w46", "handle": "@dana_k", "track": "beginner", "title": "로컬 습관 달력", "summary": "한 일을 칸에 칠해요. 계정 없이 바로 시작해요.", "caption": "DAY 12", "voteCount": 61, "submittedAt": "2026-11-10T23:18:00+09:00" },
-  { "id": "s-104", "weekId": "2026-w46", "handle": "@kwon_beats", "track": "expert", "title": "브라우저 속 SQLite 가계부", "summary": "SQLite를 WebAssembly로 띄웠어요. 쿼리로 월별 지출을 뽑아요.", "caption": "SELECT *", "voteCount": 142, "submittedAt": "2026-11-11T09:52:00+09:00" },
-  { "id": "s-105", "weekId": "2026-w46", "handle": "@seoyeon", "track": "regular", "title": "새로고침해도 남는 할 일", "summary": "할 일을 IndexedDB에 저장해요. 창을 닫았다 열어도 그대로예요.", "caption": "F5 OK", "voteCount": 84, "submittedAt": "2026-11-11T17:30:00+09:00" },
-  { "id": "s-106", "weekId": "2026-w46", "handle": "@jh.park", "track": "regular", "title": "IndexedDB 레시피 북", "summary": "사진까지 브라우저에 저장하는 레시피 북. 용량 표시도 넣었어요.", "caption": "48 MB", "voteCount": 97, "submittedAt": "2026-11-11T22:47:00+09:00" },
-  { "id": "s-107", "weekId": "2026-w46", "handle": "@yuna_b", "track": "beginner", "title": "오프라인 단어장", "summary": "외운 단어는 넘기고 헷갈린 단어만 다시 보여줘요.", "caption": "WORD 30", "voteCount": 45, "submittedAt": "2026-11-12T01:12:00+09:00" },
-  { "id": "s-108", "weekId": "2026-w46", "handle": "@taeho", "track": "expert", "title": "탭끼리 동기화되는 칸반", "summary": "BroadcastChannel로 열린 탭끼리 카드 이동을 맞춰요. 서버는 없어요.", "caption": "TAB ⇄ TAB", "voteCount": 76, "submittedAt": "2026-11-12T03:20:00+09:00" }
+  {
+    "id": "s-101",
+    "weekId": "2026-w46",
+    "handle": "@minji.dev",
+    "track": "beginner",
+    "title": "물 마신 잔 수 기록기",
+    "summary": "한 잔 마실 때마다 한 번 눌러요. 기록은 이 브라우저에만 남아요.",
+    "caption": "+1 CUP",
+    "voteCount": 128,
+    "submittedAt": "2026-11-09T21:40:00+09:00",
+    "repoUrl": "https://github.com/minji-dev/cup-counter",
+    "demoUrl": "https://minji-dev.github.io/cup-counter/",
+    "stack": [
+      "HTML",
+      "localStorage"
+    ],
+    "workHours": 14,
+    "story": [
+      {
+        "label": "무엇을",
+        "title": "한 번 누르면 한 잔",
+        "body": "물 마시는 걸 자꾸 잊어서, 기록하는 데 1초도 안 걸리게 만들고 싶었어요."
+      },
+      {
+        "label": "어떻게",
+        "title": "날짜를 키로 저장해요",
+        "body": "오늘 날짜를 키로 잡고 잔 수만 localStorage에 넣어요. 자정이 지나면 새 키가 생겨요."
+      },
+      {
+        "label": "회고",
+        "title": "되돌리기가 필요했어요",
+        "body": "잘못 누른 한 잔을 지울 방법이 없어서 아쉬웠어요. 다음엔 길게 눌러 취소를 붙여볼게요."
+      }
+    ],
+    "rhythm": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "commits": [
+      {
+        "at": "2026-11-09T11:40:00+09:00",
+        "message": "init",
+        "note": "뼈대와 첫 화면"
+      },
+      {
+        "at": "2026-11-09T13:20:00+09:00",
+        "message": "feat: 저장",
+        "note": "저장 붙이기"
+      },
+      {
+        "at": "2026-11-09T15:00:00+09:00",
+        "message": "feat: 핵심 기능",
+        "note": "핵심 기능 완성"
+      },
+      {
+        "at": "2026-11-09T16:40:00+09:00",
+        "message": "style: 모바일",
+        "note": "모바일 다듬기"
+      },
+      {
+        "at": "2026-11-09T18:20:00+09:00",
+        "message": "fix: 버그",
+        "note": "버그 잡기"
+      },
+      {
+        "at": "2026-11-09T20:00:00+09:00",
+        "message": "docs: README",
+        "note": "README와 배포"
+      }
+    ],
+    "checks": {
+      "onTime": true,
+      "demoWorks": true,
+      "readme": true,
+      "constraint": true
+    }
+  },
+  {
+    "id": "s-102",
+    "weekId": "2026-w46",
+    "handle": "@hyuk",
+    "track": "regular",
+    "title": "오프라인 메모장",
+    "summary": "비행기 모드에서도 써지는 메모장. 태그로 검색해요.",
+    "caption": "OFFLINE",
+    "voteCount": 113,
+    "submittedAt": "2026-11-10T13:05:00+09:00",
+    "repoUrl": "https://github.com/hyuk/offline-memo",
+    "demoUrl": "https://hyuk.github.io/offline-memo/",
+    "stack": [
+      "TypeScript",
+      "IndexedDB",
+      "Service Worker"
+    ],
+    "workHours": 41,
+    "story": [
+      {
+        "label": "무엇을",
+        "title": "비행기에서도 써지는 메모장",
+        "body": "오프라인일 때 메모 앱이 멈추는 게 싫어서 처음부터 네트워크 없이 도는 걸 목표로 했어요."
+      },
+      {
+        "label": "어떻게",
+        "title": "서비스 워커로 앱을 통째로 캐시해요",
+        "body": "첫 방문에 모든 파일을 캐시하고, 메모는 IndexedDB에 태그 색인과 함께 저장해요."
+      },
+      {
+        "label": "회고",
+        "title": "태그 검색이 생각보다 어려웠어요",
+        "body": "한글 초성 검색을 넣다가 시간이 부족했어요. 다음 주에 이어서 붙여볼 생각이에요."
+      }
+    ],
+    "rhythm": [
+      2,
+      0,
+      4,
+      7,
+      3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "commits": [
+      {
+        "at": "2026-11-09T13:52:00+09:00",
+        "message": "init",
+        "note": "뼈대와 첫 화면"
+      },
+      {
+        "at": "2026-11-09T17:44:00+09:00",
+        "message": "feat: 저장",
+        "note": "저장 붙이기"
+      },
+      {
+        "at": "2026-11-09T21:36:00+09:00",
+        "message": "feat: 핵심 기능",
+        "note": "핵심 기능 완성"
+      },
+      {
+        "at": "2026-11-10T01:28:00+09:00",
+        "message": "style: 모바일",
+        "note": "모바일 다듬기"
+      },
+      {
+        "at": "2026-11-10T05:20:00+09:00",
+        "message": "fix: 버그",
+        "note": "버그 잡기"
+      },
+      {
+        "at": "2026-11-10T09:12:00+09:00",
+        "message": "docs: README",
+        "note": "README와 배포"
+      }
+    ],
+    "checks": {
+      "onTime": true,
+      "demoWorks": true,
+      "readme": true,
+      "constraint": true
+    }
+  },
+  {
+    "id": "s-103",
+    "weekId": "2026-w46",
+    "handle": "@dana_k",
+    "track": "beginner",
+    "title": "로컬 습관 달력",
+    "summary": "한 일을 칸에 칠해요. 계정 없이 바로 시작해요.",
+    "caption": "DAY 12",
+    "voteCount": 61,
+    "submittedAt": "2026-11-10T23:18:00+09:00",
+    "repoUrl": "https://github.com/dana-k/habit-dots",
+    "demoUrl": "https://dana-k.github.io/habit-dots/",
+    "stack": [
+      "Svelte",
+      "localStorage"
+    ],
+    "workHours": 22,
+    "story": [
+      {
+        "label": "무엇을",
+        "title": "한 일을 칸에 칠해요",
+        "body": "계정 만들고 로그인하는 순간 습관 앱을 안 열게 되더라고요. 그래서 바로 시작하게 했어요."
+      },
+      {
+        "label": "어떻게",
+        "title": "한 달을 한 화면에",
+        "body": "한 달을 7열 격자로 그리고 칸마다 습관 색을 겹쳐 칠해요."
+      },
+      {
+        "label": "회고",
+        "title": "색이 많아지면 헷갈려요",
+        "body": "습관이 다섯 개를 넘으면 색 구분이 어려웠어요. 모양으로도 구분해볼게요."
+      }
+    ],
+    "rhythm": [
+      0,
+      0,
+      2,
+      4,
+      0,
+      0,
+      3,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "commits": [
+      {
+        "at": "2026-11-09T15:19:00+09:00",
+        "message": "init",
+        "note": "뼈대와 첫 화면"
+      },
+      {
+        "at": "2026-11-09T20:39:00+09:00",
+        "message": "feat: 저장",
+        "note": "저장 붙이기"
+      },
+      {
+        "at": "2026-11-10T01:59:00+09:00",
+        "message": "feat: 핵심 기능",
+        "note": "핵심 기능 완성"
+      },
+      {
+        "at": "2026-11-10T07:18:00+09:00",
+        "message": "style: 모바일",
+        "note": "모바일 다듬기"
+      },
+      {
+        "at": "2026-11-10T12:38:00+09:00",
+        "message": "fix: 버그",
+        "note": "버그 잡기"
+      },
+      {
+        "at": "2026-11-10T17:58:00+09:00",
+        "message": "docs: README",
+        "note": "README와 배포"
+      }
+    ],
+    "checks": {
+      "onTime": true,
+      "demoWorks": true,
+      "readme": false,
+      "constraint": true
+    }
+  },
+  {
+    "id": "s-104",
+    "weekId": "2026-w46",
+    "handle": "@kwon_beats",
+    "track": "expert",
+    "title": "브라우저 속 SQLite 가계부",
+    "summary": "SQLite를 WebAssembly로 띄웠어요. 쿼리로 월별 지출을 뽑아요.",
+    "caption": "SELECT *",
+    "voteCount": 142,
+    "submittedAt": "2026-11-11T09:52:00+09:00",
+    "repoUrl": "https://github.com/kwon-beats/sqlite-ledger",
+    "demoUrl": "https://kwon-beats.github.io/sqlite-ledger/",
+    "stack": [
+      "SQLite WASM",
+      "OPFS",
+      "Vite"
+    ],
+    "workHours": 58,
+    "story": [
+      {
+        "label": "무엇을",
+        "title": "쿼리로 보는 가계부",
+        "body": "엑셀 대신 SQL로 내 지출을 보고 싶었어요. 서버 없이 브라우저 안에서 전부 돌아가요."
+      },
+      {
+        "label": "어떻게",
+        "title": "SQLite를 WebAssembly로",
+        "body": "sqlite-wasm을 띄우고 OPFS에 DB 파일을 저장해요. 새로고침해도 데이터가 남아요."
+      },
+      {
+        "label": "회고",
+        "title": "첫 로딩이 무거워요",
+        "body": "WASM 파일이 1MB 가까이 돼서 첫 화면이 느려요. 다음엔 지연 로딩을 해볼게요."
+      }
+    ],
+    "rhythm": [
+      3,
+      1,
+      6,
+      8,
+      4,
+      2,
+      7,
+      12,
+      0,
+      0,
+      0,
+      0
+    ],
+    "commits": [
+      {
+        "at": "2026-11-09T16:50:00+09:00",
+        "message": "init",
+        "note": "뼈대와 첫 화면"
+      },
+      {
+        "at": "2026-11-09T23:40:00+09:00",
+        "message": "feat: 저장",
+        "note": "저장 붙이기"
+      },
+      {
+        "at": "2026-11-10T06:30:00+09:00",
+        "message": "feat: 핵심 기능",
+        "note": "핵심 기능 완성"
+      },
+      {
+        "at": "2026-11-10T13:21:00+09:00",
+        "message": "style: 모바일",
+        "note": "모바일 다듬기"
+      },
+      {
+        "at": "2026-11-10T20:11:00+09:00",
+        "message": "fix: 버그",
+        "note": "버그 잡기"
+      },
+      {
+        "at": "2026-11-11T03:01:00+09:00",
+        "message": "docs: README",
+        "note": "README와 배포"
+      }
+    ],
+    "checks": {
+      "onTime": true,
+      "demoWorks": true,
+      "readme": true,
+      "constraint": true
+    }
+  },
+  {
+    "id": "s-105",
+    "weekId": "2026-w46",
+    "handle": "@seoyeon",
+    "track": "regular",
+    "title": "새로고침해도 남는 할 일",
+    "summary": "할 일을 IndexedDB에 저장해요. 창을 닫았다 열어도 그대로예요.",
+    "caption": "F5 OK",
+    "voteCount": 84,
+    "submittedAt": "2026-11-11T17:30:00+09:00",
+    "repoUrl": "https://github.com/seoyeon/keep-todo",
+    "demoUrl": "https://seoyeon.github.io/keep-todo/",
+    "stack": [
+      "React",
+      "IndexedDB"
+    ],
+    "workHours": 30,
+    "story": [
+      {
+        "label": "무엇을",
+        "title": "창을 닫아도 남는 할 일",
+        "body": "탭을 실수로 닫으면 할 일이 다 날아가는 게 싫었어요."
+      },
+      {
+        "label": "어떻게",
+        "title": "바뀔 때마다 바로 저장해요",
+        "body": "할 일이 바뀔 때마다 IndexedDB에 기록하고, 열 때 그대로 불러와요."
+      },
+      {
+        "label": "회고",
+        "title": "동기화는 다음 숙제예요",
+        "body": "두 탭에서 동시에 고치면 마지막 저장만 남아요. 다음엔 탭끼리 맞춰볼게요."
+      }
+    ],
+    "rhythm": [
+      1,
+      0,
+      3,
+      5,
+      2,
+      0,
+      4,
+      6,
+      3,
+      1,
+      0,
+      0
+    ],
+    "commits": [
+      {
+        "at": "2026-11-09T17:55:00+09:00",
+        "message": "init",
+        "note": "뼈대와 첫 화면"
+      },
+      {
+        "at": "2026-11-10T01:51:00+09:00",
+        "message": "feat: 저장",
+        "note": "저장 붙이기"
+      },
+      {
+        "at": "2026-11-10T09:47:00+09:00",
+        "message": "feat: 핵심 기능",
+        "note": "핵심 기능 완성"
+      },
+      {
+        "at": "2026-11-10T17:42:00+09:00",
+        "message": "style: 모바일",
+        "note": "모바일 다듬기"
+      },
+      {
+        "at": "2026-11-11T01:38:00+09:00",
+        "message": "fix: 버그",
+        "note": "버그 잡기"
+      },
+      {
+        "at": "2026-11-11T09:34:00+09:00",
+        "message": "docs: README",
+        "note": "README와 배포"
+      }
+    ],
+    "checks": {
+      "onTime": true,
+      "demoWorks": true,
+      "readme": true,
+      "constraint": true
+    }
+  },
+  {
+    "id": "s-106",
+    "weekId": "2026-w46",
+    "handle": "@jh.park",
+    "track": "regular",
+    "title": "IndexedDB 레시피 북",
+    "summary": "사진까지 브라우저에 저장하는 레시피 북. 용량 표시도 넣었어요.",
+    "caption": "48 MB",
+    "voteCount": 97,
+    "submittedAt": "2026-11-11T22:47:00+09:00",
+    "repoUrl": "https://github.com/jh-park/recipe-book",
+    "demoUrl": "https://jh-park.github.io/recipe-book/",
+    "stack": [
+      "Vue",
+      "IndexedDB",
+      "Canvas"
+    ],
+    "workHours": 46,
+    "story": [
+      {
+        "label": "무엇을",
+        "title": "사진까지 담는 레시피 북",
+        "body": "요리하면서 찍은 사진을 레시피와 같이 보관하고 싶었어요."
+      },
+      {
+        "label": "어떻게",
+        "title": "사진은 줄여서 Blob으로",
+        "body": "Canvas로 사진을 줄이고 Blob으로 IndexedDB에 넣어요. 남은 용량도 보여줘요."
+      },
+      {
+        "label": "회고",
+        "title": "용량 한도가 브라우저마다 달라요",
+        "body": "사파리는 금방 꽉 차서 경고를 따로 띄웠어요."
+      }
+    ],
+    "rhythm": [
+      2,
+      1,
+      5,
+      6,
+      2,
+      0,
+      6,
+      8,
+      4,
+      1,
+      3,
+      0
+    ],
+    "commits": [
+      {
+        "at": "2026-11-09T18:41:00+09:00",
+        "message": "init",
+        "note": "뼈대와 첫 화면"
+      },
+      {
+        "at": "2026-11-10T03:22:00+09:00",
+        "message": "feat: 저장",
+        "note": "저장 붙이기"
+      },
+      {
+        "at": "2026-11-10T12:03:00+09:00",
+        "message": "feat: 핵심 기능",
+        "note": "핵심 기능 완성"
+      },
+      {
+        "at": "2026-11-10T20:44:00+09:00",
+        "message": "style: 모바일",
+        "note": "모바일 다듬기"
+      },
+      {
+        "at": "2026-11-11T05:25:00+09:00",
+        "message": "fix: 버그",
+        "note": "버그 잡기"
+      },
+      {
+        "at": "2026-11-11T14:06:00+09:00",
+        "message": "docs: README",
+        "note": "README와 배포"
+      }
+    ],
+    "checks": {
+      "onTime": true,
+      "demoWorks": true,
+      "readme": true,
+      "constraint": true
+    }
+  },
+  {
+    "id": "s-107",
+    "weekId": "2026-w46",
+    "handle": "@yuna_b",
+    "track": "beginner",
+    "title": "오프라인 단어장",
+    "summary": "외운 단어는 넘기고 헷갈린 단어만 다시 보여줘요.",
+    "caption": "WORD 30",
+    "voteCount": 45,
+    "submittedAt": "2026-11-12T01:12:00+09:00",
+    "repoUrl": "https://github.com/yuna-b/word-cards",
+    "demoUrl": "https://yuna-b.github.io/word-cards/",
+    "stack": [
+      "HTML",
+      "CSS",
+      "localStorage"
+    ],
+    "workHours": 18,
+    "story": [
+      {
+        "label": "무엇을",
+        "title": "헷갈린 단어만 다시",
+        "body": "외운 단어까지 계속 나오는 게 지루했어요."
+      },
+      {
+        "label": "어떻게",
+        "title": "틀린 횟수로 순서를 정해요",
+        "body": "단어마다 틀린 횟수를 저장하고, 많이 틀린 단어를 먼저 보여줘요."
+      },
+      {
+        "label": "회고",
+        "title": "단어 넣기가 번거로워요",
+        "body": "한 개씩 입력하는 게 귀찮아서 다음엔 붙여넣기로 한 번에 넣게 할게요."
+      }
+    ],
+    "rhythm": [
+      0,
+      0,
+      1,
+      3,
+      0,
+      0,
+      2,
+      4,
+      3,
+      0,
+      2,
+      0
+    ],
+    "commits": [
+      {
+        "at": "2026-11-09T19:01:00+09:00",
+        "message": "init",
+        "note": "뼈대와 첫 화면"
+      },
+      {
+        "at": "2026-11-10T04:03:00+09:00",
+        "message": "feat: 저장",
+        "note": "저장 붙이기"
+      },
+      {
+        "at": "2026-11-10T13:05:00+09:00",
+        "message": "feat: 핵심 기능",
+        "note": "핵심 기능 완성"
+      },
+      {
+        "at": "2026-11-10T22:06:00+09:00",
+        "message": "style: 모바일",
+        "note": "모바일 다듬기"
+      },
+      {
+        "at": "2026-11-11T07:08:00+09:00",
+        "message": "fix: 버그",
+        "note": "버그 잡기"
+      },
+      {
+        "at": "2026-11-11T16:10:00+09:00",
+        "message": "docs: README",
+        "note": "README와 배포"
+      }
+    ],
+    "checks": {
+      "onTime": true,
+      "demoWorks": true,
+      "readme": false,
+      "constraint": true
+    }
+  },
+  {
+    "id": "s-108",
+    "weekId": "2026-w46",
+    "handle": "@taeho",
+    "track": "expert",
+    "title": "탭끼리 동기화되는 칸반",
+    "summary": "BroadcastChannel로 열린 탭끼리 카드 이동을 맞춰요. 서버는 없어요.",
+    "caption": "TAB ⇄ TAB",
+    "voteCount": 76,
+    "submittedAt": "2026-11-12T03:20:00+09:00",
+    "repoUrl": "https://github.com/taeho/tab-kanban",
+    "demoUrl": "https://taeho.github.io/tab-kanban/",
+    "stack": [
+      "TypeScript",
+      "BroadcastChannel",
+      "Lit"
+    ],
+    "workHours": 55,
+    "story": [
+      {
+        "label": "무엇을",
+        "title": "탭끼리 맞춰지는 칸반",
+        "body": "서버 없이도 여러 창에서 같은 보드를 보고 싶었어요."
+      },
+      {
+        "label": "어떻게",
+        "title": "BroadcastChannel로 변경을 흘려요",
+        "body": "카드를 옮기면 같은 브라우저의 다른 탭에 바로 알려요. 저장은 localStorage에 해요."
+      },
+      {
+        "label": "회고",
+        "title": "충돌 처리가 제일 어려웠어요",
+        "body": "두 탭에서 같은 카드를 동시에 옮기면 마지막 쪽이 이기게 했어요. 더 나은 방법을 찾고 있어요."
+      }
+    ],
+    "rhythm": [
+      2,
+      1,
+      4,
+      6,
+      3,
+      1,
+      5,
+      8,
+      7,
+      3,
+      5,
+      0
+    ],
+    "commits": [
+      {
+        "at": "2026-11-09T19:20:00+09:00",
+        "message": "init",
+        "note": "뼈대와 첫 화면"
+      },
+      {
+        "at": "2026-11-10T04:40:00+09:00",
+        "message": "feat: 저장",
+        "note": "저장 붙이기"
+      },
+      {
+        "at": "2026-11-10T14:00:00+09:00",
+        "message": "feat: 핵심 기능",
+        "note": "핵심 기능 완성"
+      },
+      {
+        "at": "2026-11-10T23:20:00+09:00",
+        "message": "style: 모바일",
+        "note": "모바일 다듬기"
+      },
+      {
+        "at": "2026-11-11T08:40:00+09:00",
+        "message": "fix: 버그",
+        "note": "버그 잡기"
+      },
+      {
+        "at": "2026-11-11T18:00:00+09:00",
+        "message": "docs: README",
+        "note": "README와 배포"
+      }
+    ],
+    "checks": {
+      "onTime": true,
+      "demoWorks": true,
+      "readme": true,
+      "constraint": true
+    }
+  }
 ]

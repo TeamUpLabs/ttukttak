@@ -1,11 +1,9 @@
 import { useState, type ReactNode } from 'react'
 import { ProjectCard, Tabs, type ThumbTone } from '../../../shared/ui'
-import submissions from '../../../../mocks/submissions.json'
+import { allSubmissions as submissions, TRACK_LABELS, type Submission, type Track } from '../data.ts'
 
-type Track = 'beginner' | 'regular' | 'expert'
-export type Submission = (typeof submissions)[number]
+export type { Submission }
 
-const TRACK_LABELS: Record<Track, string> = { beginner: '입문', regular: '일반', expert: '고수' }
 const FILTERS: { value: Track | 'all'; label: string }[] = [
   { value: 'all', label: '전체' },
   { value: 'beginner', label: '입문' },
