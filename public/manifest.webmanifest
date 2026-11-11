@@ -1,0 +1,14 @@
+{
+  "name": "뚝딱 — 매주 하나씩, 끝까지",
+  "short_name": "뚝딱",
+  "description": "매주 월요일 10:00에 주제 하나, 72시간 안에 만들어 제출하는 주간 미니 해커톤",
+  "lang": "ko",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F1F1EE",
+  "theme_color": "#F1F1EE",
+  "icons": [
+    { "src": "/ttukttak-logo/favicon/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/ttukttak-logo/favicon/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
