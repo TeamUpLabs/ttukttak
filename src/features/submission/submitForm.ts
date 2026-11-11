@@ -59,7 +59,7 @@ export function readiness(v: SubmitValues) {
   return [
     { label: '트랙 선택', ok: !!v.track },
     { label: '제목', ok: v.title.trim().length > 0 },
-    { label: '한 줄 소개', ok: v.summary.trim().length >= LIMITS.summaryMin },
+    { label: `한 줄 소개 ${LIMITS.summaryMin}자+`, ok: v.summary.trim().length >= LIMITS.summaryMin },
     { label: '데모 링크', ok: isDemoUrl(v.demoUrl) },
     { label: 'GitHub 레포', ok: isRepoUrl(v.repoUrl) },
     { label: '썸네일', ok: v.thumbMode === 'image' ? !!v.image && !imageError(v.image) : v.caption.trim().length > 0 },

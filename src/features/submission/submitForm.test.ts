@@ -24,7 +24,7 @@ test('다 채우면 7개 모두 준비돼요', () => {
 })
 
 test('빠진 항목만 남아요', () => {
-  assert.deepEqual(left({ ...ready, title: ' ', summary: '짧아요', okRule: false }), ['제목', '한 줄 소개', '주제 제약 확인'])
+  assert.deepEqual(left({ ...ready, title: ' ', summary: '짧아요', okRule: false }), ['제목', '한 줄 소개 10자+', '주제 제약 확인'])
   assert.deepEqual(left({ ...ready, thumbMode: 'image' }), ['썸네일'])
   assert.deepEqual(left({ ...ready, thumbMode: 'image', image: { type: 'image/png', size: 1000 } }), [])
 })

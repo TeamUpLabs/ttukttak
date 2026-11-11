@@ -63,6 +63,13 @@ function SubmitForm({ week, deadline, now, submittedCount, viewer, streakBefore 
   const ready = doneCount === checks.length
   const deadlineLabel = kstDayTime(deadline)
   const rule = week.rule ?? '이번 주 주제 제약'
+  const summaryLength = v.summary.trim().length
+  const summaryHint: { text: string; state: 'idle' | 'ok' } =
+    summaryLength >= LIMITS.summaryMin
+      ? { text: '좋아요. 카드와 상세 페이지 맨 위에 보여요.', state: 'ok' }
+      : summaryLength > 0
+        ? { text: `${LIMITS.summaryMin}자 이상이면 체크돼요. ${LIMITS.summaryMin - summaryLength}자 더 적어 주세요.`, state: 'idle' }
+        : { text: `${LIMITS.summaryMin}자 이상 적어 주세요.`, state: 'idle' }
 
   function pickImage(file: File | undefined) {
     if (!file) return
@@ -205,8 +212,8 @@ function SubmitForm({ week, deadline, now, submittedCount, viewer, streakBefore 
             <Field id="f-title" label="제목" count={`${v.title.length} / ${LIMITS.title}`}>
               <input id="f-title" value={v.title} maxLength={LIMITS.title} onChange={(e) => set('title', e.target.value)} placeholder="예: 오프라인 메모장" autoComplete="off" className={INPUT} />
             </Field>
-            <Field id="f-sum" label="한 줄 소개" count={`${v.summary.length} / ${LIMITS.summary}`}>
-              <textarea id="f-sum" value={v.summary} maxLength={LIMITS.summary} onChange={(e) => set('summary', e.target.value)} placeholder="처음 보는 사람이 10초 안에 이해할 수 있게 써주세요" className={TEXTAREA} />
+            <Field id="f-sum" label="한 줄 소개" count={`${v.summary.length} / ${LIMITS.summary}`} hint={summaryHint.text} hintState={summaryHint.state}>
+              <textarea id="f-sum" value={v.summary} maxLength={LIMITS.summary} onChange={(e) => set('summary', e.target.value)} placeholder="처음 보는 사람이 10초 안에 이해할 수 있게 써주세요" aria-describedby="f-sum-hint" className={TEXTAREA} />
             </Field>
           </Block>
 
@@ -411,7 +418,7 @@ function Block({ n, title, optional, children }: { n: string; title?: string; op
   )
 }
 
-function Field({ id, label, count, hint, children }: { id: string; label: string; count?: string; hint?: string; children: ReactNode }) {
+function Field({ id, label, count, hint, hintState = 'idle', children }: { id: string; label: string; count?: string; hint?: string; hintState?: 'idle' | 'ok'; children: ReactNode }) {
   return (
     <div className="flex flex-col gap-2">
       <label htmlFor={id} className="flex justify-between items-baseline gap-3 text-[15px] font-bold">
@@ -419,7 +426,7 @@ function Field({ id, label, count, hint, children }: { id: string; label: string
         {count && <span className="mono text-xs font-normal text-(--tt-muted)">{count}</span>}
       </label>
       {children}
-      {hint && <Hint id={`${id}-hint`} state="idle">{hint}</Hint>}
+      {hint && <Hint id={`${id}-hint`} state={hintState}>{hint}</Hint>}
     </div>
   )
 }
