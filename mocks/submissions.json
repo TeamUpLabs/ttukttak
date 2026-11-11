@@ -1,10 +1,10 @@
 [
-  { "id": "s-101", "weekId": "2026-w46", "handle": "@minji.dev", "track": "beginner", "title": "물 마신 잔 수 기록기", "submittedAt": "2026-11-09T21:40:00+09:00" },
-  { "id": "s-102", "weekId": "2026-w46", "handle": "@hyuk", "track": "regular", "title": "오프라인 메모장", "submittedAt": "2026-11-10T13:05:00+09:00" },
-  { "id": "s-103", "weekId": "2026-w46", "handle": "@dana_k", "track": "beginner", "title": "로컬 습관 달력", "submittedAt": "2026-11-10T23:18:00+09:00" },
-  { "id": "s-104", "weekId": "2026-w46", "handle": "@kwon_beats", "track": "expert", "title": "브라우저 속 SQLite 가계부", "submittedAt": "2026-11-11T09:52:00+09:00" },
-  { "id": "s-105", "weekId": "2026-w46", "handle": "@seoyeon", "track": "regular", "title": "새로고침해도 남는 할 일", "submittedAt": "2026-11-11T17:30:00+09:00" },
-  { "id": "s-106", "weekId": "2026-w46", "handle": "@jh.park", "track": "regular", "title": "IndexedDB 레시피 북", "submittedAt": "2026-11-11T22:47:00+09:00" },
-  { "id": "s-107", "weekId": "2026-w46", "handle": "@yuna_b", "track": "beginner", "title": "오프라인 단어장", "submittedAt": "2026-11-12T01:12:00+09:00" },
-  { "id": "s-108", "weekId": "2026-w46", "handle": "@taeho", "track": "expert", "title": "탭끼리 동기화되는 칸반", "submittedAt": "2026-11-12T03:20:00+09:00" }
+  { "id": "s-101", "weekId": "2026-w46", "handle": "@minji.dev", "track": "beginner", "title": "물 마신 잔 수 기록기", "summary": "한 잔 마실 때마다 한 번 눌러요. 기록은 이 브라우저에만 남아요.", "caption": "+1 CUP", "voteCount": 128, "submittedAt": "2026-11-09T21:40:00+09:00" },
+  { "id": "s-102", "weekId": "2026-w46", "handle": "@hyuk", "track": "regular", "title": "오프라인 메모장", "summary": "비행기 모드에서도 써지는 메모장. 태그로 검색해요.", "caption": "OFFLINE", "voteCount": 113, "submittedAt": "2026-11-10T13:05:00+09:00" },
+  { "id": "s-103", "weekId": "2026-w46", "handle": "@dana_k", "track": "beginner", "title": "로컬 습관 달력", "summary": "한 일을 칸에 칠해요. 계정 없이 바로 시작해요.", "caption": "DAY 12", "voteCount": 61, "submittedAt": "2026-11-10T23:18:00+09:00" },
+  { "id": "s-104", "weekId": "2026-w46", "handle": "@kwon_beats", "track": "expert", "title": "브라우저 속 SQLite 가계부", "summary": "SQLite를 WebAssembly로 띄웠어요. 쿼리로 월별 지출을 뽑아요.", "caption": "SELECT *", "voteCount": 142, "submittedAt": "2026-11-11T09:52:00+09:00" },
+  { "id": "s-105", "weekId": "2026-w46", "handle": "@seoyeon", "track": "regular", "title": "새로고침해도 남는 할 일", "summary": "할 일을 IndexedDB에 저장해요. 창을 닫았다 열어도 그대로예요.", "caption": "F5 OK", "voteCount": 84, "submittedAt": "2026-11-11T17:30:00+09:00" },
+  { "id": "s-106", "weekId": "2026-w46", "handle": "@jh.park", "track": "regular", "title": "IndexedDB 레시피 북", "summary": "사진까지 브라우저에 저장하는 레시피 북. 용량 표시도 넣었어요.", "caption": "48 MB", "voteCount": 97, "submittedAt": "2026-11-11T22:47:00+09:00" },
+  { "id": "s-107", "weekId": "2026-w46", "handle": "@yuna_b", "track": "beginner", "title": "오프라인 단어장", "summary": "외운 단어는 넘기고 헷갈린 단어만 다시 보여줘요.", "caption": "WORD 30", "voteCount": 45, "submittedAt": "2026-11-12T01:12:00+09:00" },
+  { "id": "s-108", "weekId": "2026-w46", "handle": "@taeho", "track": "expert", "title": "탭끼리 동기화되는 칸반", "summary": "BroadcastChannel로 열린 탭끼리 카드 이동을 맞춰요. 서버는 없어요.", "caption": "TAB ⇄ TAB", "voteCount": 76, "submittedAt": "2026-11-12T03:20:00+09:00" }
 ]

@@ -3,8 +3,15 @@ import ThisWeekCard from "../features/week/components/ThisWeekCard";
 import RecentSubmissionsMarquee from "../features/submission/components/RecentSubmissionsMarquee";
 import WeekFlow from "../features/week/components/WeekFlow";
 import WeekRange from "../features/week/components/WeekRange";
+import SubmissionGallery from "../features/submission/components/SubmissionGallery";
+import VoteToggle from "../features/vote/components/VoteToggle";
+import { useThisWeek } from "../features/week/useThisWeek";
 
 function HomePage() {
+  // 주가 바뀌면 갤러리도 그 주 제출작으로 넘어가요. 분 단위면 충분해요.
+  const { week: current, next } = useThisWeek(60_000);
+  const week = current ?? next;
+
   return (
     <main className="min-h-screen">
       <SiteHeader />
@@ -49,6 +56,18 @@ function HomePage() {
       <section id="rules" className="max-w-7xl mx-auto py-30">
         <WeekFlow />
       </section>
+
+      {week && (
+        <section id="submit" className="bg-(--tt-ground-sunk) border-y-(length:--tt-stroke-bold) border-(--tt-ink)">
+          <div className="max-w-7xl mx-auto pt-28 pb-30">
+            <SubmissionGallery
+              weekId={week.id}
+              weekCode={week.code}
+              renderVote={(s) => <VoteToggle target={s.title} count={s.voteCount} />}
+            />
+          </div>
+        </section>
+      )}
     </main>
   )
 }
