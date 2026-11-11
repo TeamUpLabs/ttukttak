@@ -1,5 +1,6 @@
 export * from "./SiteHeader"
 export * from "./Avatar"
+export * from "./Dropdown"
 export * from "./StampBadge"
 export * from "./FeedbackType"
 export * from "./StreakGrid"

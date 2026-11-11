@@ -1,6 +1,6 @@
-import { Avatar, Button, LiveDot } from "../";
+import { Avatar, Button, Dropdown, DROPDOWN_ITEM, LiveDot } from "../";
 import { useThisWeek } from "../../../features/week/useThisWeek";
-import { useSession } from '../../../features/auth/session'
+import { signOut, useSession } from '../../../features/auth/session'
 
 function SiteHeader() {
   const { week: current, next, phase } = useThisWeek(60_000)
@@ -9,6 +9,7 @@ function SiteHeader() {
   // 주제 주가 열려 있고 결과 발표 전이면 LIVE. 휴식 주·결과 발표 뒤·시즌 밖은 END.
   const live = current?.type === 'theme' && (phase === '제출 마감까지' || phase === '투표 마감까지' || phase === '결과 발표까지')
   const session = useSession()
+  const handle = session?.handle.replace(/^@/, '')
 
   return (
     <header className="bg-(--tt-ground)/70 backdrop-blur-md w-full border-b border-(--tt-line) sticky top-0 z-50">
@@ -30,7 +31,11 @@ function SiteHeader() {
           </span>
           {session ? (
             <div className="flex items-center gap-6">
-              <Avatar handle={session.handle} href={`/@${session.handle.replace(/^@/, '')}`} />
+              <Dropdown trigger={<Avatar handle={session.handle} />} label={`@${handle} 계정 메뉴`}>
+                <p className="mono m-0 px-3 pt-1.5 pb-2.5 mb-1 border-b border-(--tt-line) text-xs text-(--tt-muted)">@{handle}</p>
+                <a href={`/@${handle}`} className={DROPDOWN_ITEM}>내 프로필</a>
+                <button type="button" onClick={signOut} className={DROPDOWN_ITEM}>로그아웃하기</button>
+              </Dropdown>
               <Button variant="secondary" href="/submit" label="제출 하기" hasArrow />
             </div>
           ) :
