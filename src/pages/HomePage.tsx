@@ -1,6 +1,7 @@
 import { Button, SiteHeader } from "../shared/ui";
 import ThisWeekCard from "../features/week/components/ThisWeekCard";
 import RecentSubmissionsMarquee from "../features/submission/components/RecentSubmissionsMarquee";
+import WeekFlow from "../features/week/components/WeekFlow";
 
 function HomePage() {
   return (
@@ -43,6 +44,10 @@ function HomePage() {
       </section>
 
       <RecentSubmissionsMarquee />
+
+      <section id="rules" className="max-w-7xl mx-auto py-30">
+        <WeekFlow />
+      </section>
     </main>
   )
 }
