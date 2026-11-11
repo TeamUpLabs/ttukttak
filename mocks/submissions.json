@@ -1,0 +1,10 @@
+[
+  { "id": "s-101", "weekId": "2026-w46", "handle": "@minji.dev", "track": "beginner", "title": "물 마신 잔 수 기록기", "submittedAt": "2026-11-09T21:40:00+09:00" },
+  { "id": "s-102", "weekId": "2026-w46", "handle": "@hyuk", "track": "regular", "title": "오프라인 메모장", "submittedAt": "2026-11-10T13:05:00+09:00" },
+  { "id": "s-103", "weekId": "2026-w46", "handle": "@dana_k", "track": "beginner", "title": "로컬 습관 달력", "submittedAt": "2026-11-10T23:18:00+09:00" },
+  { "id": "s-104", "weekId": "2026-w46", "handle": "@kwon_beats", "track": "expert", "title": "브라우저 속 SQLite 가계부", "submittedAt": "2026-11-11T09:52:00+09:00" },
+  { "id": "s-105", "weekId": "2026-w46", "handle": "@seoyeon", "track": "regular", "title": "새로고침해도 남는 할 일", "submittedAt": "2026-11-11T17:30:00+09:00" },
+  { "id": "s-106", "weekId": "2026-w46", "handle": "@jh.park", "track": "regular", "title": "IndexedDB 레시피 북", "submittedAt": "2026-11-11T22:47:00+09:00" },
+  { "id": "s-107", "weekId": "2026-w46", "handle": "@yuna_b", "track": "beginner", "title": "오프라인 단어장", "submittedAt": "2026-11-12T01:12:00+09:00" },
+  { "id": "s-108", "weekId": "2026-w46", "handle": "@taeho", "track": "expert", "title": "탭끼리 동기화되는 칸반", "submittedAt": "2026-11-12T03:20:00+09:00" }
+]

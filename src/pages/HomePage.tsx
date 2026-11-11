@@ -1,5 +1,6 @@
 import { Button, SiteHeader } from "../shared/ui";
 import ThisWeekCard from "../features/week/components/ThisWeekCard";
+import RecentSubmissionsMarquee from "../features/submission/components/RecentSubmissionsMarquee";
 
 function HomePage() {
   return (
@@ -40,6 +41,8 @@ function HomePage() {
           <ThisWeekCard />
         </div>
       </section>
+
+      <RecentSubmissionsMarquee />
     </main>
   )
 }
