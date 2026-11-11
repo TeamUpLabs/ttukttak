@@ -2,6 +2,7 @@ import { Button, SiteHeader } from "../shared/ui";
 import ThisWeekCard from "../features/week/components/ThisWeekCard";
 import RecentSubmissionsMarquee from "../features/submission/components/RecentSubmissionsMarquee";
 import WeekFlow from "../features/week/components/WeekFlow";
+import WeekRange from "../features/week/components/WeekRange";
 
 function HomePage() {
   return (
@@ -9,7 +10,7 @@ function HomePage() {
       <SiteHeader />
       <section id="theme" className="max-w-7xl mx-auto py-20 flex flex-col gap-30">
         <div className="mono tt-fade flex justify-between items-center flex-wrap">
-          <span>W1 - 11.09 — 11.15</span>
+          <WeekRange />
           <span>매주 월요일 10:00 새 주제 공개</span>
         </div>
 
