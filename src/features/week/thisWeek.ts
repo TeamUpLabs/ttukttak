@@ -17,6 +17,8 @@ export type Week = {
     votingClosesAt: string | null
     resultsAt: string | null
   }
+  /** 지난 주에만 집계돼 있어요 */
+  submissionCount?: number
 }
 
 export type Phase = '제출 마감까지' | '투표 마감까지' | '결과 발표까지' | '다음 주제 공개까지'
@@ -46,4 +48,11 @@ export function getThisWeek(weeks: Week[], now: Date) {
     phase: step?.[0],
     deadline: step?.[1] ? new Date(step[1]) : undefined,
   }
+}
+
+/** 결과까지 발표된 주제 주. 최근 주가 먼저. */
+export function getPastWeeks(weeks: Week[], now: Date) {
+  return weeks
+    .filter((w) => w.type === 'theme' && w.schedule.resultsAt && Date.parse(w.schedule.resultsAt) <= now.getTime())
+    .sort((a, b) => Date.parse(b.schedule.opensAt) - Date.parse(a.schedule.opensAt))
 }

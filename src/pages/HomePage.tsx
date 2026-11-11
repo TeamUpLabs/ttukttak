@@ -3,6 +3,7 @@ import ThisWeekCard from "../features/week/components/ThisWeekCard";
 import RecentSubmissionsMarquee from "../features/submission/components/RecentSubmissionsMarquee";
 import WeekFlow from "../features/week/components/WeekFlow";
 import WeekRange from "../features/week/components/WeekRange";
+import PastWeeks from "../features/week/components/PastWeeks";
 import SubmissionGallery from "../features/submission/components/SubmissionGallery";
 import VoteToggle from "../features/vote/components/VoteToggle";
 import { useThisWeek } from "../features/week/useThisWeek";
@@ -68,6 +69,10 @@ function HomePage() {
           </div>
         </section>
       )}
+
+      <section id="archive" className="max-w-7xl mx-auto py-30">
+        <PastWeeks />
+      </section>
     </main>
   )
 }

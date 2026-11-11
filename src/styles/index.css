@@ -3,7 +3,8 @@
 @import "tailwindcss";
 
 @import "tokens.css";
-@import "base.css";
+/* 기본값이라 Tailwind 유틸리티가 덮어쓸 수 있게 base 레이어에 넣어요 */
+@import "base.css" layer(base);
 @import "motion.css";
 @import "components.css";
 
