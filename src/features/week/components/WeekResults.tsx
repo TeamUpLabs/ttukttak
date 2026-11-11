@@ -45,12 +45,6 @@ function WeekResults({ id }: { id: string }) {
       {/* 머리 */}
       <section className={`${WRAP} pt-12 pb-18 flex flex-col gap-12`}>
         <div className="flex justify-between items-center flex-wrap gap-4">
-          <a href="/#archive" className="group mono inline-flex items-center gap-2 text-[13px] text-(--tt-muted) no-underline hover:text-(--tt-ink)">
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" className="transition-transform duration-300 group-hover:-translate-x-1">
-              <path d="M12 7H2M6 3 2 7l4 4" />
-            </svg>
-            아카이브
-          </a>
           <span className="mono text-[13px] text-(--tt-muted)">
             {kstDate(opensAt)} — {kstMonthDay(new Date(opensAt.getTime() + 6 * DAY))} · {STATUS_LABELS[status]}
           </span>
@@ -159,9 +153,8 @@ function Stat({ value, unit, label, index }: { value: number; unit?: string; lab
   const shown = useCountUp(value, 1200)
   return (
     <div
-      className={`flex flex-col-reverse gap-1.5 py-7 px-6 border-(--tt-ink) ${index === 0 ? 'pl-0' : ''} ${
-        index < 3 ? 'border-r-(length:--tt-stroke-bold)' : ''
-      } max-lg:[&:nth-child(2)]:border-r-0 max-lg:[&:nth-child(3)]:pl-0 max-lg:[&:nth-child(-n+2)]:border-b-(length:--tt-stroke-bold)`}
+      className={`flex flex-col-reverse gap-1.5 py-7 px-6 border-(--tt-ink) ${index === 0 ? 'pl-0' : ''} ${index < 3 ? 'border-r-(length:--tt-stroke-bold)' : ''
+        } max-lg:[&:nth-child(2)]:border-r-0 max-lg:[&:nth-child(3)]:pl-0 max-lg:[&:nth-child(-n+2)]:border-b-(length:--tt-stroke-bold)`}
     >
       <dt className="text-sm text-(--tt-muted)">{label}</dt>
       <dd className="m-0 tt-numeral-l max-sm:text-[52px] tabular-nums" aria-label={`${value.toLocaleString('ko-KR')}${unit ?? ''}`}>
@@ -213,11 +206,10 @@ function WeekLink({ week, dir, now }: { week: Week; dir: 'prev' | 'next'; now: D
   return (
     <a
       href={`/w/${week.id}`}
-      className={`relative isolate overflow-hidden flex flex-col gap-3 px-10 max-sm:px-4 py-14 max-sm:py-9 text-(--tt-ink) no-underline before:absolute before:inset-0 before:-z-10 before:bg-(--tt-signal) before:scale-x-0 before:transition-transform before:duration-500 before:ease-(--tt-ease-wipe) hover:before:scale-x-100 focus-visible:before:scale-x-100 ${
-        dir === 'prev'
+      className={`relative isolate overflow-hidden flex flex-col gap-3 px-10 max-sm:px-4 py-14 max-sm:py-9 text-(--tt-ink) no-underline before:absolute before:inset-0 before:-z-10 before:bg-(--tt-signal) before:scale-x-0 before:transition-transform before:duration-500 before:ease-(--tt-ease-wipe) hover:before:scale-x-100 focus-visible:before:scale-x-100 ${dir === 'prev'
           ? 'before:origin-left'
           : 'items-end text-right before:origin-right border-l-(length:--tt-stroke-bold) max-sm:border-l-0 max-sm:border-t-(length:--tt-stroke-bold) border-(--tt-ink)'
-      }`}
+        }`}
     >
       <span className="mono text-[13px]">{caption}</span>
       <span className="tt-numeral-xl max-sm:text-[60px]">{week.code}</span>

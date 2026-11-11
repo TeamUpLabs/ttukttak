@@ -66,12 +66,6 @@ function SubmissionDetail({ id, renderVote, viewer }: SubmissionDetailProps) {
     <>
       {/* 머리 */}
       <section className={`${WRAP} pt-12 pb-14 flex flex-col gap-7`}>
-        <a href="/#submit" className="group mono inline-flex items-center gap-2 self-start text-[13px] text-(--tt-muted) no-underline hover:text-(--tt-ink)">
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" className="transition-transform duration-300 group-hover:-translate-x-1">
-            <path d="M12 7H2M6 3 2 7l4 4" />
-          </svg>
-          {week.code} 제출작으로
-        </a>
         <ul aria-label="제출작 분류" className="m-0 p-0 list-none flex flex-wrap gap-2">
           <li><Tag><span className="mono">{week.code}</span></Tag></li>
           <li><Tag>{week.title}</Tag></li>
@@ -151,9 +145,8 @@ function SubmissionDetail({ id, renderVote, viewer }: SubmissionDetailProps) {
                 <span
                   key={i}
                   title={`${slotLabel(i)}부터 6시간 · 커밋 ${n}개`}
-                  className={`min-h-1 rounded-t-(--tt-radius-xs) origin-bottom animate-[tt-bar_1s_var(--tt-ease-snap)_both] transition-colors hover:bg-(--tt-muted) ${
-                    i === peakIndex && n > 0 ? 'bg-(--tt-signal)' : 'bg-(--tt-ink)'
-                  }`}
+                  className={`min-h-1 rounded-t-(--tt-radius-xs) origin-bottom animate-[tt-bar_1s_var(--tt-ease-snap)_both] transition-colors hover:bg-(--tt-muted) ${i === peakIndex && n > 0 ? 'bg-(--tt-signal)' : 'bg-(--tt-ink)'
+                    }`}
                   style={{ height: `${(n / peak) * 100}%`, animationDelay: `${i * 50}ms` }}
                 />
               ))}

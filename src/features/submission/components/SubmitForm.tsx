@@ -158,12 +158,6 @@ function SubmitForm({ week, deadline, now, submittedCount, viewer, streakBefore 
     <>
       {/* 머리 + 마감 띠 */}
       <div className="flex flex-col gap-8 pb-12">
-        <a href="/#theme" className="group mono inline-flex items-center gap-2 self-start text-[13px] text-(--tt-muted) no-underline hover:text-(--tt-ink)">
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" className="transition-transform duration-300 group-hover:-translate-x-1">
-            <path d="M12 7H2M6 3 2 7l4 4" />
-          </svg>
-          이번 주 주제로
-        </a>
         <div className="flex justify-between items-end flex-wrap gap-6">
           <div className="flex flex-col gap-3">
             <span className="mono text-[13px] text-(--tt-muted)">{week.code} · {week.title}</span>
@@ -385,11 +379,10 @@ function SubmitForm({ week, deadline, now, submittedCount, viewer, streakBefore 
               type="submit"
               form="submit-form"
               disabled={!ready}
-              className={`w-full min-h-16 rounded-full text-[17px] font-bold transition-[translate,box-shadow,background-color,color] duration-(--tt-dur-press) focus-visible:shadow-[0_0_0_4px_var(--tt-focus)] ${
-                ready
+              className={`w-full min-h-16 rounded-full text-[17px] font-bold transition-[translate,box-shadow,background-color,color] duration-(--tt-dur-press) focus-visible:shadow-[0_0_0_4px_var(--tt-focus)] ${ready
                   ? 'bg-(--tt-signal) text-(--tt-ink) cursor-pointer shadow-(--tt-shadow-press) animate-[tt-breathe_2.2s_ease-in-out_infinite] active:translate-y-2.5 active:shadow-none active:animate-none'
                   : 'bg-(--tt-fill-quiet) text-(--tt-muted) cursor-not-allowed'
-              }`}
+                }`}
             >
               {ready ? '제출하기' : `${checks.length - doneCount}개 남았어요`}
             </button>
