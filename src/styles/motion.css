@@ -122,6 +122,24 @@
   }
 }
 
+/* 제출 완료 카드: 위에서 떨어져 살짝 기운 채 내려앉아요 */
+@keyframes tt-drop {
+  0% {
+    opacity: 0;
+    transform: translateY(-70px) rotate(-7deg);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(10px) rotate(1.2deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(-1.5deg);
+  }
+}
+
 /* 주차 결과의 거대한 주차 코드: 넓은 폭에서 좁은 폭으로 조여들어요 */
 @keyframes tt-stretch {
   from {

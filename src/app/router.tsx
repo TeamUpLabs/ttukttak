@@ -5,8 +5,8 @@ import HomePage from '../pages/HomePage.tsx'
 export const router = createBrowserRouter([
   { path: '/', element: <HomePage /> },
   { path: '/login', lazy: () => import('../pages/LoginPage.tsx').then((m) => ({ Component: m.default })) },
+  { path: '/submit', lazy: () => import('../pages/SubmitPage.tsx').then((m) => ({ Component: m.default })) },
   { path: '/p/:id', lazy: () => import('../pages/SubmissionPage.tsx').then((m) => ({ Component: m.default })) },
   { path: '/w/:id', lazy: () => import('../pages/WeekPage.tsx').then((m) => ({ Component: m.default })) },
-  // "/@jh.park". 정적 라우트(/login)가 먼저 매칭돼요.
   { path: '/:handle', lazy: () => import('../pages/ProfilePage.tsx').then((m) => ({ Component: m.default })) },
 ])
