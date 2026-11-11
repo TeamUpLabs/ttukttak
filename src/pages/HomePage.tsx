@@ -23,6 +23,18 @@ function HomePage() {
               <Button variant="secondary" label="이번 주 참가하기" hasArrow />
               <Button variant="primary" label="제출작 구경하기" />
             </div>
+            <div className="w-full pt-10 border-t border-(--tt-line)">
+              <div className="w-full flex gap-12 justify-center">
+                <div className="flex flex-col">
+                  <span className="text-4xl font-stretch-extra-condensed font-extrabold leading-none">46</span>
+                  <span className="text-[#5E5E58] text-sm">지금 만드는 중</span>
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-4xl font-stretch-extra-condensed font-extrabold leading-none">23</span>
+                  <span className="text-[#5E5E58] text-sm">제출 완료</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <ThisWeekCard />
