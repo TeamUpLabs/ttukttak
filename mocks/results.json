@@ -1,0 +1,4511 @@
+[
+  {
+    "weekId": "2026-w02",
+    "handle": "sora",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 51,
+    "title": "입력창 하나만 · 작은 실험 하나",
+    "submittedAt": "2026-01-06T20:58:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w02",
+    "handle": "doyun",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 76,
+    "title": "입력창 하나만 · 작은 실험 하나",
+    "submittedAt": "2026-01-06T04:11:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w02",
+    "handle": "woojin",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 93,
+    "title": "한 줄 일기",
+    "submittedAt": "2026-01-07T05:56:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w02",
+    "handle": "jun.k",
+    "track": "regular",
+    "rank": 3,
+    "votes": 66,
+    "title": "입력창 하나만 · 하루 만에 만든 도구",
+    "submittedAt": "2026-01-07T21:24:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w02",
+    "handle": "sumin",
+    "track": "regular",
+    "rank": 2,
+    "votes": 78,
+    "title": "입력창 하나만 · 끝까지 만든 장난감",
+    "submittedAt": "2026-01-06T17:59:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w02",
+    "handle": "harin",
+    "track": "regular",
+    "rank": 1,
+    "votes": 99,
+    "title": "자연어로 적는 할 일",
+    "submittedAt": "2026-01-07T03:16:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w02",
+    "handle": "jiwoo",
+    "track": "expert",
+    "rank": 3,
+    "votes": 104,
+    "title": "입력창 하나만 · 작은 실험 하나",
+    "submittedAt": "2026-01-07T12:01:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w02",
+    "handle": "woojin",
+    "track": "expert",
+    "rank": 2,
+    "votes": 126,
+    "title": "입력창 하나만 · 작은 실험 하나",
+    "submittedAt": "2026-01-07T15:04:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w02",
+    "handle": "woojin",
+    "track": "expert",
+    "rank": 1,
+    "votes": 147,
+    "title": "명령어 하나로 도는 가계부",
+    "submittedAt": "2026-01-08T04:52:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w03",
+    "handle": "jiwoo",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 29,
+    "title": "스크롤 없이 · 하루 만에 만든 도구",
+    "submittedAt": "2026-01-13T07:07:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w03",
+    "handle": "jiwoo",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 42,
+    "title": "스크롤 없이 · 끝까지 만든 장난감",
+    "submittedAt": "2026-01-12T19:59:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w03",
+    "handle": "harin",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 52,
+    "title": "오늘 날씨 한 장",
+    "submittedAt": "2026-01-13T14:04:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w03",
+    "handle": "woojin",
+    "track": "regular",
+    "rank": 3,
+    "votes": 67,
+    "title": "스크롤 없이 · 하루 만에 만든 도구",
+    "submittedAt": "2026-01-12T20:42:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w03",
+    "handle": "doyun",
+    "track": "regular",
+    "rank": 2,
+    "votes": 98,
+    "title": "스크롤 없이 · 작은 실험 하나",
+    "submittedAt": "2026-01-14T08:08:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w03",
+    "handle": "eunbi",
+    "track": "regular",
+    "rank": 1,
+    "votes": 134,
+    "title": "한 화면 주간 플래너",
+    "submittedAt": "2026-01-14T14:06:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w03",
+    "handle": "eunbi",
+    "track": "expert",
+    "rank": 3,
+    "votes": 47,
+    "title": "스크롤 없이 · 하루 만에 만든 도구",
+    "submittedAt": "2026-01-14T02:08:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w03",
+    "handle": "eunbi",
+    "track": "expert",
+    "rank": 2,
+    "votes": 48,
+    "title": "스크롤 없이 · 작은 실험 하나",
+    "submittedAt": "2026-01-13T14:34:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w04",
+    "handle": "minseo",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 76,
+    "title": "색 하나만 · 끝까지 만든 장난감",
+    "submittedAt": "2026-01-21T04:02:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w04",
+    "handle": "jun.k",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 81,
+    "title": "색 하나만 · 끝까지 만든 장난감",
+    "submittedAt": "2026-01-21T20:40:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w04",
+    "handle": "yuna",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 95,
+    "title": "한 색 무드 트래커",
+    "submittedAt": "2026-01-21T16:01:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w04",
+    "handle": "woojin",
+    "track": "regular",
+    "rank": 3,
+    "votes": 64,
+    "title": "색 하나만 · 작은 실험 하나",
+    "submittedAt": "2026-01-22T00:21:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w04",
+    "handle": "jiwoo",
+    "track": "regular",
+    "rank": 2,
+    "votes": 88,
+    "title": "색 하나만 · 끝까지 만든 장난감",
+    "submittedAt": "2026-01-20T12:42:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w04",
+    "handle": "sora",
+    "track": "regular",
+    "rank": 1,
+    "votes": 101,
+    "title": "강조색 하나뿐인 대시보드",
+    "submittedAt": "2026-01-19T18:57:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w04",
+    "handle": "harin",
+    "track": "expert",
+    "rank": 3,
+    "votes": 86,
+    "title": "색 하나만 · 하루 만에 만든 도구",
+    "submittedAt": "2026-01-19T21:10:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w04",
+    "handle": "woojin",
+    "track": "expert",
+    "rank": 2,
+    "votes": 96,
+    "title": "색 하나만 · 하루 만에 만든 도구",
+    "submittedAt": "2026-01-21T13:28:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w04",
+    "handle": "gaeun",
+    "track": "expert",
+    "rank": 1,
+    "votes": 120,
+    "title": "색 하나로 그리는 데이터 시각화",
+    "submittedAt": "2026-01-19T20:10:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w05",
+    "handle": "hyeon",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 70,
+    "title": "로딩 0초 · 끝까지 만든 장난감",
+    "submittedAt": "2026-01-27T07:09:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w05",
+    "handle": "yuna",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 107,
+    "title": "로딩 0초 · 하루 만에 만든 도구",
+    "submittedAt": "2026-01-27T20:39:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w05",
+    "handle": "eunbi",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 134,
+    "title": "바로 뜨는 메모장",
+    "submittedAt": "2026-01-27T14:00:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w05",
+    "handle": "harin",
+    "track": "regular",
+    "rank": 3,
+    "votes": 45,
+    "title": "로딩 0초 · 끝까지 만든 장난감",
+    "submittedAt": "2026-01-27T15:28:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w05",
+    "handle": "harin",
+    "track": "regular",
+    "rank": 2,
+    "votes": 63,
+    "title": "로딩 0초 · 작은 실험 하나",
+    "submittedAt": "2026-01-27T05:14:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w05",
+    "handle": "jiwoo",
+    "track": "regular",
+    "rank": 1,
+    "votes": 98,
+    "title": "오프라인 우선 뉴스 리더",
+    "submittedAt": "2026-01-27T03:03:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w05",
+    "handle": "hyeon",
+    "track": "expert",
+    "rank": 3,
+    "votes": 75,
+    "title": "로딩 0초 · 작은 실험 하나",
+    "submittedAt": "2026-01-26T21:35:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w05",
+    "handle": "eunbi",
+    "track": "expert",
+    "rank": 2,
+    "votes": 87,
+    "title": "로딩 0초 · 하루 만에 만든 도구",
+    "submittedAt": "2026-01-27T01:29:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w05",
+    "handle": "eunbi",
+    "track": "expert",
+    "rank": 1,
+    "votes": 93,
+    "title": "낙관적 업데이트 할 일 앱",
+    "submittedAt": "2026-01-27T11:12:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w06",
+    "handle": "minseo",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 69,
+    "title": "아이콘 없이 · 하루 만에 만든 도구",
+    "submittedAt": "2026-02-03T05:08:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w06",
+    "handle": "sora",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 100,
+    "title": "아이콘 없이 · 끝까지 만든 장난감",
+    "submittedAt": "2026-02-03T01:06:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w06",
+    "handle": "eunbi",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 101,
+    "title": "글자로만 된 타이머",
+    "submittedAt": "2026-02-03T20:47:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w06",
+    "handle": "sora",
+    "track": "regular",
+    "rank": 3,
+    "votes": 44,
+    "title": "아이콘 없이 · 작은 실험 하나",
+    "submittedAt": "2026-02-04T05:02:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w06",
+    "handle": "woojin",
+    "track": "regular",
+    "rank": 2,
+    "votes": 56,
+    "title": "아이콘 없이 · 하루 만에 만든 도구",
+    "submittedAt": "2026-02-03T19:49:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w06",
+    "handle": "jiwoo",
+    "track": "regular",
+    "rank": 1,
+    "votes": 89,
+    "title": "글자로 그린 달력",
+    "submittedAt": "2026-02-03T22:02:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w06",
+    "handle": "jiwoo",
+    "track": "expert",
+    "rank": 3,
+    "votes": 70,
+    "title": "아이콘 없이 · 하루 만에 만든 도구",
+    "submittedAt": "2026-02-05T05:05:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w06",
+    "handle": "jiwoo",
+    "track": "expert",
+    "rank": 1,
+    "votes": 110,
+    "title": "텍스트 기반 대시보드",
+    "submittedAt": "2026-02-04T04:22:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w07",
+    "handle": "sora",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 65,
+    "title": "명절에 쓰는 앱 · 하루 만에 만든 도구",
+    "submittedAt": "2026-02-12T02:33:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w07",
+    "handle": "doyun",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 82,
+    "title": "명절에 쓰는 앱 · 하루 만에 만든 도구",
+    "submittedAt": "2026-02-11T16:17:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w07",
+    "handle": "sumin",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 98,
+    "title": "세뱃돈 기록장",
+    "submittedAt": "2026-02-10T08:10:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w07",
+    "handle": "jiwoo",
+    "track": "regular",
+    "rank": 3,
+    "votes": 89,
+    "title": "명절에 쓰는 앱 · 작은 실험 하나",
+    "submittedAt": "2026-02-10T07:34:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w07",
+    "handle": "harin",
+    "track": "regular",
+    "rank": 2,
+    "votes": 121,
+    "title": "명절에 쓰는 앱 · 작은 실험 하나",
+    "submittedAt": "2026-02-09T19:42:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w07",
+    "handle": "gaeun",
+    "track": "regular",
+    "rank": 1,
+    "votes": 153,
+    "title": "친척 호칭 계산기",
+    "submittedAt": "2026-02-11T11:15:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w07",
+    "handle": "minseo",
+    "track": "expert",
+    "rank": 3,
+    "votes": 40,
+    "title": "명절에 쓰는 앱 · 작은 실험 하나",
+    "submittedAt": "2026-02-12T01:33:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w07",
+    "handle": "eunbi",
+    "track": "expert",
+    "rank": 2,
+    "votes": 44,
+    "title": "명절에 쓰는 앱 · 하루 만에 만든 도구",
+    "submittedAt": "2026-02-12T03:44:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w07",
+    "handle": "gaeun",
+    "track": "expert",
+    "rank": 1,
+    "votes": 53,
+    "title": "귀성길 교대 운전 타이머",
+    "submittedAt": "2026-02-11T18:40:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w09",
+    "handle": "gaeun",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 75,
+    "title": "되돌리기 무한 · 작은 실험 하나",
+    "submittedAt": "2026-02-23T20:35:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w09",
+    "handle": "jiwoo",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 81,
+    "title": "되돌리기 무한 · 하루 만에 만든 도구",
+    "submittedAt": "2026-02-24T16:03:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w09",
+    "handle": "jun.k",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 86,
+    "title": "되돌릴 수 있는 그림판",
+    "submittedAt": "2026-02-25T19:14:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w09",
+    "handle": "hyeon",
+    "track": "regular",
+    "rank": 3,
+    "votes": 46,
+    "title": "되돌리기 무한 · 작은 실험 하나",
+    "submittedAt": "2026-02-25T23:11:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w09",
+    "handle": "sumin",
+    "track": "regular",
+    "rank": 2,
+    "votes": 57,
+    "title": "되돌리기 무한 · 작은 실험 하나",
+    "submittedAt": "2026-02-24T10:20:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w09",
+    "handle": "sora",
+    "track": "regular",
+    "rank": 1,
+    "votes": 61,
+    "title": "시간 여행 할 일 앱",
+    "submittedAt": "2026-02-25T19:38:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w09",
+    "handle": "jun.k",
+    "track": "expert",
+    "rank": 3,
+    "votes": 129,
+    "title": "되돌리기 무한 · 하루 만에 만든 도구",
+    "submittedAt": "2026-02-24T03:40:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w09",
+    "handle": "gaeun",
+    "track": "expert",
+    "rank": 2,
+    "votes": 155,
+    "title": "되돌리기 무한 · 끝까지 만든 장난감",
+    "submittedAt": "2026-02-24T00:58:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w09",
+    "handle": "sora",
+    "track": "expert",
+    "rank": 1,
+    "votes": 194,
+    "title": "히스토리가 가지 치는 텍스트 에디터",
+    "submittedAt": "2026-02-26T00:46:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w10",
+    "handle": "harin",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 72,
+    "title": "5초 안에 첫 사용 · 하루 만에 만든 도구",
+    "submittedAt": "2026-03-03T02:36:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w10",
+    "handle": "sora",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 96,
+    "title": "5초 안에 첫 사용 · 하루 만에 만든 도구",
+    "submittedAt": "2026-03-03T16:00:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w10",
+    "handle": "sora",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 117,
+    "title": "눌러서 세는 카운터",
+    "submittedAt": "2026-03-04T19:11:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w10",
+    "handle": "gaeun",
+    "track": "regular",
+    "rank": 3,
+    "votes": 64,
+    "title": "5초 안에 첫 사용 · 작은 실험 하나",
+    "submittedAt": "2026-03-04T03:05:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w10",
+    "handle": "harin",
+    "track": "regular",
+    "rank": 2,
+    "votes": 72,
+    "title": "5초 안에 첫 사용 · 하루 만에 만든 도구",
+    "submittedAt": "2026-03-04T02:41:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w10",
+    "handle": "gaeun",
+    "track": "regular",
+    "rank": 1,
+    "votes": 94,
+    "title": "한 번 눌러 출석 체크",
+    "submittedAt": "2026-03-04T17:31:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w10",
+    "handle": "jun.k",
+    "track": "expert",
+    "rank": 3,
+    "votes": 83,
+    "title": "5초 안에 첫 사용 · 작은 실험 하나",
+    "submittedAt": "2026-03-04T03:37:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w10",
+    "handle": "woojin",
+    "track": "expert",
+    "rank": 2,
+    "votes": 100,
+    "title": "5초 안에 첫 사용 · 하루 만에 만든 도구",
+    "submittedAt": "2026-03-03T09:10:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w10",
+    "handle": "jiwoo",
+    "track": "expert",
+    "rank": 1,
+    "votes": 110,
+    "title": "설명 없이 배우는 단축키 연습",
+    "submittedAt": "2026-03-04T13:41:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w11",
+    "handle": "gaeun",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 91,
+    "title": "숫자만 입력 · 끝까지 만든 장난감",
+    "submittedAt": "2026-03-12T02:01:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w11",
+    "handle": "sumin",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 103,
+    "title": "숫자만 입력 · 하루 만에 만든 도구",
+    "submittedAt": "2026-03-10T12:20:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w11",
+    "handle": "woojin",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 119,
+    "title": "몸무게 기록장",
+    "submittedAt": "2026-03-10T22:06:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w11",
+    "handle": "gaeun",
+    "track": "regular",
+    "rank": 3,
+    "votes": 119,
+    "title": "숫자만 입력 · 끝까지 만든 장난감",
+    "submittedAt": "2026-03-10T11:37:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w11",
+    "handle": "eunbi",
+    "track": "regular",
+    "rank": 2,
+    "votes": 158,
+    "title": "숫자만 입력 · 끝까지 만든 장난감",
+    "submittedAt": "2026-03-10T18:29:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w11",
+    "handle": "harin",
+    "track": "regular",
+    "rank": 1,
+    "votes": 167,
+    "title": "더치페이 계산기",
+    "submittedAt": "2026-03-11T22:40:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w11",
+    "handle": "gaeun",
+    "track": "expert",
+    "rank": 3,
+    "votes": 112,
+    "title": "숫자만 입력 · 하루 만에 만든 도구",
+    "submittedAt": "2026-03-11T16:46:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w11",
+    "handle": "harin",
+    "track": "expert",
+    "rank": 2,
+    "votes": 143,
+    "title": "숫자만 입력 · 하루 만에 만든 도구",
+    "submittedAt": "2026-03-11T12:54:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w11",
+    "handle": "harin",
+    "track": "expert",
+    "rank": 1,
+    "votes": 161,
+    "title": "숫자로 쓰는 암호 메신저",
+    "submittedAt": "2026-03-12T00:05:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w12",
+    "handle": "sora",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 78,
+    "title": "날씨가 바꾸는 화면 · 작은 실험 하나",
+    "submittedAt": "2026-03-18T19:36:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w12",
+    "handle": "gaeun",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 105,
+    "title": "날씨가 바꾸는 화면 · 끝까지 만든 장난감",
+    "submittedAt": "2026-03-18T18:27:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w12",
+    "handle": "sora",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 107,
+    "title": "날씨 따라 바뀌는 배경",
+    "submittedAt": "2026-03-17T02:14:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w12",
+    "handle": "hyeon",
+    "track": "regular",
+    "rank": 3,
+    "votes": 26,
+    "title": "날씨가 바꾸는 화면 · 작은 실험 하나",
+    "submittedAt": "2026-03-18T01:55:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w12",
+    "handle": "sora",
+    "track": "regular",
+    "rank": 2,
+    "votes": 35,
+    "title": "날씨가 바꾸는 화면 · 끝까지 만든 장난감",
+    "submittedAt": "2026-03-18T09:24:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w12",
+    "handle": "jun.k",
+    "track": "expert",
+    "rank": 3,
+    "votes": 75,
+    "title": "날씨가 바꾸는 화면 · 끝까지 만든 장난감",
+    "submittedAt": "2026-03-19T00:48:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w12",
+    "handle": "yuna",
+    "track": "expert",
+    "rank": 2,
+    "votes": 96,
+    "title": "날씨가 바꾸는 화면 · 하루 만에 만든 도구",
+    "submittedAt": "2026-03-16T16:42:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w12",
+    "handle": "minseo",
+    "track": "expert",
+    "rank": 1,
+    "votes": 104,
+    "title": "기상 데이터로 만드는 음악",
+    "submittedAt": "2026-03-18T19:59:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w13",
+    "handle": "sora",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 111,
+    "title": "만우절 · 끝까지 만든 장난감",
+    "submittedAt": "2026-03-23T16:46:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w13",
+    "handle": "sumin",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 139,
+    "title": "만우절 · 하루 만에 만든 도구",
+    "submittedAt": "2026-03-25T02:12:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w13",
+    "handle": "sumin",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 146,
+    "title": "누를수록 커지는 확인 버튼",
+    "submittedAt": "2026-03-25T05:46:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w13",
+    "handle": "woojin",
+    "track": "regular",
+    "rank": 3,
+    "votes": 97,
+    "title": "만우절 · 작은 실험 하나",
+    "submittedAt": "2026-03-26T02:35:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w13",
+    "handle": "yuna",
+    "track": "regular",
+    "rank": 2,
+    "votes": 133,
+    "title": "만우절 · 끝까지 만든 장난감",
+    "submittedAt": "2026-03-25T10:35:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w13",
+    "handle": "eunbi",
+    "track": "regular",
+    "rank": 1,
+    "votes": 151,
+    "title": "거꾸로 가는 시계",
+    "submittedAt": "2026-03-25T16:16:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w13",
+    "handle": "harin",
+    "track": "expert",
+    "rank": 2,
+    "votes": 100,
+    "title": "만우절 · 하루 만에 만든 도구",
+    "submittedAt": "2026-03-25T21:29:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w13",
+    "handle": "yuna",
+    "track": "expert",
+    "rank": 1,
+    "votes": 101,
+    "title": "진지한 척하는 운세",
+    "submittedAt": "2026-03-25T08:07:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w14",
+    "handle": "woojin",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 81,
+    "title": "애니메이션 없이 · 하루 만에 만든 도구",
+    "submittedAt": "2026-03-30T18:49:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w14",
+    "handle": "jiwoo",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 98,
+    "title": "애니메이션 없이 · 하루 만에 만든 도구",
+    "submittedAt": "2026-03-30T21:21:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w14",
+    "handle": "gaeun",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 118,
+    "title": "정지 화면 퀴즈",
+    "submittedAt": "2026-03-31T04:03:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w14",
+    "handle": "gaeun",
+    "track": "regular",
+    "rank": 3,
+    "votes": 51,
+    "title": "애니메이션 없이 · 작은 실험 하나",
+    "submittedAt": "2026-03-31T08:44:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w14",
+    "handle": "doyun",
+    "track": "regular",
+    "rank": 2,
+    "votes": 76,
+    "title": "애니메이션 없이 · 끝까지 만든 장난감",
+    "submittedAt": "2026-04-01T06:17:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w14",
+    "handle": "minseo",
+    "track": "regular",
+    "rank": 1,
+    "votes": 81,
+    "title": "한 장씩 넘기는 그림책",
+    "submittedAt": "2026-04-01T15:49:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w14",
+    "handle": "sora",
+    "track": "expert",
+    "rank": 3,
+    "votes": 126,
+    "title": "애니메이션 없이 · 하루 만에 만든 도구",
+    "submittedAt": "2026-03-30T20:03:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w14",
+    "handle": "minseo",
+    "track": "expert",
+    "rank": 2,
+    "votes": 149,
+    "title": "애니메이션 없이 · 작은 실험 하나",
+    "submittedAt": "2026-03-31T03:40:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w14",
+    "handle": "eunbi",
+    "track": "expert",
+    "rank": 1,
+    "votes": 151,
+    "title": "상태 머신 텍스트 게임",
+    "submittedAt": "2026-04-01T19:02:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w15",
+    "handle": "hyeon",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 75,
+    "title": "100KB 이하 · 끝까지 만든 장난감",
+    "submittedAt": "2026-04-06T19:55:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w15",
+    "handle": "eunbi",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 109,
+    "title": "100KB 이하 · 끝까지 만든 장난감",
+    "submittedAt": "2026-04-06T23:43:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w15",
+    "handle": "doyun",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 146,
+    "title": "가벼운 메모장",
+    "submittedAt": "2026-04-07T12:17:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w15",
+    "handle": "woojin",
+    "track": "regular",
+    "rank": 3,
+    "votes": 63,
+    "title": "100KB 이하 · 하루 만에 만든 도구",
+    "submittedAt": "2026-04-08T12:02:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w15",
+    "handle": "harin",
+    "track": "regular",
+    "rank": 2,
+    "votes": 77,
+    "title": "100KB 이하 · 작은 실험 하나",
+    "submittedAt": "2026-04-08T08:05:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w15",
+    "handle": "sumin",
+    "track": "regular",
+    "rank": 1,
+    "votes": 88,
+    "title": "빠른 링크 모음",
+    "submittedAt": "2026-04-08T19:30:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w15",
+    "handle": "gaeun",
+    "track": "expert",
+    "rank": 3,
+    "votes": 75,
+    "title": "100KB 이하 · 끝까지 만든 장난감",
+    "submittedAt": "2026-04-08T08:31:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w15",
+    "handle": "jiwoo",
+    "track": "expert",
+    "rank": 2,
+    "votes": 99,
+    "title": "100KB 이하 · 작은 실험 하나",
+    "submittedAt": "2026-04-07T13:01:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w15",
+    "handle": "sumin",
+    "track": "expert",
+    "rank": 1,
+    "votes": 134,
+    "title": "100KB 안에 든 게임",
+    "submittedAt": "2026-04-07T19:48:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w16",
+    "handle": "jiwoo",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 111,
+    "title": "라이브러리 없이 · 끝까지 만든 장난감",
+    "submittedAt": "2026-04-14T11:06:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w16",
+    "handle": "harin",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 141,
+    "title": "바닐라 할 일 앱",
+    "submittedAt": "2026-04-14T13:28:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w16",
+    "handle": "gaeun",
+    "track": "regular",
+    "rank": 3,
+    "votes": 64,
+    "title": "라이브러리 없이 · 끝까지 만든 장난감",
+    "submittedAt": "2026-04-15T09:26:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w16",
+    "handle": "harin",
+    "track": "regular",
+    "rank": 2,
+    "votes": 70,
+    "title": "라이브러리 없이 · 끝까지 만든 장난감",
+    "submittedAt": "2026-04-13T23:17:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w16",
+    "handle": "sora",
+    "track": "regular",
+    "rank": 1,
+    "votes": 88,
+    "title": "바닐라 칸반 보드",
+    "submittedAt": "2026-04-14T04:15:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w16",
+    "handle": "eunbi",
+    "track": "expert",
+    "rank": 3,
+    "votes": 51,
+    "title": "라이브러리 없이 · 끝까지 만든 장난감",
+    "submittedAt": "2026-04-13T19:13:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w16",
+    "handle": "jiwoo",
+    "track": "expert",
+    "rank": 2,
+    "votes": 54,
+    "title": "라이브러리 없이 · 작은 실험 하나",
+    "submittedAt": "2026-04-15T00:44:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w17",
+    "handle": "jun.k",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 89,
+    "title": "시간이 핵심 · 끝까지 만든 장난감",
+    "submittedAt": "2026-04-22T14:11:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w17",
+    "handle": "doyun",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 109,
+    "title": "시간이 핵심 · 하루 만에 만든 도구",
+    "submittedAt": "2026-04-23T02:18:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w17",
+    "handle": "eunbi",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 116,
+    "title": "라면 타이머",
+    "submittedAt": "2026-04-21T20:27:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w17",
+    "handle": "yuna",
+    "track": "regular",
+    "rank": 3,
+    "votes": 58,
+    "title": "시간이 핵심 · 끝까지 만든 장난감",
+    "submittedAt": "2026-04-21T05:12:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w17",
+    "handle": "jun.k",
+    "track": "regular",
+    "rank": 2,
+    "votes": 91,
+    "title": "시간이 핵심 · 끝까지 만든 장난감",
+    "submittedAt": "2026-04-22T19:23:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w17",
+    "handle": "sora",
+    "track": "regular",
+    "rank": 1,
+    "votes": 92,
+    "title": "회의 발언 타이머",
+    "submittedAt": "2026-04-23T06:37:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w17",
+    "handle": "hyeon",
+    "track": "expert",
+    "rank": 3,
+    "votes": 130,
+    "title": "시간이 핵심 · 하루 만에 만든 도구",
+    "submittedAt": "2026-04-22T11:30:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w17",
+    "handle": "sora",
+    "track": "expert",
+    "rank": 2,
+    "votes": 144,
+    "title": "시간이 핵심 · 하루 만에 만든 도구",
+    "submittedAt": "2026-04-22T06:56:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w17",
+    "handle": "harin",
+    "track": "expert",
+    "rank": 1,
+    "votes": 147,
+    "title": "여러 구간을 재는 스톱워치",
+    "submittedAt": "2026-04-22T17:27:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w18",
+    "handle": "harin",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 76,
+    "title": "아이가 쓰는 앱 · 끝까지 만든 장난감",
+    "submittedAt": "2026-04-28T16:01:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w18",
+    "handle": "jiwoo",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 106,
+    "title": "아이가 쓰는 앱 · 끝까지 만든 장난감",
+    "submittedAt": "2026-04-28T14:29:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w18",
+    "handle": "doyun",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 116,
+    "title": "양치 타이머",
+    "submittedAt": "2026-04-28T15:04:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w18",
+    "handle": "woojin",
+    "track": "regular",
+    "rank": 3,
+    "votes": 45,
+    "title": "아이가 쓰는 앱 · 하루 만에 만든 도구",
+    "submittedAt": "2026-04-28T10:38:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w18",
+    "handle": "harin",
+    "track": "regular",
+    "rank": 2,
+    "votes": 77,
+    "title": "아이가 쓰는 앱 · 끝까지 만든 장난감",
+    "submittedAt": "2026-04-28T19:14:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w18",
+    "handle": "sora",
+    "track": "regular",
+    "rank": 1,
+    "votes": 93,
+    "title": "동물 소리 맞히기",
+    "submittedAt": "2026-04-30T08:10:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w18",
+    "handle": "yuna",
+    "track": "expert",
+    "rank": 2,
+    "votes": 137,
+    "title": "아이가 쓰는 앱 · 작은 실험 하나",
+    "submittedAt": "2026-04-28T08:48:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w18",
+    "handle": "yuna",
+    "track": "expert",
+    "rank": 1,
+    "votes": 152,
+    "title": "그림으로 고르는 하루 일과표",
+    "submittedAt": "2026-04-30T06:33:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w19",
+    "handle": "eunbi",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 67,
+    "title": "선물하는 앱 · 작은 실험 하나",
+    "submittedAt": "2026-05-05T22:16:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w19",
+    "handle": "harin",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 71,
+    "title": "선물하는 앱 · 작은 실험 하나",
+    "submittedAt": "2026-05-05T09:59:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w19",
+    "handle": "gaeun",
+    "track": "regular",
+    "rank": 3,
+    "votes": 66,
+    "title": "선물하는 앱 · 작은 실험 하나",
+    "submittedAt": "2026-05-06T23:28:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w19",
+    "handle": "doyun",
+    "track": "regular",
+    "rank": 2,
+    "votes": 105,
+    "title": "선물하는 앱 · 하루 만에 만든 도구",
+    "submittedAt": "2026-05-04T23:41:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w19",
+    "handle": "minseo",
+    "track": "regular",
+    "rank": 1,
+    "votes": 120,
+    "title": "부모님 쿠폰북",
+    "submittedAt": "2026-05-07T08:39:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w19",
+    "handle": "jun.k",
+    "track": "expert",
+    "rank": 3,
+    "votes": 72,
+    "title": "선물하는 앱 · 끝까지 만든 장난감",
+    "submittedAt": "2026-05-06T14:19:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w19",
+    "handle": "hyeon",
+    "track": "expert",
+    "rank": 2,
+    "votes": 91,
+    "title": "선물하는 앱 · 작은 실험 하나",
+    "submittedAt": "2026-05-06T14:29:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w19",
+    "handle": "sora",
+    "track": "expert",
+    "rank": 1,
+    "votes": 98,
+    "title": "손글씨가 써지는 편지",
+    "submittedAt": "2026-05-06T09:51:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w20",
+    "handle": "hyeon",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 25,
+    "title": "가로 모드 전용 · 작은 실험 하나",
+    "submittedAt": "2026-05-12T19:22:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w20",
+    "handle": "yuna",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 59,
+    "title": "가로 모드 전용 · 끝까지 만든 장난감",
+    "submittedAt": "2026-05-13T21:19:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w20",
+    "handle": "sora",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 62,
+    "title": "가로 달력",
+    "submittedAt": "2026-05-13T14:02:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w20",
+    "handle": "sora",
+    "track": "regular",
+    "rank": 3,
+    "votes": 65,
+    "title": "가로 모드 전용 · 하루 만에 만든 도구",
+    "submittedAt": "2026-05-13T12:59:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w20",
+    "handle": "eunbi",
+    "track": "regular",
+    "rank": 2,
+    "votes": 72,
+    "title": "가로 모드 전용 · 하루 만에 만든 도구",
+    "submittedAt": "2026-05-13T16:43:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w20",
+    "handle": "hyeon",
+    "track": "regular",
+    "rank": 1,
+    "votes": 87,
+    "title": "가로로 넘기는 연표",
+    "submittedAt": "2026-05-13T05:15:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w20",
+    "handle": "yuna",
+    "track": "expert",
+    "rank": 3,
+    "votes": 121,
+    "title": "가로 모드 전용 · 작은 실험 하나",
+    "submittedAt": "2026-05-12T17:42:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w20",
+    "handle": "doyun",
+    "track": "expert",
+    "rank": 2,
+    "votes": 128,
+    "title": "가로 모드 전용 · 작은 실험 하나",
+    "submittedAt": "2026-05-12T21:42:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w20",
+    "handle": "minseo",
+    "track": "expert",
+    "rank": 1,
+    "votes": 163,
+    "title": "마주 보고 하는 2인 게임",
+    "submittedAt": "2026-05-13T01:33:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w21",
+    "handle": "minseo",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 87,
+    "title": "검색이 전부 · 하루 만에 만든 도구",
+    "submittedAt": "2026-05-21T08:58:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w21",
+    "handle": "jun.k",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 124,
+    "title": "검색이 전부 · 끝까지 만든 장난감",
+    "submittedAt": "2026-05-20T12:15:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w21",
+    "handle": "sora",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 126,
+    "title": "내 북마크 검색",
+    "submittedAt": "2026-05-20T17:44:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w21",
+    "handle": "sora",
+    "track": "regular",
+    "rank": 3,
+    "votes": 125,
+    "title": "검색이 전부 · 하루 만에 만든 도구",
+    "submittedAt": "2026-05-19T22:57:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w21",
+    "handle": "jun.k",
+    "track": "regular",
+    "rank": 2,
+    "votes": 135,
+    "title": "검색이 전부 · 하루 만에 만든 도구",
+    "submittedAt": "2026-05-20T02:45:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w21",
+    "handle": "woojin",
+    "track": "regular",
+    "rank": 1,
+    "votes": 158,
+    "title": "자주 쓰는 문장 검색",
+    "submittedAt": "2026-05-21T09:20:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w21",
+    "handle": "sora",
+    "track": "expert",
+    "rank": 3,
+    "votes": 33,
+    "title": "검색이 전부 · 끝까지 만든 장난감",
+    "submittedAt": "2026-05-20T04:56:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w21",
+    "handle": "yuna",
+    "track": "expert",
+    "rank": 2,
+    "votes": 34,
+    "title": "검색이 전부 · 작은 실험 하나",
+    "submittedAt": "2026-05-20T22:13:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w22",
+    "handle": "jun.k",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 58,
+    "title": "끌어서만 · 끝까지 만든 장난감",
+    "submittedAt": "2026-05-28T08:07:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w22",
+    "handle": "gaeun",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 97,
+    "title": "끌어서만 · 작은 실험 하나",
+    "submittedAt": "2026-05-27T00:01:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w22",
+    "handle": "yuna",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 132,
+    "title": "끌어서 정리하는 할 일",
+    "submittedAt": "2026-05-25T22:40:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w22",
+    "handle": "jun.k",
+    "track": "regular",
+    "rank": 3,
+    "votes": 47,
+    "title": "끌어서만 · 끝까지 만든 장난감",
+    "submittedAt": "2026-05-27T07:20:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w22",
+    "handle": "woojin",
+    "track": "regular",
+    "rank": 2,
+    "votes": 80,
+    "title": "끌어서만 · 하루 만에 만든 도구",
+    "submittedAt": "2026-05-27T21:16:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w22",
+    "handle": "doyun",
+    "track": "regular",
+    "rank": 1,
+    "votes": 103,
+    "title": "끌어서 잡는 일정 블록",
+    "submittedAt": "2026-05-28T02:56:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w22",
+    "handle": "woojin",
+    "track": "expert",
+    "rank": 2,
+    "votes": 98,
+    "title": "끌어서만 · 끝까지 만든 장난감",
+    "submittedAt": "2026-05-27T10:05:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w22",
+    "handle": "jiwoo",
+    "track": "expert",
+    "rank": 1,
+    "votes": 127,
+    "title": "드래그 노드 에디터",
+    "submittedAt": "2026-05-27T01:27:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w23",
+    "handle": "jun.k",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 83,
+    "title": "하루 한 번만 · 끝까지 만든 장난감",
+    "submittedAt": "2026-06-03T08:22:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w23",
+    "handle": "harin",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 107,
+    "title": "하루 한 번만 · 하루 만에 만든 도구",
+    "submittedAt": "2026-06-02T17:25:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w23",
+    "handle": "eunbi",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 111,
+    "title": "하루 한 번 질문",
+    "submittedAt": "2026-06-02T10:29:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w23",
+    "handle": "hyeon",
+    "track": "regular",
+    "rank": 3,
+    "votes": 49,
+    "title": "하루 한 번만 · 작은 실험 하나",
+    "submittedAt": "2026-06-03T11:01:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w23",
+    "handle": "gaeun",
+    "track": "regular",
+    "rank": 2,
+    "votes": 69,
+    "title": "하루 한 번만 · 끝까지 만든 장난감",
+    "submittedAt": "2026-06-04T02:55:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w23",
+    "handle": "doyun",
+    "track": "regular",
+    "rank": 1,
+    "votes": 104,
+    "title": "오늘의 단어",
+    "submittedAt": "2026-06-04T02:41:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w23",
+    "handle": "sumin",
+    "track": "expert",
+    "rank": 3,
+    "votes": 132,
+    "title": "하루 한 번만 · 작은 실험 하나",
+    "submittedAt": "2026-06-04T02:58:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w23",
+    "handle": "minseo",
+    "track": "expert",
+    "rank": 2,
+    "votes": 154,
+    "title": "하루 한 번만 · 하루 만에 만든 도구",
+    "submittedAt": "2026-06-03T15:30:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w23",
+    "handle": "eunbi",
+    "track": "expert",
+    "rank": 1,
+    "votes": 168,
+    "title": "하루 한 수 두는 바둑",
+    "submittedAt": "2026-06-03T18:34:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w24",
+    "handle": "gaeun",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 99,
+    "title": "점 하나로 · 하루 만에 만든 도구",
+    "submittedAt": "2026-06-10T03:30:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w24",
+    "handle": "harin",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 133,
+    "title": "점 하나로 · 끝까지 만든 장난감",
+    "submittedAt": "2026-06-10T16:11:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w24",
+    "handle": "sumin",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 142,
+    "title": "점으로 찍는 습관 달력",
+    "submittedAt": "2026-06-09T16:42:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w24",
+    "handle": "gaeun",
+    "track": "regular",
+    "rank": 3,
+    "votes": 63,
+    "title": "점 하나로 · 작은 실험 하나",
+    "submittedAt": "2026-06-09T18:55:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w24",
+    "handle": "harin",
+    "track": "regular",
+    "rank": 2,
+    "votes": 85,
+    "title": "점 하나로 · 작은 실험 하나",
+    "submittedAt": "2026-06-10T17:03:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w24",
+    "handle": "gaeun",
+    "track": "regular",
+    "rank": 1,
+    "votes": 119,
+    "title": "점으로 보는 지출",
+    "submittedAt": "2026-06-10T18:28:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w24",
+    "handle": "hyeon",
+    "track": "expert",
+    "rank": 2,
+    "votes": 125,
+    "title": "점 하나로 · 하루 만에 만든 도구",
+    "submittedAt": "2026-06-09T09:16:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w24",
+    "handle": "sora",
+    "track": "expert",
+    "rank": 1,
+    "votes": 128,
+    "title": "점 입자 시뮬레이션",
+    "submittedAt": "2026-06-10T23:02:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w25",
+    "handle": "minseo",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 53,
+    "title": "일부러 느리게 · 작은 실험 하나",
+    "submittedAt": "2026-06-16T19:53:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w25",
+    "handle": "woojin",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 59,
+    "title": "일부러 느리게 · 작은 실험 하나",
+    "submittedAt": "2026-06-17T04:47:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w25",
+    "handle": "minseo",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 69,
+    "title": "천천히 써지는 편지",
+    "submittedAt": "2026-06-18T03:19:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w25",
+    "handle": "jiwoo",
+    "track": "regular",
+    "rank": 3,
+    "votes": 83,
+    "title": "일부러 느리게 · 하루 만에 만든 도구",
+    "submittedAt": "2026-06-17T08:46:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w25",
+    "handle": "yuna",
+    "track": "regular",
+    "rank": 2,
+    "votes": 101,
+    "title": "일부러 느리게 · 하루 만에 만든 도구",
+    "submittedAt": "2026-06-17T22:24:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w25",
+    "handle": "harin",
+    "track": "regular",
+    "rank": 1,
+    "votes": 115,
+    "title": "느린 메신저",
+    "submittedAt": "2026-06-16T05:53:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w25",
+    "handle": "doyun",
+    "track": "expert",
+    "rank": 3,
+    "votes": 117,
+    "title": "일부러 느리게 · 끝까지 만든 장난감",
+    "submittedAt": "2026-06-16T03:35:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w25",
+    "handle": "yuna",
+    "track": "expert",
+    "rank": 2,
+    "votes": 150,
+    "title": "일부러 느리게 · 끝까지 만든 장난감",
+    "submittedAt": "2026-06-17T23:59:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w25",
+    "handle": "woojin",
+    "track": "expert",
+    "rank": 1,
+    "votes": 188,
+    "title": "거북이 경주 게임",
+    "submittedAt": "2026-06-17T15:31:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w26",
+    "handle": "doyun",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 38,
+    "title": "반년 회고 · 작은 실험 하나",
+    "submittedAt": "2026-06-25T04:54:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w26",
+    "handle": "minseo",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 66,
+    "title": "반년 회고 · 끝까지 만든 장난감",
+    "submittedAt": "2026-06-23T04:56:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w26",
+    "handle": "jun.k",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 88,
+    "title": "상반기 사진 회고",
+    "submittedAt": "2026-06-25T05:29:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w26",
+    "handle": "harin",
+    "track": "regular",
+    "rank": 3,
+    "votes": 128,
+    "title": "반년 회고 · 끝까지 만든 장난감",
+    "submittedAt": "2026-06-25T08:36:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w26",
+    "handle": "yuna",
+    "track": "regular",
+    "rank": 2,
+    "votes": 133,
+    "title": "반년 회고 · 하루 만에 만든 도구",
+    "submittedAt": "2026-06-23T05:53:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w26",
+    "handle": "sumin",
+    "track": "regular",
+    "rank": 1,
+    "votes": 137,
+    "title": "커밋 기록 회고",
+    "submittedAt": "2026-06-22T22:57:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w26",
+    "handle": "woojin",
+    "track": "expert",
+    "rank": 3,
+    "votes": 60,
+    "title": "반년 회고 · 작은 실험 하나",
+    "submittedAt": "2026-06-25T05:36:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w26",
+    "handle": "gaeun",
+    "track": "expert",
+    "rank": 2,
+    "votes": 71,
+    "title": "반년 회고 · 작은 실험 하나",
+    "submittedAt": "2026-06-23T10:11:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w26",
+    "handle": "woojin",
+    "track": "expert",
+    "rank": 1,
+    "votes": 83,
+    "title": "반년 지출 분석",
+    "submittedAt": "2026-06-23T08:06:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w27",
+    "handle": "doyun",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 43,
+    "title": "에러가 주인공 · 하루 만에 만든 도구",
+    "submittedAt": "2026-06-29T21:33:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w27",
+    "handle": "harin",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 103,
+    "title": "친절한 404 페이지",
+    "submittedAt": "2026-07-01T16:52:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w27",
+    "handle": "yuna",
+    "track": "regular",
+    "rank": 3,
+    "votes": 57,
+    "title": "에러가 주인공 · 하루 만에 만든 도구",
+    "submittedAt": "2026-06-30T00:29:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w27",
+    "handle": "harin",
+    "track": "regular",
+    "rank": 2,
+    "votes": 59,
+    "title": "에러가 주인공 · 하루 만에 만든 도구",
+    "submittedAt": "2026-07-01T00:29:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w27",
+    "handle": "hyeon",
+    "track": "regular",
+    "rank": 1,
+    "votes": 69,
+    "title": "비밀번호 규칙 안내",
+    "submittedAt": "2026-06-29T23:22:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w27",
+    "handle": "sumin",
+    "track": "expert",
+    "rank": 3,
+    "votes": 55,
+    "title": "에러가 주인공 · 작은 실험 하나",
+    "submittedAt": "2026-07-02T01:52:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w27",
+    "handle": "minseo",
+    "track": "expert",
+    "rank": 2,
+    "votes": 73,
+    "title": "에러가 주인공 · 끝까지 만든 장난감",
+    "submittedAt": "2026-07-01T09:48:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w27",
+    "handle": "gaeun",
+    "track": "expert",
+    "rank": 1,
+    "votes": 74,
+    "title": "날아가지 않는 입력 폼",
+    "submittedAt": "2026-07-01T09:38:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w28",
+    "handle": "harin",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 37,
+    "title": "1분 게임 · 작은 실험 하나",
+    "submittedAt": "2026-07-06T18:23:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w28",
+    "handle": "woojin",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 69,
+    "title": "1분 게임 · 끝까지 만든 장난감",
+    "submittedAt": "2026-07-07T08:50:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w28",
+    "handle": "yuna",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 87,
+    "title": "반응 속도 측정",
+    "submittedAt": "2026-07-08T07:17:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w28",
+    "handle": "doyun",
+    "track": "regular",
+    "rank": 3,
+    "votes": 75,
+    "title": "1분 게임 · 끝까지 만든 장난감",
+    "submittedAt": "2026-07-07T13:39:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w28",
+    "handle": "jiwoo",
+    "track": "regular",
+    "rank": 2,
+    "votes": 96,
+    "title": "1분 게임 · 하루 만에 만든 도구",
+    "submittedAt": "2026-07-08T20:10:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w28",
+    "handle": "gaeun",
+    "track": "regular",
+    "rank": 1,
+    "votes": 116,
+    "title": "1분 타자 게임",
+    "submittedAt": "2026-07-06T23:18:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w28",
+    "handle": "jun.k",
+    "track": "expert",
+    "rank": 2,
+    "votes": 145,
+    "title": "1분 게임 · 하루 만에 만든 도구",
+    "submittedAt": "2026-07-08T21:36:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w28",
+    "handle": "eunbi",
+    "track": "expert",
+    "rank": 1,
+    "votes": 170,
+    "title": "1분 로그라이크",
+    "submittedAt": "2026-07-08T20:51:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w29",
+    "handle": "hyeon",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 81,
+    "title": "커서가 주인공 · 끝까지 만든 장난감",
+    "submittedAt": "2026-07-13T16:17:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w29",
+    "handle": "harin",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 115,
+    "title": "커서가 주인공 · 끝까지 만든 장난감",
+    "submittedAt": "2026-07-14T05:51:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w29",
+    "handle": "eunbi",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 132,
+    "title": "커서를 따라오는 고양이",
+    "submittedAt": "2026-07-13T23:11:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w29",
+    "handle": "doyun",
+    "track": "regular",
+    "rank": 3,
+    "votes": 56,
+    "title": "커서가 주인공 · 끝까지 만든 장난감",
+    "submittedAt": "2026-07-14T03:03:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w29",
+    "handle": "gaeun",
+    "track": "regular",
+    "rank": 2,
+    "votes": 80,
+    "title": "커서가 주인공 · 하루 만에 만든 도구",
+    "submittedAt": "2026-07-13T16:49:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w29",
+    "handle": "harin",
+    "track": "regular",
+    "rank": 1,
+    "votes": 116,
+    "title": "커서 궤적 그림판",
+    "submittedAt": "2026-07-15T19:40:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w29",
+    "handle": "woojin",
+    "track": "expert",
+    "rank": 3,
+    "votes": 108,
+    "title": "커서가 주인공 · 끝까지 만든 장난감",
+    "submittedAt": "2026-07-14T19:25:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w29",
+    "handle": "gaeun",
+    "track": "expert",
+    "rank": 2,
+    "votes": 131,
+    "title": "커서가 주인공 · 작은 실험 하나",
+    "submittedAt": "2026-07-14T07:51:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w29",
+    "handle": "gaeun",
+    "track": "expert",
+    "rank": 1,
+    "votes": 137,
+    "title": "커서로 노는 물리 장난감",
+    "submittedAt": "2026-07-15T21:50:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w30",
+    "handle": "sora",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 69,
+    "title": "이모지 없이 감정 · 하루 만에 만든 도구",
+    "submittedAt": "2026-07-22T02:22:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w30",
+    "handle": "sumin",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 86,
+    "title": "이모지 없이 감정 · 작은 실험 하나",
+    "submittedAt": "2026-07-22T10:49:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w30",
+    "handle": "woojin",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 102,
+    "title": "기분 색 고르기",
+    "submittedAt": "2026-07-21T19:25:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w30",
+    "handle": "yuna",
+    "track": "regular",
+    "rank": 3,
+    "votes": 27,
+    "title": "이모지 없이 감정 · 끝까지 만든 장난감",
+    "submittedAt": "2026-07-21T00:48:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w30",
+    "handle": "harin",
+    "track": "regular",
+    "rank": 2,
+    "votes": 28,
+    "title": "이모지 없이 감정 · 작은 실험 하나",
+    "submittedAt": "2026-07-22T18:45:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w30",
+    "handle": "gaeun",
+    "track": "expert",
+    "rank": 3,
+    "votes": 50,
+    "title": "이모지 없이 감정 · 하루 만에 만든 도구",
+    "submittedAt": "2026-07-21T03:09:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w30",
+    "handle": "sora",
+    "track": "expert",
+    "rank": 1,
+    "votes": 53,
+    "title": "감정 그래프 일기",
+    "submittedAt": "2026-07-20T22:43:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w31",
+    "handle": "sora",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 83,
+    "title": "여행 준비 · 끝까지 만든 장난감",
+    "submittedAt": "2026-07-29T23:18:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w31",
+    "handle": "sora",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 87,
+    "title": "여행 준비 · 작은 실험 하나",
+    "submittedAt": "2026-07-29T08:29:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w31",
+    "handle": "gaeun",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 114,
+    "title": "짐 체크리스트",
+    "submittedAt": "2026-07-29T01:58:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w31",
+    "handle": "yuna",
+    "track": "regular",
+    "rank": 3,
+    "votes": 69,
+    "title": "여행 준비 · 끝까지 만든 장난감",
+    "submittedAt": "2026-07-29T10:09:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w31",
+    "handle": "yuna",
+    "track": "regular",
+    "rank": 2,
+    "votes": 88,
+    "title": "여행 준비 · 끝까지 만든 장난감",
+    "submittedAt": "2026-07-30T01:02:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w31",
+    "handle": "yuna",
+    "track": "regular",
+    "rank": 1,
+    "votes": 112,
+    "title": "여행 경비 나누기",
+    "submittedAt": "2026-07-27T18:48:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w31",
+    "handle": "eunbi",
+    "track": "expert",
+    "rank": 3,
+    "votes": 98,
+    "title": "여행 준비 · 작은 실험 하나",
+    "submittedAt": "2026-07-28T13:19:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w31",
+    "handle": "eunbi",
+    "track": "expert",
+    "rank": 2,
+    "votes": 111,
+    "title": "여행 준비 · 하루 만에 만든 도구",
+    "submittedAt": "2026-07-29T17:21:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w31",
+    "handle": "hyeon",
+    "track": "expert",
+    "rank": 1,
+    "votes": 139,
+    "title": "오프라인 여행 지도",
+    "submittedAt": "2026-07-29T16:07:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w33",
+    "handle": "harin",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 124,
+    "title": "한글만 · 작은 실험 하나",
+    "submittedAt": "2026-08-12T14:24:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w33",
+    "handle": "jiwoo",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 131,
+    "title": "한글만 · 하루 만에 만든 도구",
+    "submittedAt": "2026-08-12T21:46:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w33",
+    "handle": "jun.k",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 163,
+    "title": "한글 단위 변환기",
+    "submittedAt": "2026-08-11T09:17:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w33",
+    "handle": "jun.k",
+    "track": "regular",
+    "rank": 3,
+    "votes": 49,
+    "title": "한글만 · 하루 만에 만든 도구",
+    "submittedAt": "2026-08-12T01:31:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w33",
+    "handle": "yuna",
+    "track": "regular",
+    "rank": 2,
+    "votes": 53,
+    "title": "한글만 · 작은 실험 하나",
+    "submittedAt": "2026-08-12T21:20:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w33",
+    "handle": "harin",
+    "track": "regular",
+    "rank": 1,
+    "votes": 90,
+    "title": "순우리말 사전",
+    "submittedAt": "2026-08-12T16:36:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w33",
+    "handle": "eunbi",
+    "track": "expert",
+    "rank": 3,
+    "votes": 60,
+    "title": "한글만 · 하루 만에 만든 도구",
+    "submittedAt": "2026-08-11T13:52:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w33",
+    "handle": "doyun",
+    "track": "expert",
+    "rank": 2,
+    "votes": 62,
+    "title": "한글만 · 하루 만에 만든 도구",
+    "submittedAt": "2026-08-13T01:59:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w33",
+    "handle": "doyun",
+    "track": "expert",
+    "rank": 1,
+    "votes": 86,
+    "title": "한글로 짜는 코딩 장난감",
+    "submittedAt": "2026-08-12T06:32:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w34",
+    "handle": "harin",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 97,
+    "title": "버튼이 딱 하나뿐인 앱 · 작은 실험 하나",
+    "submittedAt": "2026-08-18T14:36:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w34",
+    "handle": "sumin",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 124,
+    "title": "버튼이 딱 하나뿐인 앱 · 하루 만에 만든 도구",
+    "submittedAt": "2026-08-17T19:08:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w34",
+    "handle": "minseo",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 157,
+    "title": "숨 참기 타이머",
+    "submittedAt": "2026-08-19T17:28:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w34",
+    "handle": "doyun",
+    "track": "regular",
+    "rank": 3,
+    "votes": 47,
+    "title": "버튼이 딱 하나뿐인 앱 · 작은 실험 하나",
+    "submittedAt": "2026-08-20T04:27:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w34",
+    "handle": "sumin",
+    "track": "regular",
+    "rank": 1,
+    "votes": 51,
+    "title": "한 버튼 메트로놈",
+    "submittedAt": "2026-08-19T14:12:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w34",
+    "handle": "sora",
+    "track": "expert",
+    "rank": 3,
+    "votes": 75,
+    "title": "버튼이 딱 하나뿐인 앱 · 하루 만에 만든 도구",
+    "submittedAt": "2026-08-17T20:48:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w34",
+    "handle": "jiwoo",
+    "track": "expert",
+    "rank": 2,
+    "votes": 76,
+    "title": "버튼이 딱 하나뿐인 앱 · 작은 실험 하나",
+    "submittedAt": "2026-08-17T17:47:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w35",
+    "handle": "jun.k",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 80,
+    "title": "학생이 쓰는 앱 · 하루 만에 만든 도구",
+    "submittedAt": "2026-08-25T03:18:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w35",
+    "handle": "woojin",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 94,
+    "title": "학생이 쓰는 앱 · 끝까지 만든 장난감",
+    "submittedAt": "2026-08-26T07:01:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w35",
+    "handle": "minseo",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 112,
+    "title": "시간표 위젯",
+    "submittedAt": "2026-08-27T00:26:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w35",
+    "handle": "doyun",
+    "track": "regular",
+    "rank": 2,
+    "votes": 80,
+    "title": "학생이 쓰는 앱 · 하루 만에 만든 도구",
+    "submittedAt": "2026-08-27T08:38:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w35",
+    "handle": "woojin",
+    "track": "regular",
+    "rank": 1,
+    "votes": 92,
+    "title": "급식 메뉴 보기",
+    "submittedAt": "2026-08-26T23:51:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w35",
+    "handle": "sumin",
+    "track": "expert",
+    "rank": 3,
+    "votes": 86,
+    "title": "학생이 쓰는 앱 · 작은 실험 하나",
+    "submittedAt": "2026-08-24T16:50:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w35",
+    "handle": "minseo",
+    "track": "expert",
+    "rank": 2,
+    "votes": 88,
+    "title": "학생이 쓰는 앱 · 작은 실험 하나",
+    "submittedAt": "2026-08-26T09:29:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w35",
+    "handle": "woojin",
+    "track": "expert",
+    "rank": 1,
+    "votes": 92,
+    "title": "과제 마감 역산 플래너",
+    "submittedAt": "2026-08-26T14:49:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w36",
+    "handle": "yuna",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 92,
+    "title": "실시간이 핵심 · 하루 만에 만든 도구",
+    "submittedAt": "2026-09-02T03:53:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w36",
+    "handle": "minseo",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 127,
+    "title": "실시간이 핵심 · 하루 만에 만든 도구",
+    "submittedAt": "2026-09-01T18:10:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w36",
+    "handle": "minseo",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 159,
+    "title": "실시간 투표",
+    "submittedAt": "2026-09-01T22:56:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w36",
+    "handle": "woojin",
+    "track": "regular",
+    "rank": 3,
+    "votes": 100,
+    "title": "실시간이 핵심 · 작은 실험 하나",
+    "submittedAt": "2026-09-01T23:20:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w36",
+    "handle": "hyeon",
+    "track": "regular",
+    "rank": 2,
+    "votes": 125,
+    "title": "실시간이 핵심 · 작은 실험 하나",
+    "submittedAt": "2026-09-01T01:31:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w36",
+    "handle": "sora",
+    "track": "regular",
+    "rank": 1,
+    "votes": 163,
+    "title": "같이 듣는 플레이리스트",
+    "submittedAt": "2026-09-02T12:44:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w36",
+    "handle": "jun.k",
+    "track": "expert",
+    "rank": 3,
+    "votes": 92,
+    "title": "실시간이 핵심 · 하루 만에 만든 도구",
+    "submittedAt": "2026-09-02T00:54:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w36",
+    "handle": "sora",
+    "track": "expert",
+    "rank": 2,
+    "votes": 131,
+    "title": "실시간이 핵심 · 작은 실험 하나",
+    "submittedAt": "2026-09-01T15:27:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w36",
+    "handle": "woojin",
+    "track": "expert",
+    "rank": 1,
+    "votes": 155,
+    "title": "멀티플레이 그림 맞히기",
+    "submittedAt": "2026-09-02T14:46:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w37",
+    "handle": "sora",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 43,
+    "title": "차트 하나 · 하루 만에 만든 도구",
+    "submittedAt": "2026-09-09T22:59:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w37",
+    "handle": "sora",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 44,
+    "title": "차트 하나 · 하루 만에 만든 도구",
+    "submittedAt": "2026-09-08T06:06:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w37",
+    "handle": "sora",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 57,
+    "title": "수면 시간 막대",
+    "submittedAt": "2026-09-09T11:06:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w37",
+    "handle": "doyun",
+    "track": "regular",
+    "rank": 3,
+    "votes": 88,
+    "title": "차트 하나 · 작은 실험 하나",
+    "submittedAt": "2026-09-09T23:31:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w37",
+    "handle": "jiwoo",
+    "track": "regular",
+    "rank": 1,
+    "votes": 147,
+    "title": "공공 데이터 지도",
+    "submittedAt": "2026-09-09T05:14:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w37",
+    "handle": "woojin",
+    "track": "expert",
+    "rank": 3,
+    "votes": 40,
+    "title": "차트 하나 · 끝까지 만든 장난감",
+    "submittedAt": "2026-09-09T05:27:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w37",
+    "handle": "sora",
+    "track": "expert",
+    "rank": 1,
+    "votes": 74,
+    "title": "실시간 스파크라인",
+    "submittedAt": "2026-09-10T04:30:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w38",
+    "handle": "gaeun",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 111,
+    "title": "한 손으로만 · 끝까지 만든 장난감",
+    "submittedAt": "2026-09-17T01:28:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w38",
+    "handle": "sora",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 117,
+    "title": "한 손으로만 · 하루 만에 만든 도구",
+    "submittedAt": "2026-09-14T21:44:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w38",
+    "handle": "harin",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 138,
+    "title": "한 손 계산기",
+    "submittedAt": "2026-09-16T19:14:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w38",
+    "handle": "minseo",
+    "track": "regular",
+    "rank": 3,
+    "votes": 132,
+    "title": "한 손으로만 · 끝까지 만든 장난감",
+    "submittedAt": "2026-09-17T07:11:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w38",
+    "handle": "woojin",
+    "track": "regular",
+    "rank": 2,
+    "votes": 146,
+    "title": "한 손으로만 · 끝까지 만든 장난감",
+    "submittedAt": "2026-09-15T00:10:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w38",
+    "handle": "jun.k",
+    "track": "regular",
+    "rank": 1,
+    "votes": 183,
+    "title": "엄지로 넘기는 단어장",
+    "submittedAt": "2026-09-16T07:39:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w38",
+    "handle": "minseo",
+    "track": "expert",
+    "rank": 3,
+    "votes": 106,
+    "title": "한 손으로만 · 하루 만에 만든 도구",
+    "submittedAt": "2026-09-15T00:34:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w38",
+    "handle": "doyun",
+    "track": "expert",
+    "rank": 2,
+    "votes": 127,
+    "title": "한 손으로만 · 하루 만에 만든 도구",
+    "submittedAt": "2026-09-16T01:42:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w38",
+    "handle": "sora",
+    "track": "expert",
+    "rank": 1,
+    "votes": 142,
+    "title": "한 손 리듬 게임",
+    "submittedAt": "2026-09-16T10:54:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w40",
+    "handle": "harin",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 103,
+    "title": "60초 안에 끝나는 앱 · 하루 만에 만든 도구",
+    "submittedAt": "2026-09-29T21:44:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w40",
+    "handle": "jun.k",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 118,
+    "title": "60초 안에 끝나는 앱 · 끝까지 만든 장난감",
+    "submittedAt": "2026-09-28T23:58:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w40",
+    "handle": "hyeon",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 131,
+    "title": "60초 안에 끝나는 앱 · 하루 만에 만든 도구",
+    "submittedAt": "2026-09-29T03:36:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w40",
+    "handle": "sora",
+    "track": "regular",
+    "rank": 3,
+    "votes": 61,
+    "title": "60초 안에 끝나는 앱 · 끝까지 만든 장난감",
+    "submittedAt": "2026-09-30T16:18:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w40",
+    "handle": "gaeun",
+    "track": "regular",
+    "rank": 2,
+    "votes": 93,
+    "title": "60초 안에 끝나는 앱 · 하루 만에 만든 도구",
+    "submittedAt": "2026-09-29T08:52:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w40",
+    "handle": "sumin",
+    "track": "regular",
+    "rank": 1,
+    "votes": 96,
+    "title": "60초 안에 끝나는 앱 · 끝까지 만든 장난감",
+    "submittedAt": "2026-09-29T20:52:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w40",
+    "handle": "woojin",
+    "track": "expert",
+    "rank": 3,
+    "votes": 79,
+    "title": "60초 안에 끝나는 앱 · 하루 만에 만든 도구",
+    "submittedAt": "2026-09-29T17:17:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w40",
+    "handle": "jun.k",
+    "track": "expert",
+    "rank": 1,
+    "votes": 85,
+    "title": "60초 안에 끝나는 앱 · 하루 만에 만든 도구",
+    "submittedAt": "2026-09-30T15:37:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w41",
+    "handle": "yuna",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 135,
+    "title": "코드 100줄 이하 · 작은 실험 하나",
+    "submittedAt": "2026-10-05T18:28:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w41",
+    "handle": "gaeun",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 155,
+    "title": "코드 100줄 이하 · 작은 실험 하나",
+    "submittedAt": "2026-10-06T16:47:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w41",
+    "handle": "sora",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 186,
+    "title": "코드 100줄 이하 · 하루 만에 만든 도구",
+    "submittedAt": "2026-10-07T12:00:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w41",
+    "handle": "jun.k",
+    "track": "regular",
+    "rank": 3,
+    "votes": 90,
+    "title": "코드 100줄 이하 · 끝까지 만든 장난감",
+    "submittedAt": "2026-10-05T22:59:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w41",
+    "handle": "jun.k",
+    "track": "regular",
+    "rank": 2,
+    "votes": 122,
+    "title": "코드 100줄 이하 · 하루 만에 만든 도구",
+    "submittedAt": "2026-10-07T07:39:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w41",
+    "handle": "hyeon",
+    "track": "regular",
+    "rank": 1,
+    "votes": 159,
+    "title": "코드 100줄 이하 · 하루 만에 만든 도구",
+    "submittedAt": "2026-10-05T16:32:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w41",
+    "handle": "jiwoo",
+    "track": "expert",
+    "rank": 3,
+    "votes": 84,
+    "title": "코드 100줄 이하 · 하루 만에 만든 도구",
+    "submittedAt": "2026-10-06T07:26:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w41",
+    "handle": "sumin",
+    "track": "expert",
+    "rank": 1,
+    "votes": 102,
+    "title": "코드 100줄 이하 · 끝까지 만든 장난감",
+    "submittedAt": "2026-10-07T08:08:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w42",
+    "handle": "woojin",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 110,
+    "title": "로그인 없는 SNS · 작은 실험 하나",
+    "submittedAt": "2026-10-14T10:34:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w42",
+    "handle": "sora",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 146,
+    "title": "로그인 없는 SNS · 작은 실험 하나",
+    "submittedAt": "2026-10-13T08:01:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w42",
+    "handle": "jun.k",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 151,
+    "title": "로그인 없는 SNS · 작은 실험 하나",
+    "submittedAt": "2026-10-15T03:41:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w42",
+    "handle": "sumin",
+    "track": "regular",
+    "rank": 3,
+    "votes": 44,
+    "title": "로그인 없는 SNS · 하루 만에 만든 도구",
+    "submittedAt": "2026-10-14T00:01:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w42",
+    "handle": "yuna",
+    "track": "regular",
+    "rank": 2,
+    "votes": 79,
+    "title": "로그인 없는 SNS · 하루 만에 만든 도구",
+    "submittedAt": "2026-10-14T02:42:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w42",
+    "handle": "doyun",
+    "track": "regular",
+    "rank": 1,
+    "votes": 103,
+    "title": "로그인 없는 SNS · 작은 실험 하나",
+    "submittedAt": "2026-10-14T11:28:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w42",
+    "handle": "doyun",
+    "track": "expert",
+    "rank": 2,
+    "votes": 98,
+    "title": "로그인 없는 SNS · 하루 만에 만든 도구",
+    "submittedAt": "2026-10-15T06:18:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w42",
+    "handle": "yuna",
+    "track": "expert",
+    "rank": 1,
+    "votes": 118,
+    "title": "로그인 없는 SNS · 끝까지 만든 장난감",
+    "submittedAt": "2026-10-14T18:21:00+09:00",
+    "stack": [
+      "WebAudio"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w43",
+    "handle": "sumin",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 129,
+    "title": "흑백 두 가지 색만 허용 · 하루 만에 만든 도구",
+    "submittedAt": "2026-10-22T00:38:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w43",
+    "handle": "sora",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 130,
+    "title": "흑백 두 가지 색만 허용 · 끝까지 만든 장난감",
+    "submittedAt": "2026-10-20T00:32:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w43",
+    "handle": "woojin",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 165,
+    "title": "흑백 두 가지 색만 허용 · 하루 만에 만든 도구",
+    "submittedAt": "2026-10-19T16:55:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w43",
+    "handle": "sumin",
+    "track": "regular",
+    "rank": 3,
+    "votes": 104,
+    "title": "흑백 두 가지 색만 허용 · 작은 실험 하나",
+    "submittedAt": "2026-10-21T13:47:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w43",
+    "handle": "gaeun",
+    "track": "regular",
+    "rank": 2,
+    "votes": 134,
+    "title": "흑백 두 가지 색만 허용 · 작은 실험 하나",
+    "submittedAt": "2026-10-20T09:30:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w43",
+    "handle": "minseo",
+    "track": "regular",
+    "rank": 1,
+    "votes": 156,
+    "title": "흑백 두 가지 색만 허용 · 하루 만에 만든 도구",
+    "submittedAt": "2026-10-21T07:27:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w43",
+    "handle": "sumin",
+    "track": "expert",
+    "rank": 2,
+    "votes": 141,
+    "title": "흑백 두 가지 색만 허용 · 작은 실험 하나",
+    "submittedAt": "2026-10-20T10:29:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w43",
+    "handle": "doyun",
+    "track": "expert",
+    "rank": 1,
+    "votes": 158,
+    "title": "흑백 두 가지 색만 허용 · 하루 만에 만든 도구",
+    "submittedAt": "2026-10-19T17:24:00+09:00",
+    "stack": [
+      "React"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w44",
+    "handle": "harin",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 132,
+    "title": "어제 뉴스로 만드는 무언가 · 작은 실험 하나",
+    "submittedAt": "2026-10-28T11:59:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w44",
+    "handle": "sumin",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 158,
+    "title": "어제 뉴스로 만드는 무언가 · 하루 만에 만든 도구",
+    "submittedAt": "2026-10-26T17:16:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w44",
+    "handle": "sora",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 181,
+    "title": "어제 뉴스로 만드는 무언가 · 작은 실험 하나",
+    "submittedAt": "2026-10-27T18:13:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w44",
+    "handle": "hyeon",
+    "track": "regular",
+    "rank": 3,
+    "votes": 44,
+    "title": "어제 뉴스로 만드는 무언가 · 끝까지 만든 장난감",
+    "submittedAt": "2026-10-27T14:00:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "제약이 오히려 아이디어를 줬어요."
+  },
+  {
+    "weekId": "2026-w44",
+    "handle": "sumin",
+    "track": "regular",
+    "rank": 2,
+    "votes": 66,
+    "title": "어제 뉴스로 만드는 무언가 · 작은 실험 하나",
+    "submittedAt": "2026-10-29T06:36:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w44",
+    "handle": "harin",
+    "track": "regular",
+    "rank": 1,
+    "votes": 97,
+    "title": "어제 뉴스로 만드는 무언가 · 작은 실험 하나",
+    "submittedAt": "2026-10-27T03:18:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w44",
+    "handle": "jun.k",
+    "track": "expert",
+    "rank": 2,
+    "votes": 104,
+    "title": "어제 뉴스로 만드는 무언가 · 끝까지 만든 장난감",
+    "submittedAt": "2026-10-27T20:50:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  },
+  {
+    "weekId": "2026-w44",
+    "handle": "jun.k",
+    "track": "expert",
+    "rank": 1,
+    "votes": 135,
+    "title": "어제 뉴스로 만드는 무언가 · 하루 만에 만든 도구",
+    "submittedAt": "2026-10-29T03:30:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w45",
+    "handle": "jun.k",
+    "track": "beginner",
+    "rank": 3,
+    "votes": 136,
+    "title": "API 하나만 써서 만들기 · 끝까지 만든 장난감",
+    "submittedAt": "2026-11-04T04:10:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w45",
+    "handle": "woojin",
+    "track": "beginner",
+    "rank": 2,
+    "votes": 153,
+    "title": "API 하나만 써서 만들기 · 작은 실험 하나",
+    "submittedAt": "2026-11-05T08:19:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w45",
+    "handle": "sora",
+    "track": "beginner",
+    "rank": 1,
+    "votes": 160,
+    "title": "API 하나만 써서 만들기 · 작은 실험 하나",
+    "submittedAt": "2026-11-03T19:56:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "디자인을 줄였더니 기능이 또렷해졌어요."
+  },
+  {
+    "weekId": "2026-w45",
+    "handle": "sora",
+    "track": "regular",
+    "rank": 3,
+    "votes": 124,
+    "title": "API 하나만 써서 만들기 · 끝까지 만든 장난감",
+    "submittedAt": "2026-11-05T00:53:00+09:00",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "retro": "다음 주엔 더 작게 시작할래요."
+  },
+  {
+    "weekId": "2026-w45",
+    "handle": "minseo",
+    "track": "regular",
+    "rank": 2,
+    "votes": 125,
+    "title": "API 하나만 써서 만들기 · 하루 만에 만든 도구",
+    "submittedAt": "2026-11-02T19:24:00+09:00",
+    "stack": [
+      "TypeScript"
+    ],
+    "retro": "처음으로 끝까지 만들어서 뿌듯해요."
+  },
+  {
+    "weekId": "2026-w45",
+    "handle": "harin",
+    "track": "regular",
+    "rank": 1,
+    "votes": 159,
+    "title": "API 하나만 써서 만들기 · 작은 실험 하나",
+    "submittedAt": "2026-11-04T13:11:00+09:00",
+    "stack": [
+      "Vue"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w45",
+    "handle": "minseo",
+    "track": "expert",
+    "rank": 3,
+    "votes": 128,
+    "title": "API 하나만 써서 만들기 · 끝까지 만든 장난감",
+    "submittedAt": "2026-11-03T16:05:00+09:00",
+    "stack": [
+      "Svelte"
+    ],
+    "retro": "마지막 6시간에 커밋의 절반을 했어요."
+  },
+  {
+    "weekId": "2026-w45",
+    "handle": "harin",
+    "track": "expert",
+    "rank": 2,
+    "votes": 129,
+    "title": "API 하나만 써서 만들기 · 작은 실험 하나",
+    "submittedAt": "2026-11-04T17:05:00+09:00",
+    "stack": [
+      "Canvas"
+    ],
+    "retro": "친구들이 실제로 써줘서 놀랐어요."
+  }
+]

@@ -6,6 +6,13 @@ type TabsProps<T extends string> = {
   options: { value: T; label: string }[]
   value: T
   onChange: (value: T) => void
+  /** night: 검정 무대 위(시상대 트랙 선택). 테두리 night-line, 선택 칸 on-night */
+  tone?: 'ground' | 'night'
+}
+
+const TONES = {
+  ground: { group: 'border-(--tt-ink)', hover: 'hover:bg-(--tt-fill-quiet)', overlay: 'bg-(--tt-ink) text-(--tt-ground)' },
+  night: { group: 'border-(--tt-night-line) text-(--tt-on-night)', hover: 'hover:bg-(--tt-night-line)', overlay: 'bg-(--tt-on-night) text-(--tt-ink)' },
 }
 
 const ITEM = 'inline-flex items-center justify-center min-h-11 px-4.5 rounded-full text-sm font-medium'
@@ -15,7 +22,7 @@ const ITEM = 'inline-flex items-center justify-center min-h-11 px-4.5 rounded-fu
  * 잉크 글자 줄 위에 뒤집힌 색의 같은 줄을 겹치고, 선택 칸 모양으로만 잘라 보여줘요.
  * 그래서 이동 중에도 글자와 바탕 색이 어긋나지 않아요.
  */
-function Tabs<T extends string>({ label, options, value, onChange }: TabsProps<T>) {
+function Tabs<T extends string>({ label, options, value, onChange, tone = 'ground' }: TabsProps<T>) {
   const groupRef = useRef<HTMLDivElement>(null)
   const overlayRef = useRef<HTMLDivElement>(null)
 
@@ -51,7 +58,7 @@ function Tabs<T extends string>({ label, options, value, onChange }: TabsProps<T
       ref={groupRef}
       role="group"
       aria-label={label}
-      className="relative flex flex-wrap gap-1.5 p-1.25 rounded-full border-(length:--tt-stroke-bold) border-(--tt-ink)"
+      className={`relative flex flex-wrap gap-1.5 p-1.25 rounded-full border-(length:--tt-stroke-bold) ${TONES[tone].group}`}
     >
       {options.map((option) => (
         <button
@@ -59,7 +66,7 @@ function Tabs<T extends string>({ label, options, value, onChange }: TabsProps<T
           type="button"
           aria-pressed={option.value === value}
           onClick={() => onChange(option.value)}
-          className={`${ITEM} cursor-pointer transition-colors duration-(--tt-dur-quick) hover:bg-(--tt-fill-quiet)`}
+          className={`${ITEM} cursor-pointer transition-colors duration-(--tt-dur-quick) ${TONES[tone].hover}`}
         >
           {option.label}
         </button>
@@ -68,7 +75,7 @@ function Tabs<T extends string>({ label, options, value, onChange }: TabsProps<T
       <div
         ref={overlayRef}
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 flex flex-wrap gap-1.5 p-1.25 rounded-full bg-(--tt-ink) text-(--tt-ground) [clip-path:inset(50%_50%_50%_50%)] data-ready:transition-[clip-path] data-ready:duration-(--tt-dur-quick) data-ready:ease-(--tt-ease-snap)"
+        className={`pointer-events-none absolute inset-0 flex flex-wrap gap-1.5 p-1.25 rounded-full ${TONES[tone].overlay} [clip-path:inset(50%_50%_50%_50%)] data-ready:transition-[clip-path] data-ready:duration-(--tt-dur-quick) data-ready:ease-(--tt-ease-snap)`}
       >
         {options.map((option) => (
           <span key={option.value} className={ITEM}>

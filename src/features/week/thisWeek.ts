@@ -19,6 +19,10 @@ export type Week = {
   }
   /** 지난 주에만 집계돼 있어요 */
   submissionCount?: number
+  /** 참가 신청 수. 완주율 = 제출 ÷ 참가 */
+  participantCount?: number
+  /** 지난 주 전체 투표 수 */
+  voteCount?: number
 }
 
 export type Phase = '제출 마감까지' | '투표 마감까지' | '결과 발표까지' | '다음 주제 공개까지'

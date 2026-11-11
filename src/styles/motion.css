@@ -122,6 +122,19 @@
   }
 }
 
+/* 주차 결과의 거대한 주차 코드: 넓은 폭에서 좁은 폭으로 조여들어요 */
+@keyframes tt-stretch {
+  from {
+    font-stretch: 125%;
+    letter-spacing: -.02em;
+  }
+
+  to {
+    font-stretch: var(--tt-display-stretch);
+    letter-spacing: -.04em;
+  }
+}
+
 @keyframes tt-breathe {
 
   0%,
