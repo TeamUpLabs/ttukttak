@@ -1,0 +1,381 @@
+{
+  "season": {
+    "id": "season-2",
+    "name": "시즌 2",
+    "timezone": "Asia/Seoul",
+    "startsAt": "2026-11-09T10:00:00+09:00",
+    "endsAt": "2027-02-22T10:00:00+09:00",
+    "weekCount": 15,
+    "themeCount": 12
+  },
+  "labels": {
+    "status": {
+      "draft": "준비 중",
+      "announced": "공지 완료",
+      "building": "진행 중",
+      "voting": "투표 중",
+      "closed": "종료",
+      "break": "휴식"
+    },
+    "difficulty": {
+      "low": "낮음",
+      "medium": "보통",
+      "high": "높음"
+    },
+    "track": {
+      "beginner": "입문",
+      "regular": "일반",
+      "expert": "고수"
+    }
+  },
+  "weeks": [
+    {
+      "id": "2026-w46",
+      "type": "theme",
+      "round": 1,
+      "code": "W46",
+      "title": "서버 없이",
+      "announcement": "이번 주엔 서버를 쓰지 않아요. 데이터는 브라우저 안(localStorage, IndexedDB)에만 저장하고 정적 호스팅에 올려 주세요.",
+      "rule": "데모에서 네트워크 요청 없이 핵심 기능이 동작 (폰트·정적 파일 제외)",
+      "difficulty": "low",
+      "status": "building",
+      "examples": {
+        "beginner": "오늘 마신 물 잔 수 기록기",
+        "regular": "오프라인 메모장 + 태그 검색",
+        "expert": "브라우저 안에서 도는 SQLite 가계부"
+      },
+      "schedule": {
+        "opensAt": "2026-11-09T10:00:00+09:00",
+        "submissionClosesAt": "2026-11-12T10:00:00+09:00",
+        "votingClosesAt": "2026-11-16T00:00:00+09:00",
+        "resultsAt": "2026-11-16T10:00:00+09:00"
+      },
+      "owner": null,
+      "notes": "시즌 첫 주. 백엔드 부담이 없어 입문자 유입용으로 공지를 넓게 돌리기."
+    },
+    {
+      "id": "2026-w47",
+      "type": "theme",
+      "round": 2,
+      "code": "W47",
+      "title": "한 화면에 글자 10자 이하",
+      "announcement": "어느 화면에서도 보이는 글자가 10자를 넘으면 안 돼요. 숫자와 기호도 한 글자로 세요.",
+      "rule": "모든 화면 스크린샷에서 보이는 글자 수 10자 이하",
+      "difficulty": "low",
+      "status": "draft",
+      "examples": {
+        "beginner": "색으로만 알려주는 오늘의 날씨",
+        "regular": "아이콘과 움직임만으로 쓰는 뽀모도로 타이머",
+        "expert": "글자 없이 규칙을 익히는 퍼즐 게임"
+      },
+      "schedule": {
+        "opensAt": "2026-11-16T10:00:00+09:00",
+        "submissionClosesAt": "2026-11-19T10:00:00+09:00",
+        "votingClosesAt": "2026-11-23T00:00:00+09:00",
+        "resultsAt": "2026-11-23T10:00:00+09:00"
+      },
+      "owner": null,
+      "notes": "제출 시 모든 화면 스크린샷 첨부를 필수로."
+    },
+    {
+      "id": "2026-w48",
+      "type": "theme",
+      "round": 3,
+      "code": "W48",
+      "title": "쓸모없지만 정교한 것",
+      "announcement": "아무 쓸모 없는 걸 만드세요. 대신 이상할 만큼 공들여서요.",
+      "rule": "실용적 목적이 없을 것 + 애니메이션·반응형·접근성 중 2개 이상 완성도",
+      "difficulty": "medium",
+      "status": "draft",
+      "examples": {
+        "beginner": "누를 때마다 더 공손하게 거절하는 버튼",
+        "regular": "커서를 피해 다니는 체크박스",
+        "expert": "물리 엔진으로 굴러가는 로딩 바"
+      },
+      "schedule": {
+        "opensAt": "2026-11-23T10:00:00+09:00",
+        "submissionClosesAt": "2026-11-26T10:00:00+09:00",
+        "votingClosesAt": "2026-11-30T00:00:00+09:00",
+        "resultsAt": "2026-11-30T10:00:00+09:00"
+      },
+      "owner": null,
+      "notes": "분위기 전환용. 투표 독려 문구도 가볍게."
+    },
+    {
+      "id": "2026-w49",
+      "type": "theme",
+      "round": 4,
+      "code": "W49",
+      "title": "키보드만으로",
+      "announcement": "마우스와 터치 없이, 키보드만으로 처음부터 끝까지 쓸 수 있어야 해요.",
+      "rule": "마우스 없이 모든 기능 완료 가능 + 포커스가 항상 보일 것",
+      "difficulty": "low",
+      "status": "draft",
+      "examples": {
+        "beginner": "단축키로만 움직이는 할 일 목록",
+        "regular": "한글 타자 연습 게임",
+        "expert": "vim 키 바인딩 칸반 보드"
+      },
+      "schedule": {
+        "opensAt": "2026-11-30T10:00:00+09:00",
+        "submissionClosesAt": "2026-12-03T10:00:00+09:00",
+        "votingClosesAt": "2026-12-07T00:00:00+09:00",
+        "resultsAt": "2026-12-07T10:00:00+09:00"
+      },
+      "owner": null,
+      "notes": "접근성(포커스 표시) 가이드 링크를 공지에 함께."
+    },
+    {
+      "id": "2026-w50",
+      "type": "theme",
+      "round": 5,
+      "code": "W50",
+      "title": "URL이 곧 데이터",
+      "announcement": "앱의 모든 상태를 주소에 담으세요. 링크를 보내면 받는 사람 화면이 똑같이 재현돼야 해요.",
+      "rule": "서버·저장소 없이 URL만으로 상태가 복원됨",
+      "difficulty": "medium",
+      "status": "draft",
+      "examples": {
+        "beginner": "링크로 주고받는 롤링페이퍼",
+        "regular": "링크로 공유하는 픽셀 아트 그림판",
+        "expert": "URL에 압축 저장되는 코드 플레이그라운드"
+      },
+      "schedule": {
+        "opensAt": "2026-12-07T10:00:00+09:00",
+        "submissionClosesAt": "2026-12-10T10:00:00+09:00",
+        "votingClosesAt": "2026-12-14T00:00:00+09:00",
+        "resultsAt": "2026-12-14T10:00:00+09:00"
+      },
+      "owner": null,
+      "notes": "1주차(서버 없이)와 이어지는 주제라 1주차 우수작을 공지에 소개."
+    },
+    {
+      "id": "2026-w51",
+      "type": "theme",
+      "round": 6,
+      "code": "W51",
+      "title": "화면 없는 앱",
+      "announcement": "결과는 소리, 진동, 알림으로만 전달해요. 화면은 시작 버튼 하나까지만 허용해요.",
+      "rule": "핵심 정보가 화면의 글자·그래픽 없이 전달됨",
+      "difficulty": "medium",
+      "status": "draft",
+      "examples": {
+        "beginner": "25분마다 종이 울리는 집중 타이머",
+        "regular": "자세가 무너지면 소리로 알려주는 앱",
+        "expert": "버스 도착까지 남은 시간을 박자로 알려주는 앱"
+      },
+      "schedule": {
+        "opensAt": "2026-12-14T10:00:00+09:00",
+        "submissionClosesAt": "2026-12-17T10:00:00+09:00",
+        "votingClosesAt": "2026-12-21T00:00:00+09:00",
+        "resultsAt": "2026-12-21T10:00:00+09:00"
+      },
+      "owner": null,
+      "notes": "다음 주부터 2주 연말 휴식. 휴식 전 마지막 주제라 공지에 휴식 일정과 리메이크 보드 안내를 함께."
+    },
+    {
+      "id": "2026-w52",
+      "type": "break",
+      "round": null,
+      "code": "W52",
+      "title": "연말 휴식 · 크리스마스",
+      "announcement": "크리스마스 주간이라 쉬어요. 1~6주 제출작을 다시 손봐서 올리는 리메이크 보드를 열어둬요.",
+      "rule": null,
+      "difficulty": null,
+      "status": "break",
+      "examples": null,
+      "schedule": {
+        "opensAt": "2026-12-21T10:00:00+09:00",
+        "submissionClosesAt": null,
+        "votingClosesAt": null,
+        "resultsAt": null
+      },
+      "owner": null,
+      "notes": "크리스마스(12/25 금). 휴식 주는 연속 제출 기록이 끊기지 않아요."
+    },
+    {
+      "id": "2026-w53",
+      "type": "break",
+      "round": null,
+      "code": "W53",
+      "title": "연말 휴식 · 중간 회고",
+      "announcement": "이번 주도 쉬어요. 리메이크 보드는 일요일까지 열려 있어요.",
+      "rule": null,
+      "difficulty": null,
+      "status": "break",
+      "examples": null,
+      "schedule": {
+        "opensAt": "2026-12-28T10:00:00+09:00",
+        "submissionClosesAt": null,
+        "votingClosesAt": null,
+        "resultsAt": null
+      },
+      "owner": null,
+      "notes": "신정(1/1 금). 휴식 주는 연속 제출 기록이 끊기지 않아요. 1~6주 중간 결산 글 발행."
+    },
+    {
+      "id": "2027-w01",
+      "type": "theme",
+      "round": 7,
+      "code": "W1",
+      "title": "오늘만 존재하는 앱",
+      "announcement": "모든 데이터는 자정(한국 시간)에 사라져요. 내일은 늘 빈 화면에서 시작해요.",
+      "rule": "자정이 지나면 데이터가 초기화됨 (데모에서 시간을 바꿔 확인)",
+      "difficulty": "medium",
+      "status": "draft",
+      "examples": {
+        "beginner": "하루짜리 한 줄 일기",
+        "regular": "오늘만 열리는 익명 방명록",
+        "expert": "자정에 사라지는 실시간 공동 낙서 벽"
+      },
+      "schedule": {
+        "opensAt": "2027-01-04T10:00:00+09:00",
+        "submissionClosesAt": "2027-01-07T10:00:00+09:00",
+        "votingClosesAt": "2027-01-11T00:00:00+09:00",
+        "resultsAt": "2027-01-11T10:00:00+09:00"
+      },
+      "owner": null,
+      "notes": "새해 첫 주. 공지 톤을 '올해 첫 작품'으로."
+    },
+    {
+      "id": "2027-w02",
+      "type": "theme",
+      "round": 8,
+      "code": "W2",
+      "title": "두 사람이 있어야 작동",
+      "announcement": "혼자서는 아무것도 할 수 없어야 해요. 두 명 이상이 함께 있어야 의미가 생기는 앱을 만드세요.",
+      "rule": "1인 접속 시 핵심 기능 불가, 2인 이상에서 동작",
+      "difficulty": "high",
+      "status": "draft",
+      "examples": {
+        "beginner": "둘이 번갈아 한 줄씩 쓰는 교환 일기 (턴제 OK)",
+        "regular": "링크로 초대하는 실시간 끝말잇기",
+        "expert": "두 사람의 커서로 함께 그리는 캔버스"
+      },
+      "schedule": {
+        "opensAt": "2027-01-11T10:00:00+09:00",
+        "submissionClosesAt": "2027-01-14T10:00:00+09:00",
+        "votingClosesAt": "2027-01-18T00:00:00+09:00",
+        "resultsAt": "2027-01-18T10:00:00+09:00"
+      },
+      "owner": null,
+      "notes": "실시간 기능 부담이 커요. 공지에 Realtime 참고 자료와 '같이 테스트할 사람' 스레드를 함께."
+    },
+    {
+      "id": "2027-w03",
+      "type": "theme",
+      "round": 9,
+      "code": "W3",
+      "title": "이미 있는 앱을 1%만 다르게",
+      "announcement": "익숙한 앱 하나를 골라 딱 한 가지만 바꿔서 다시 만드세요. 무엇을 왜 바꿨는지가 핵심이에요.",
+      "rule": "원본 앱 명시 + 바꾼 한 가지와 이유를 README에",
+      "difficulty": "medium",
+      "status": "draft",
+      "examples": {
+        "beginner": "체크하면 칭찬해 주는 할 일 앱",
+        "regular": "답장이 하루 뒤에 도착하는 메신저",
+        "expert": "추천 없이 무작위로만 보여주는 피드"
+      },
+      "schedule": {
+        "opensAt": "2027-01-18T10:00:00+09:00",
+        "submissionClosesAt": "2027-01-21T10:00:00+09:00",
+        "votingClosesAt": "2027-01-25T00:00:00+09:00",
+        "resultsAt": "2027-01-25T10:00:00+09:00"
+      },
+      "owner": null,
+      "notes": "실제 서비스의 로고·이름을 그대로 쓰지 않도록 안내."
+    },
+    {
+      "id": "2027-w04",
+      "type": "theme",
+      "round": 10,
+      "code": "W4",
+      "title": "바깥 세상을 입력으로",
+      "announcement": "카메라, 마이크, 기울기 센서 중 하나를 핵심 입력으로 써요. 키보드와 터치는 보조로만.",
+      "rule": "핵심 기능이 센서 입력으로 동작",
+      "difficulty": "high",
+      "status": "draft",
+      "examples": {
+        "beginner": "박수 치면 넘어가는 슬라이드",
+        "regular": "폰을 기울여 푸는 미로",
+        "expert": "손 모양을 인식하는 가위바위보"
+      },
+      "schedule": {
+        "opensAt": "2027-01-25T10:00:00+09:00",
+        "submissionClosesAt": "2027-01-28T10:00:00+09:00",
+        "votingClosesAt": "2027-02-01T00:00:00+09:00",
+        "resultsAt": "2027-02-01T10:00:00+09:00"
+      },
+      "owner": null,
+      "notes": "권한 요청 UX와 HTTPS 필수 안내. 데모 확인용 30초 영상 제출 허용."
+    },
+    {
+      "id": "2027-w05",
+      "type": "theme",
+      "round": 11,
+      "code": "W5",
+      "title": "되돌리기 없음",
+      "announcement": "모든 행동은 영구적이에요. 지우기, 수정, 되돌리기를 만들지 마세요.",
+      "rule": "삭제·수정·되돌리기 기능이 없음",
+      "difficulty": "medium",
+      "status": "draft",
+      "examples": {
+        "beginner": "한 번 쓰면 못 지우는 일기",
+        "regular": "한 사람당 한 글자씩 쓰는 공동 소설",
+        "expert": "변경이 쌓이기만 하는 공동 픽셀 캔버스"
+      },
+      "schedule": {
+        "opensAt": "2027-02-01T10:00:00+09:00",
+        "submissionClosesAt": "2027-02-04T10:00:00+09:00",
+        "votingClosesAt": "2027-02-08T00:00:00+09:00",
+        "resultsAt": "2027-02-10T10:00:00+09:00"
+      },
+      "owner": null,
+      "notes": "원래 발표일(월)이 설 연휴(2/6~2/9)라 결과 발표를 수요일로 미뤘어요."
+    },
+    {
+      "id": "2027-w06",
+      "type": "break",
+      "round": null,
+      "code": "W6",
+      "title": "설 연휴 휴식",
+      "announcement": "설 연휴라 한 주 쉬어요. 11주차 결과는 수요일에 발표해요.",
+      "rule": null,
+      "difficulty": null,
+      "status": "break",
+      "examples": null,
+      "schedule": {
+        "opensAt": "2027-02-08T10:00:00+09:00",
+        "submissionClosesAt": null,
+        "votingClosesAt": null,
+        "resultsAt": null
+      },
+      "owner": null,
+      "notes": "연속 제출 기록 유지. 시즌 피날레 예고 공지."
+    },
+    {
+      "id": "2027-w07",
+      "type": "theme",
+      "round": 12,
+      "code": "W7",
+      "title": "딱 한 사람을 위한 앱",
+      "announcement": "가족, 친구, 동료 중 한 사람을 정하고 그 사람만을 위해 만드세요. 제출할 때 그 사람의 반응 한 줄을 함께 받아요.",
+      "rule": "대상 1인 명시 + 그 사람의 반응 한 줄 첨부",
+      "difficulty": "low",
+      "status": "draft",
+      "examples": {
+        "beginner": "할머니를 위한 큰 글씨 전화번호부",
+        "regular": "룸메이트와 쓰는 청소 당번 돌림판",
+        "expert": "동생의 수학 오답을 자동으로 정리하는 노트"
+      },
+      "schedule": {
+        "opensAt": "2027-02-15T10:00:00+09:00",
+        "submissionClosesAt": "2027-02-18T10:00:00+09:00",
+        "votingClosesAt": "2027-02-22T00:00:00+09:00",
+        "resultsAt": "2027-02-22T10:00:00+09:00"
+      },
+      "owner": null,
+      "notes": "시즌 피날레. 결과 발표 날 시즌 시상과 연속 제출 시상을 함께."
+    }
+  ]
+}
