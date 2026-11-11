@@ -43,7 +43,7 @@ function ThisWeekCard() {
         ) : (
           <span className="mono text-[13px] text-(--tt-on-night-muted)">이번 시즌이 끝났어요</span>
         )}
-        {phase === '제출 마감까지' && <Button variant="primary" href="/submit" label="결과물 제출하기" hasArrow />}
+        {phase === '제출 마감까지' && <Button variant="primary" href="/submit" label="결과물 제출하기" className="hover:bg-white! hover:text-black!" hasArrow />}
       </div>
     </article>
   )

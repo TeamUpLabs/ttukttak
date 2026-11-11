@@ -21,7 +21,7 @@ function HomePage() {
             <p className="m-0 text-lg leading-[1.7] max-w-md">월요일에 주제가 열리면 72시간 안에 만들어 올리세요. 작게 만들고, 완성하고, 서로의 결과물에 투표하는 주간 미니 해커톤이에요.</p>
             <div className="flex gap-4 flex-wrap">
               <Button variant="secondary" label="이번 주 참가하기" hasArrow />
-              <Button variant="tint" label="제출작 구경하기" />
+              <Button variant="primary" label="제출작 구경하기" />
             </div>
           </div>
 
