@@ -1,4 +1,5 @@
-import { Button, SiteHeader } from "../shared/ui";
+import { Button, SiteFooter, SiteHeader } from "../shared/ui";
+import NextThemeNotify from "../features/week/components/NextThemeNotify";
 import ThisWeekCard from "../features/week/components/ThisWeekCard";
 import RecentSubmissionsMarquee from "../features/submission/components/RecentSubmissionsMarquee";
 import WeekFlow from "../features/week/components/WeekFlow";
@@ -14,6 +15,7 @@ function HomePage() {
   const week = current ?? next;
 
   return (
+    <>
     <main className="min-h-screen">
       <SiteHeader />
       <section id="theme" className="max-w-7xl mx-auto py-20 flex flex-col gap-30">
@@ -74,6 +76,11 @@ function HomePage() {
         <PastWeeks />
       </section>
     </main>
+
+    <SiteFooter>
+      <NextThemeNotify />
+    </SiteFooter>
+    </>
   )
 }
 

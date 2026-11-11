@@ -1,4 +1,5 @@
 export * from "./SiteHeader"
+export * from "./SiteFooter"
 export * from "./Button"
 export * from "./Countdown"
 export * from "./LiveDot"
