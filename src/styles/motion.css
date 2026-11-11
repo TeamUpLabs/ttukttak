@@ -1,0 +1,185 @@
+@keyframes tt-rise {
+  from {
+    transform: translateY(108%);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+@keyframes tt-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes tt-draw {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes tt-grow {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes tt-bar {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes tt-ping {
+  0% {
+    transform: scale(1);
+    opacity: .55;
+  }
+
+  100% {
+    transform: scale(2.8);
+    opacity: 0;
+  }
+}
+
+@keyframes tt-pop {
+  0% {
+    transform: scale(1);
+  }
+
+  40% {
+    transform: scale(1.45) rotate(-8deg);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes tt-blink {
+  50% {
+    opacity: .2;
+  }
+}
+
+@keyframes tt-slide {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes tt-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes tt-cell {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  70% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes tt-wobble {
+
+  0%,
+  100% {
+    transform: rotate(-6deg);
+  }
+
+  50% {
+    transform: rotate(4deg);
+  }
+}
+
+@keyframes tt-breathe {
+
+  0%,
+  100% {
+    box-shadow: var(--tt-shadow-press), 0 0 0 0 rgba(255, 90, 31, .45);
+  }
+
+  50% {
+    box-shadow: var(--tt-shadow-press), 0 0 0 18px rgba(255, 90, 31, 0);
+  }
+}
+
+/* 헤드라인 한 줄씩 마스크 안에서 올라오기
+   <span class="tt-line"><span class="tt-line__in" style="animation-delay:.12s">…</span></span> */
+.tt-line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: .04em;
+}
+
+.tt-line__in {
+  display: block;
+  animation: tt-rise var(--tt-dur-enter) var(--tt-ease-snap) both;
+}
+
+/* 덩어리 페이드업 (animation-delay로 순서) */
+.tt-fade {
+  animation: tt-fade-up .9s var(--tt-ease-snap) both;
+}
+
+/* 스크롤에 맞춰 등장 — 지원하지 않는 브라우저에서는 그냥 보여요 */
+@supports (animation-timeline: view()) {
+  .tt-reveal {
+    animation: tt-fade-up linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 35%;
+  }
+}
+
+/* 막대 차트 막대 (animation-delay로 스태거) */
+.tt-bar {
+  border-radius: var(--tt-radius-xs) var(--tt-radius-xs) 0 0;
+  background: var(--tt-ink);
+  transform-origin: bottom;
+  animation: tt-bar 1s var(--tt-ease-snap) both;
+}
+
+.tt-bar.is-peak {
+  background: var(--tt-signal);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

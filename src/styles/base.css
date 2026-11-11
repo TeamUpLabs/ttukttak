@@ -1,0 +1,160 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--tt-ground);
+  color: var(--tt-ink);
+  font-family: var(--tt-font-sans);
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--tt-ink);
+}
+
+a:hover {
+  color: var(--tt-muted);
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px var(--tt-focus);
+  border-radius: var(--tt-radius-xs);
+}
+
+.tt-wrap {
+  max-width: var(--tt-max-width);
+  margin-inline: auto;
+  padding-inline: var(--tt-gutter);
+}
+
+.tt-section {
+  padding-block: var(--tt-space-10);
+}
+
+.tt-section--sunk {
+  background: var(--tt-ground-sunk);
+  border-block: var(--tt-stroke-bold) solid var(--tt-line-strong);
+}
+
+.tt-section--night {
+  background: var(--tt-night);
+  color: var(--tt-on-night);
+}
+
+.tt-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.tt-display-xl {
+  margin: 0;
+  font: 700 clamp(60px, 10.4vw, 164px) / .98 var(--tt-font-sans);
+  letter-spacing: -.055em;
+}
+
+.tt-display-l {
+  margin: 0;
+  font: 700 clamp(36px, 4.4vw, 64px) / 1.08 var(--tt-font-sans);
+  letter-spacing: -.045em;
+}
+
+.tt-title {
+  margin: 0;
+  font: 700 clamp(34px, 3.6vw, 48px) / 1.12 var(--tt-font-sans);
+  letter-spacing: -.04em;
+}
+
+.tt-heading {
+  margin: 0;
+  font: 700 28px / 1.25 var(--tt-font-sans);
+  letter-spacing: -.04em;
+}
+
+.tt-card-title {
+  margin: 0;
+  font: 700 22px / 1.3 var(--tt-font-sans);
+  letter-spacing: -.035em;
+}
+
+.tt-lead {
+  margin: 0;
+  font: 400 20px / 1.65 var(--tt-font-sans);
+  color: var(--tt-ink-soft);
+}
+
+.tt-body {
+  margin: 0;
+  font: 400 16px / 1.7 var(--tt-font-sans);
+  color: var(--tt-ink-soft);
+}
+
+.tt-ui {
+  font: 500 15px / 1.4 var(--tt-font-sans);
+}
+
+.tt-small {
+  font: 400 13px / 1.5 var(--tt-font-sans);
+  color: var(--tt-muted);
+}
+
+.tt-numeral-xl,
+.tt-numeral-l,
+.tt-numeral-m {
+  font-family: var(--tt-font-display);
+  font-stretch: var(--tt-display-stretch);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.tt-numeral-xl {
+  font-size: 92px;
+}
+
+.tt-numeral-l {
+  font-size: 72px;
+}
+
+.tt-numeral-m {
+  font-size: 40px;
+}
+
+.tt-label {
+  font: 400 13px / 1.5 var(--tt-font-mono);
+  color: var(--tt-muted);
+}
+
+.tt-label-s {
+  font: 500 12px / 1.4 var(--tt-font-mono);
+  color: var(--tt-muted);
+}
+
+/* 강조 단어 아래로 그어지는 주황 형광펜 */
+.tt-highlight {
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+}
+
+.tt-highlight::after {
+  content: "";
+  position: absolute;
+  left: -.04em;
+  right: -.04em;
+  bottom: .08em;
+  height: .32em;
+  background: var(--tt-signal);
+  z-index: -1;
+  transform-origin: left;
+  animation: tt-draw .7s var(--tt-ease-wipe) 1s both;
+}

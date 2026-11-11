@@ -1,0 +1,139 @@
+:root {
+  /* Color — surfaces */
+  --tt-ground: #F1F1EE;
+  /* 페이지 바탕 */
+  --tt-ground-sunk: #E7E7E2;
+  /* 번갈아 나오는 섹션 */
+  --tt-surface: #FFFFFF;
+  /* 카드, 입력창 */
+  --tt-night: #121212;
+  /* 뒤집힌 무대 블록 (테마 카드, 푸터) */
+
+  /* Color — text & lines */
+  --tt-ink: #121212;
+  /* 주 텍스트, 테두리 · 17:1 */
+  --tt-ink-soft: #3C3C38;
+  /* 본문 · 10:1 */
+  --tt-muted: #5E5E58;
+  /* 메타, 캡션 · 5.9:1 (12px 이상) */
+  --tt-line: #DADAD4;
+  /* 조용한 헤어라인 */
+  --tt-line-strong: var(--tt-ink);
+  --tt-fill-quiet: #E2E2DC;
+  /* hover 바탕, 빈 칸 */
+
+  /* Color — signal (유일한 강조색: 면과 큰 숫자에만) */
+  --tt-signal: #FF5A1F;
+  --tt-signal-deep: #9C2E06;
+  --tt-on-signal: #121212;
+  --tt-focus: rgba(255, 90, 31, .35);
+
+  /* Color — on night (테마와 무관하게 고정) */
+  --tt-on-night: #F1F1EE;
+  --tt-on-night-muted: #9A9A94;
+  --tt-night-line: #3A3A37;
+
+  /* Color — tints (썸네일, 피드백 라벨) */
+  --tt-tint-sage: #D7DECF;
+  --tt-tint-sky: #CFD8E3;
+  --tt-tint-sand: #E6DCCF;
+  --tt-tint-butter: #E9E4C8;
+
+  /* Type — families */
+  --tt-font-sans: "IBM Plex Sans KR", system-ui, sans-serif;
+  --tt-font-display: Archivo, "IBM Plex Sans KR", sans-serif;
+  --tt-font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --tt-display-stretch: 62%;
+
+  /* Spacing */
+  --tt-space-1: 4px;
+  --tt-space-2: 8px;
+  --tt-space-3: 12px;
+  --tt-space-4: 16px;
+  --tt-space-5: 24px;
+  --tt-space-6: 32px;
+  --tt-space-7: 40px;
+  --tt-space-8: 56px;
+  --tt-space-9: 72px;
+  --tt-space-10: 112px;
+
+  /* Layout */
+  --tt-max-width: 1320px;
+  --tt-gutter: var(--tt-space-7);
+
+  /* Radius */
+  --tt-radius-xs: 6px;
+  --tt-radius-sm: 10px;
+  --tt-radius-md: 16px;
+  --tt-radius-lg: 22px;
+  --tt-radius-xl: 28px;
+  --tt-radius-pill: 999px;
+
+  /* Stroke */
+  --tt-stroke-hair: 1px;
+  --tt-stroke-bold: 1.5px;
+
+  /* Shadow — 블러 없는 오프셋만 */
+  --tt-shadow-lift: 8px 10px 0 #121212;
+  --tt-shadow-stamp: 4px 4px 0 #121212;
+  --tt-shadow-press: 0 10px 0 var(--tt-signal-deep);
+  --tt-shadow-key: 0 8px 0 #121212;
+
+  /* Motion */
+  --tt-ease-snap: cubic-bezier(.16, .84, .2, 1);
+  /* 등장, 숫자 롤링 */
+  --tt-ease-wipe: cubic-bezier(.65, 0, .35, 1);
+  /* 형광펜, 행 채움 */
+  --tt-ease-lift: cubic-bezier(.2, .8, .2, 1);
+  /* hover 떠오름 */
+  --tt-dur-press: 80ms;
+  --tt-dur-quick: 250ms;
+  --tt-dur-lift: 450ms;
+  --tt-dur-tick: 700ms;
+  --tt-dur-enter: 1000ms;
+
+  color-scheme: light;
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --tt-ground: #121212;
+    --tt-ground-sunk: #1B1B19;
+    --tt-surface: #1F1F1D;
+    --tt-night: #2A2A27;
+    --tt-ink: #F1F1EE;
+    --tt-ink-soft: #CFCFC9;
+    --tt-muted: #9A9A94;
+    --tt-line: #2E2E2B;
+    --tt-fill-quiet: #2E2E2B;
+    --tt-tint-sage: #3A4236;
+    --tt-tint-sky: #343C47;
+    --tt-tint-sand: #463D35;
+    --tt-tint-butter: #46422E;
+    --tt-shadow-lift: 8px 10px 0 #000000;
+    --tt-shadow-stamp: 4px 4px 0 #000000;
+    --tt-shadow-key: 0 8px 0 #000000;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --tt-ground: #121212;
+  --tt-ground-sunk: #1B1B19;
+  --tt-surface: #1F1F1D;
+  --tt-night: #2A2A27;
+  --tt-ink: #F1F1EE;
+  --tt-ink-soft: #CFCFC9;
+  --tt-muted: #9A9A94;
+  --tt-line: #2E2E2B;
+  --tt-fill-quiet: #2E2E2B;
+  --tt-tint-sage: #3A4236;
+  --tt-tint-sky: #343C47;
+  --tt-tint-sand: #463D35;
+  --tt-tint-butter: #46422E;
+  --tt-shadow-lift: 8px 10px 0 #000000;
+  --tt-shadow-stamp: 4px 4px 0 #000000;
+  --tt-shadow-key: 0 8px 0 #000000;
+  color-scheme: dark;
+}

@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=IBM+Plex+Sans+KR:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@import "tokens.css";
+@import "base.css";
+@import "motion.css";
+
+@media (max-width: 1000px) {
+  .tt-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tt-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tt-stat:nth-child(2) {
+    border-right: 0;
+  }
+
+  .tt-stat:nth-child(-n + 2) {
+    border-bottom: var(--tt-stroke-bold) solid var(--tt-ink);
+  }
+
+  .tt-stat:nth-child(3) {
+    padding-left: 0;
+  }
+
+  .tt-streak {
+    grid-template-columns: repeat(13, minmax(0, 1fr));
+  }
+
+  .tt-nav__links {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --tt-gutter: var(--tt-space-4);
+  }
+
+  .tt-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tt-stage {
+    padding: 24px;
+    border-radius: var(--tt-radius-lg);
+  }
+
+  .tt-countdown__win {
+    font-size: 60px;
+  }
+
+  .tt-countdown__sep {
+    font-size: 48px;
+    padding-bottom: 22px;
+  }
+
+  .tt-row {
+    grid-template-columns: 56px minmax(0, 1fr) 32px;
+    padding: 22px 4px;
+  }
+
+  .tt-row__extra {
+    display: none;
+  }
+
+  .tt-streak {
+    gap: 4px;
+  }
+
+  .tt-avatar--xl {
+    width: 112px;
+    height: 112px;
+    font-size: 56px;
+    border-radius: 28px;
+  }
+
+  .tt-stamp {
+    width: 140px;
+    height: 140px;
+  }
+
+  .tt-stamp__core {
+    inset: 30px;
+  }
+}
