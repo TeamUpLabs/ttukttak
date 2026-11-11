@@ -96,7 +96,7 @@
 }
 
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --tt-ground: #121212;
     --tt-ground-sunk: #1B1B19;
@@ -136,4 +136,4 @@
   --tt-shadow-stamp: 4px 4px 0 #000000;
   --tt-shadow-key: 0 8px 0 #000000;
   color-scheme: dark;
-}
+} */
