@@ -158,3 +158,8 @@ a:hover {
   transform-origin: left;
   animation: tt-draw .7s var(--tt-ease-wipe) 1s both;
 }
+
+.mono {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  letter-spacing: 0
+}

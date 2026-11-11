@@ -1,0 +1,25 @@
+.nav-a {
+  text-decoration: none;
+  /* font-size: 15px; */
+  color: #121212;
+  position: relative;
+  padding: 12px 0;
+}
+
+.nav-a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 6px;
+  height: 2px;
+  background: #121212;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .35s cubic-bezier(.65, 0, .35, 1)
+}
+
+.nav-a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left
+}
