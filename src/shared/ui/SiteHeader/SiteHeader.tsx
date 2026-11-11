@@ -25,7 +25,7 @@ function SiteHeader() {
             <span className="text-sm mono">{week.code} LIVE</span>
           </span>
 
-          <Button variant="secondary" label="GitHub로 시작하기" hasArrow />
+          <Button variant="secondary" href="/login" label="GitHub로 시작하기" hasArrow />
         </div>
       </div>
     </header>
