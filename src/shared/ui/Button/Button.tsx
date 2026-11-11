@@ -20,12 +20,12 @@ type ButtonAsButton = BaseProps &
 type ButtonProps = ButtonAsAnchor | ButtonAsButton;
 
 const BASE_CLASSES =
-  'inline-flex items-center justify-center rounded-full font-medium py-2 px-6';
+  'group inline-flex items-center justify-center rounded-full font-medium py-2 px-6 transition-colors duration-300 ease-in-out';
 
 const VARIANT_CLASSES: Record<BaseProps['variant'], string> = {
-  primary: 'bg-white text-black cursor-pointer',
-  secondary: 'bg-black text-white border border-white cursor-pointer',
-  tint: 'bg-(--tt-signal) text-white cursor-pointer',
+  primary: 'bg-white text-black border border-black cursor-pointer hover:bg-black hover:text-white',
+  secondary: 'bg-black text-white border border-white cursor-pointer hover:bg-(--tt-signal) hover:text-black',
+  tint: 'bg-(--tt-signal) text-white cursor-pointer hover:bg-(--tt-signal-deep)',
   disabled: 'bg-gray-200 text-gray-400 cursor-not-allowed pointer-events-none',
 };
 
@@ -36,7 +36,7 @@ function Button(props: ButtonProps) {
   const content = (
     <>
       <span>{label}</span>
-      {hasArrow && <span className="ml-2">→</span>}
+      {hasArrow && <span className="ml-2 group-hover:translate-x-1 transition-all duration-300 ease-in-out">→</span>}
     </>
   );
 
