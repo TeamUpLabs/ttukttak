@@ -8,7 +8,8 @@ const TONES: ThumbTone[] = ['night', 'sand', 'sky', 'sage', 'signal', 'butter']
 const SECTION_TITLE = 'm-0 text-[clamp(32px,3.6vw,52px)] leading-[1.1] tracking-[-0.045em] font-bold'
 
 /** 프로필 전체: 머리 · 통계 · 52주 기록 · 배지 · 제출작/피드백 */
-function ProfileView({ handle }: { handle: string }) {
+/** isMe: 로그인한 본인의 프로필이면 팔로우 버튼을 숨겨요. */
+function ProfileView({ handle, isMe = false }: { handle: string; isMe?: boolean }) {
   const profile = useProfile(handle)
   const [following, setFollowing] = useState(false)
   const [tab, setTab] = useState<'works' | 'acts'>('works')
@@ -57,12 +58,14 @@ function ProfileView({ handle }: { handle: string }) {
             </div>
           </div>
           <div className="flex flex-wrap gap-3">
-            <Button
-              variant="secondary"
-              label={following ? '팔로잉' : '팔로우하기'}
-              aria-pressed={following}
-              onClick={() => setFollowing(!following)}
-            />
+            {!isMe && (
+              <Button
+                variant="secondary"
+                label={following ? '팔로잉' : '팔로우하기'}
+                aria-pressed={following}
+                onClick={() => setFollowing(!following)}
+              />
+            )}
             {user.links.github && <Button variant="primary" href={user.links.github} target="_blank" rel="noreferrer" label="GitHub ↗" />}
             {user.links.blog && <Button variant="primary" href={user.links.blog} target="_blank" rel="noreferrer" label="블로그 ↗" />}
           </div>
