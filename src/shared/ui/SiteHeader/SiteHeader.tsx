@@ -3,9 +3,11 @@ import { useThisWeek } from "../../../features/week/useThisWeek";
 import { useSession } from '../../../features/auth/session'
 
 function SiteHeader() {
-  const { week: current, next } = useThisWeek()
+  const { week: current, next, phase } = useThisWeek(60_000)
   // 시즌 시작 전엔 첫 주 주제를 미리 보여줘요.
   const week = current ?? next
+  // 주제 주가 열려 있고 결과 발표 전이면 LIVE. 휴식 주·결과 발표 뒤·시즌 밖은 END.
+  const live = current?.type === 'theme' && (phase === '제출 마감까지' || phase === '투표 마감까지' || phase === '결과 발표까지')
   const session = useSession()
 
   return (
@@ -23,11 +25,14 @@ function SiteHeader() {
 
         <div className="flex items-center gap-6">
           <span className="flex items-center gap-4">
-            <LiveDot />
-            <span className="text-sm mono">{week.code} LIVE</span>
+            <LiveDot off={!live} />
+            <span className={`text-sm mono ${live ? '' : 'text-(--tt-muted)'}`}>{week?.code} {live ? 'LIVE' : 'END'}</span>
           </span>
           {session ? (
-            <Avatar handle={session.handle} href={`/@${session.handle.replace(/^@/, '')}`} />
+            <div className="flex items-center gap-6">
+              <Avatar handle={session.handle} href={`/@${session.handle.replace(/^@/, '')}`} />
+              <Button variant="secondary" href="/submit" label="제출 하기" hasArrow />
+            </div>
           ) :
             <Button variant="secondary" href="/login" label="GitHub로 시작하기" hasArrow />
           }
