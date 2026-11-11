@@ -1,0 +1,1297 @@
+[
+  {
+    "handle": "jh.park",
+    "name": "박지훈",
+    "bio": "프론트엔드 개발자. 작게 만들고 빨리 버리는 걸 좋아해요. 요즘은 Svelte랑 WebSocket으로 노는 중이에요.",
+    "links": {
+      "github": "https://github.com/jh-park",
+      "blog": "https://jh.park.dev"
+    },
+    "joinedAt": "2026-01-05T10:00:00+09:00",
+    "followers": 214,
+    "following": 86,
+    "history": [
+      {
+        "weekId": "2026-w45",
+        "title": "깃허브 커밋으로 그린 도시",
+        "track": "expert",
+        "votes": 131,
+        "rank": 1
+      },
+      {
+        "weekId": "2026-w44",
+        "title": "헤드라인 끝말잇기",
+        "track": "expert",
+        "votes": 88,
+        "rank": 7
+      },
+      {
+        "weekId": "2026-w43",
+        "title": "흑백 테트리스",
+        "track": "expert",
+        "votes": 102,
+        "rank": 3
+      },
+      {
+        "weekId": "2026-w42",
+        "title": "익명 한 줄 게시판",
+        "track": "expert",
+        "votes": 64,
+        "rank": 9
+      },
+      {
+        "weekId": "2026-w41",
+        "title": "100줄 그림판",
+        "track": "expert",
+        "votes": 97,
+        "rank": 2
+      },
+      {
+        "weekId": "2026-w40",
+        "title": "60초 안에 끝나는 앱 · 72시간 프로토타입",
+        "track": "expert",
+        "votes": 35,
+        "rank": 10
+      },
+      {
+        "weekId": "2026-w38",
+        "title": "한 손 리듬 게임",
+        "track": "expert",
+        "votes": 51,
+        "rank": 6
+      },
+      {
+        "weekId": "2026-w36",
+        "title": "멀티플레이 그림 맞히기",
+        "track": "expert",
+        "votes": 56,
+        "rank": 11
+      },
+      {
+        "weekId": "2026-w35",
+        "title": "과제 마감 역산 플래너",
+        "track": "expert",
+        "votes": 53,
+        "rank": 7
+      },
+      {
+        "weekId": "2026-w34",
+        "title": "모스 메신저",
+        "track": "expert",
+        "votes": 76,
+        "rank": 13
+      },
+      {
+        "weekId": "2026-w33",
+        "title": "한글 단위 변환기",
+        "track": "beginner",
+        "votes": 103,
+        "rank": 13
+      },
+      {
+        "weekId": "2026-w31",
+        "title": "오프라인 여행 지도",
+        "track": "expert",
+        "votes": 47,
+        "rank": 5
+      },
+      {
+        "weekId": "2026-w30",
+        "title": "감정 그래프 일기",
+        "track": "expert",
+        "votes": 52,
+        "rank": 2
+      },
+      {
+        "weekId": "2026-w29",
+        "title": "커서로 노는 물리 장난감",
+        "track": "expert",
+        "votes": 89,
+        "rank": 5
+      },
+      {
+        "weekId": "2026-w28",
+        "title": "1분 로그라이크",
+        "track": "expert",
+        "votes": 43,
+        "rank": 12
+      },
+      {
+        "weekId": "2026-w26",
+        "title": "반년 지출 분석",
+        "track": "expert",
+        "votes": 44,
+        "rank": 4
+      },
+      {
+        "weekId": "2026-w25",
+        "title": "거북이 경주 게임",
+        "track": "expert",
+        "votes": 43,
+        "rank": 8
+      },
+      {
+        "weekId": "2026-w23",
+        "title": "하루 한 수 두는 바둑",
+        "track": "expert",
+        "votes": 99,
+        "rank": 6
+      },
+      {
+        "weekId": "2026-w21",
+        "title": "코드 조각 퍼지 검색",
+        "track": "expert",
+        "votes": 36,
+        "rank": 13
+      },
+      {
+        "weekId": "2026-w20",
+        "title": "마주 보고 하는 2인 게임",
+        "track": "expert",
+        "votes": 87,
+        "rank": 13
+      },
+      {
+        "weekId": "2026-w18",
+        "title": "그림으로 고르는 하루 일과표",
+        "track": "expert",
+        "votes": 88,
+        "rank": 14
+      },
+      {
+        "weekId": "2026-w16",
+        "title": "라우터까지 직접 만든 블로그",
+        "track": "expert",
+        "votes": 34,
+        "rank": 9
+      },
+      {
+        "weekId": "2026-w14",
+        "title": "상태 머신 텍스트 게임",
+        "track": "expert",
+        "votes": 104,
+        "rank": 8
+      },
+      {
+        "weekId": "2026-w13",
+        "title": "진지한 척하는 운세",
+        "track": "expert",
+        "votes": 76,
+        "rank": 3
+      },
+      {
+        "weekId": "2026-w12",
+        "title": "기상 데이터로 만드는 음악",
+        "track": "expert",
+        "votes": 74,
+        "rank": 12
+      },
+      {
+        "weekId": "2026-w11",
+        "title": "숫자로 쓰는 암호 메신저",
+        "track": "expert",
+        "votes": 20,
+        "rank": 8
+      },
+      {
+        "weekId": "2026-w09",
+        "title": "되돌릴 수 있는 그림판",
+        "track": "beginner",
+        "votes": 36,
+        "rank": 4
+      },
+      {
+        "weekId": "2026-w07",
+        "title": "귀성길 교대 운전 타이머",
+        "track": "expert",
+        "votes": 37,
+        "rank": 8
+      },
+      {
+        "weekId": "2026-w06",
+        "title": "텍스트 기반 대시보드",
+        "track": "expert",
+        "votes": 88,
+        "rank": 13
+      },
+      {
+        "weekId": "2026-w05",
+        "title": "낙관적 업데이트 할 일 앱",
+        "track": "expert",
+        "votes": 20,
+        "rank": 11
+      },
+      {
+        "weekId": "2026-w04",
+        "title": "강조색 하나뿐인 대시보드",
+        "track": "regular",
+        "votes": 12,
+        "rank": 6
+      },
+      {
+        "weekId": "2026-w03",
+        "title": "스크롤 없는 문서 뷰어",
+        "track": "expert",
+        "votes": 48,
+        "rank": 1
+      }
+    ],
+    "feedbacks": [
+      {
+        "id": "f-1",
+        "type": "code",
+        "targetTitle": "탭끼리 동기화되는 칸반",
+        "targetHandle": "taeho",
+        "targetId": "s-108",
+        "body": "BroadcastChannel이 없는 브라우저에선 storage 이벤트로 대신 맞출 수 있어요. 지금은 사파리 구버전에서 카드가 안 움직여요.",
+        "helpful": 18,
+        "createdAt": "2026-11-12T03:40:00+09:00"
+      },
+      {
+        "id": "f-2",
+        "type": "ux",
+        "targetTitle": "물 마신 잔 수 기록기",
+        "targetHandle": "minji.dev",
+        "targetId": "s-101",
+        "body": "실수로 눌렀을 때 되돌릴 방법이 없어요. 마지막 한 잔만이라도 취소할 수 있으면 좋겠어요.",
+        "helpful": 11,
+        "createdAt": "2026-11-11T21:10:00+09:00"
+      },
+      {
+        "id": "f-3",
+        "type": "kudo",
+        "targetTitle": "브라우저 속 SQLite 가계부",
+        "targetHandle": "kwon_beats",
+        "targetId": "s-104",
+        "body": "쿼리로 월별 지출을 뽑는 게 정말 편해요. 이번 주 주제를 제일 끝까지 밀어붙인 작품 같아요.",
+        "helpful": 24,
+        "createdAt": "2026-11-11T12:30:00+09:00"
+      },
+      {
+        "id": "f-4",
+        "type": "bug",
+        "targetTitle": "오프라인 메모장",
+        "targetHandle": "hyuk",
+        "targetId": "s-102",
+        "body": "태그에 공백이 들어가면 검색이 안 돼요. 저장할 때 trim이 빠진 것 같아요.",
+        "helpful": 9,
+        "createdAt": "2026-11-10T22:05:00+09:00"
+      }
+    ]
+  },
+  {
+    "handle": "guest",
+    "name": "손님",
+    "bio": "이제 막 뚝딱을 시작했어요.",
+    "links": {
+      "github": null,
+      "blog": null
+    },
+    "joinedAt": "2026-11-12T04:00:00+09:00",
+    "followers": 0,
+    "following": 0,
+    "history": [],
+    "feedbacks": []
+  },
+  {
+    "handle": "minji.dev",
+    "name": "김민지",
+    "bio": "디자이너 출신 개발자. 손에 잡히는 인터랙션을 좋아해요.",
+    "links": {
+      "github": "https://github.com/minji-dev",
+      "blog": null
+    },
+    "joinedAt": "2026-02-23T10:00:00+09:00",
+    "followers": 20,
+    "following": 44,
+    "history": [
+      {
+        "weekId": "2026-w45",
+        "title": "API 하나만 써서 만들기 · 끝까지 만든 장난감",
+        "track": "beginner",
+        "votes": 87,
+        "rank": 9
+      },
+      {
+        "weekId": "2026-w44",
+        "title": "어제 뉴스로 만드는 무언가 · 끝까지 만든 장난감",
+        "track": "beginner",
+        "votes": 54,
+        "rank": 11
+      },
+      {
+        "weekId": "2026-w41",
+        "title": "코드 100줄 이하 · 끝까지 만든 장난감",
+        "track": "beginner",
+        "votes": 70,
+        "rank": 6
+      },
+      {
+        "weekId": "2026-w40",
+        "title": "60초 안에 끝나는 앱 · 끝까지 만든 장난감",
+        "track": "beginner",
+        "votes": 94,
+        "rank": 11
+      },
+      {
+        "weekId": "2026-w38",
+        "title": "한 손 계산기",
+        "track": "beginner",
+        "votes": 84,
+        "rank": 9
+      },
+      {
+        "weekId": "2026-w37",
+        "title": "공공 데이터 지도",
+        "track": "regular",
+        "votes": 109,
+        "rank": 2
+      },
+      {
+        "weekId": "2026-w35",
+        "title": "시간표 위젯",
+        "track": "beginner",
+        "votes": 74,
+        "rank": 7
+      },
+      {
+        "weekId": "2026-w34",
+        "title": "숨 참기 타이머",
+        "track": "beginner",
+        "votes": 75,
+        "rank": 14
+      },
+      {
+        "weekId": "2026-w30",
+        "title": "기분 색 고르기",
+        "track": "beginner",
+        "votes": 59,
+        "rank": 10
+      },
+      {
+        "weekId": "2026-w25",
+        "title": "천천히 써지는 편지",
+        "track": "beginner",
+        "votes": 15,
+        "rank": 11
+      },
+      {
+        "weekId": "2026-w24",
+        "title": "점으로 찍는 습관 달력",
+        "track": "beginner",
+        "votes": 71,
+        "rank": 5
+      },
+      {
+        "weekId": "2026-w21",
+        "title": "내 북마크 검색",
+        "track": "beginner",
+        "votes": 86,
+        "rank": 12
+      },
+      {
+        "weekId": "2026-w19",
+        "title": "카네이션 카드",
+        "track": "beginner",
+        "votes": 74,
+        "rank": 1
+      },
+      {
+        "weekId": "2026-w16",
+        "title": "바닐라 할 일 앱",
+        "track": "beginner",
+        "votes": 100,
+        "rank": 3
+      },
+      {
+        "weekId": "2026-w13",
+        "title": "누를수록 커지는 확인 버튼",
+        "track": "beginner",
+        "votes": 87,
+        "rank": 10
+      },
+      {
+        "weekId": "2026-w10",
+        "title": "설명 없이 배우는 단축키 연습",
+        "track": "expert",
+        "votes": 62,
+        "rank": 11
+      },
+      {
+        "weekId": "2026-w09",
+        "title": "되돌릴 수 있는 그림판",
+        "track": "beginner",
+        "votes": 28,
+        "rank": 14
+      }
+    ],
+    "feedbacks": []
+  },
+  {
+    "handle": "hyuk",
+    "name": "이혁",
+    "bio": "게임 잼 단골. 사운드는 WebAudio로 직접 만들어요.",
+    "links": {
+      "github": "https://github.com/hyuk",
+      "blog": null
+    },
+    "joinedAt": "2026-01-05T10:00:00+09:00",
+    "followers": 55,
+    "following": 16,
+    "history": [
+      {
+        "weekId": "2026-w45",
+        "title": "API 하나만 써서 만들기 · 끝까지 만든 장난감",
+        "track": "expert",
+        "votes": 110,
+        "rank": 7
+      },
+      {
+        "weekId": "2026-w44",
+        "title": "어제 뉴스로 만드는 무언가 · 작은 실험 하나",
+        "track": "expert",
+        "votes": 62,
+        "rank": 9
+      },
+      {
+        "weekId": "2026-w43",
+        "title": "흑백 두 가지 색만 허용 · 72시간 프로토타입",
+        "track": "expert",
+        "votes": 15,
+        "rank": 5
+      },
+      {
+        "weekId": "2026-w42",
+        "title": "로그인 없는 SNS · 하루 만에 만든 도구",
+        "track": "expert",
+        "votes": 41,
+        "rank": 13
+      },
+      {
+        "weekId": "2026-w41",
+        "title": "코드 100줄 이하 · 72시간 프로토타입",
+        "track": "expert",
+        "votes": 53,
+        "rank": 10
+      },
+      {
+        "weekId": "2026-w40",
+        "title": "60초 안에 끝나는 앱 · 끝까지 만든 장난감",
+        "track": "expert",
+        "votes": 78,
+        "rank": 2
+      },
+      {
+        "weekId": "2026-w38",
+        "title": "한 손 리듬 게임",
+        "track": "expert",
+        "votes": 75,
+        "rank": 7
+      },
+      {
+        "weekId": "2026-w37",
+        "title": "실시간 스파크라인",
+        "track": "expert",
+        "votes": 34,
+        "rank": 14
+      },
+      {
+        "weekId": "2026-w36",
+        "title": "멀티플레이 그림 맞히기",
+        "track": "expert",
+        "votes": 90,
+        "rank": 11
+      },
+      {
+        "weekId": "2026-w34",
+        "title": "한 버튼 메트로놈",
+        "track": "regular",
+        "votes": 44,
+        "rank": 2
+      },
+      {
+        "weekId": "2026-w33",
+        "title": "한글로 짜는 코딩 장난감",
+        "track": "expert",
+        "votes": 50,
+        "rank": 10
+      },
+      {
+        "weekId": "2026-w30",
+        "title": "감정 그래프 일기",
+        "track": "expert",
+        "votes": 28,
+        "rank": 6
+      },
+      {
+        "weekId": "2026-w28",
+        "title": "1분 로그라이크",
+        "track": "expert",
+        "votes": 106,
+        "rank": 7
+      },
+      {
+        "weekId": "2026-w25",
+        "title": "거북이 경주 게임",
+        "track": "expert",
+        "votes": 108,
+        "rank": 9
+      },
+      {
+        "weekId": "2026-w23",
+        "title": "하루 한 수 두는 바둑",
+        "track": "expert",
+        "votes": 40,
+        "rank": 5
+      },
+      {
+        "weekId": "2026-w22",
+        "title": "드래그 노드 에디터",
+        "track": "expert",
+        "votes": 59,
+        "rank": 3
+      },
+      {
+        "weekId": "2026-w18",
+        "title": "그림으로 고르는 하루 일과표",
+        "track": "expert",
+        "votes": 102,
+        "rank": 3
+      },
+      {
+        "weekId": "2026-w16",
+        "title": "라우터까지 직접 만든 블로그",
+        "track": "expert",
+        "votes": 70,
+        "rank": 1
+      },
+      {
+        "weekId": "2026-w15",
+        "title": "100KB 안에 든 게임",
+        "track": "expert",
+        "votes": 43,
+        "rank": 13
+      },
+      {
+        "weekId": "2026-w14",
+        "title": "상태 머신 텍스트 게임",
+        "track": "expert",
+        "votes": 104,
+        "rank": 11
+      },
+      {
+        "weekId": "2026-w13",
+        "title": "진지한 척하는 운세",
+        "track": "expert",
+        "votes": 44,
+        "rank": 8
+      },
+      {
+        "weekId": "2026-w12",
+        "title": "비 오면 열리는 플레이리스트",
+        "track": "regular",
+        "votes": 54,
+        "rank": 1
+      },
+      {
+        "weekId": "2026-w10",
+        "title": "설명 없이 배우는 단축키 연습",
+        "track": "expert",
+        "votes": 49,
+        "rank": 10
+      },
+      {
+        "weekId": "2026-w06",
+        "title": "텍스트 기반 대시보드",
+        "track": "expert",
+        "votes": 32,
+        "rank": 2
+      },
+      {
+        "weekId": "2026-w05",
+        "title": "낙관적 업데이트 할 일 앱",
+        "track": "expert",
+        "votes": 50,
+        "rank": 12
+      },
+      {
+        "weekId": "2026-w04",
+        "title": "강조색 하나뿐인 대시보드",
+        "track": "regular",
+        "votes": 31,
+        "rank": 10
+      },
+      {
+        "weekId": "2026-w02",
+        "title": "명령어 하나로 도는 가계부",
+        "track": "expert",
+        "votes": 73,
+        "rank": 12
+      }
+    ],
+    "feedbacks": []
+  },
+  {
+    "handle": "dana_k",
+    "name": "강다나",
+    "bio": "식물과 작은 도구를 키워요.",
+    "links": {
+      "github": "https://github.com/dana-k",
+      "blog": null
+    },
+    "joinedAt": "2026-04-06T10:00:00+09:00",
+    "followers": 26,
+    "following": 74,
+    "history": [
+      {
+        "weekId": "2026-w45",
+        "title": "API 하나만 써서 만들기 · 끝까지 만든 장난감",
+        "track": "beginner",
+        "votes": 100,
+        "rank": 7
+      },
+      {
+        "weekId": "2026-w44",
+        "title": "어제 뉴스로 만드는 무언가 · 끝까지 만든 장난감",
+        "track": "beginner",
+        "votes": 110,
+        "rank": 6
+      },
+      {
+        "weekId": "2026-w43",
+        "title": "흑백 두 가지 색만 허용 · 끝까지 만든 장난감",
+        "track": "beginner",
+        "votes": 90,
+        "rank": 10
+      },
+      {
+        "weekId": "2026-w41",
+        "title": "코드 100줄 이하 · 끝까지 만든 장난감",
+        "track": "beginner",
+        "votes": 104,
+        "rank": 11
+      },
+      {
+        "weekId": "2026-w38",
+        "title": "한 손 리듬 게임",
+        "track": "expert",
+        "votes": 95,
+        "rank": 14
+      },
+      {
+        "weekId": "2026-w36",
+        "title": "실시간 투표",
+        "track": "beginner",
+        "votes": 83,
+        "rank": 11
+      },
+      {
+        "weekId": "2026-w35",
+        "title": "시간표 위젯",
+        "track": "beginner",
+        "votes": 34,
+        "rank": 6
+      },
+      {
+        "weekId": "2026-w30",
+        "title": "기분 색 고르기",
+        "track": "beginner",
+        "votes": 13,
+        "rank": 13
+      },
+      {
+        "weekId": "2026-w25",
+        "title": "거북이 경주 게임",
+        "track": "expert",
+        "votes": 110,
+        "rank": 4
+      },
+      {
+        "weekId": "2026-w24",
+        "title": "점으로 찍는 습관 달력",
+        "track": "beginner",
+        "votes": 71,
+        "rank": 5
+      },
+      {
+        "weekId": "2026-w21",
+        "title": "자주 쓰는 문장 검색",
+        "track": "regular",
+        "votes": 96,
+        "rank": 9
+      },
+      {
+        "weekId": "2026-w20",
+        "title": "가로 달력",
+        "track": "beginner",
+        "votes": 19,
+        "rank": 12
+      },
+      {
+        "weekId": "2026-w19",
+        "title": "손글씨가 써지는 편지",
+        "track": "expert",
+        "votes": 20,
+        "rank": 14
+      },
+      {
+        "weekId": "2026-w18",
+        "title": "양치 타이머",
+        "track": "beginner",
+        "votes": 54,
+        "rank": 4
+      }
+    ],
+    "feedbacks": []
+  },
+  {
+    "handle": "kwon_beats",
+    "name": "권태윤",
+    "bio": "음악 만드는 백엔드 개발자예요.",
+    "links": {
+      "github": "https://github.com/kwon-beats",
+      "blog": null
+    },
+    "joinedAt": "2026-03-02T10:00:00+09:00",
+    "followers": 140,
+    "following": 26,
+    "history": [
+      {
+        "weekId": "2026-w45",
+        "title": "API 하나만 써서 만들기 · 끝까지 만든 장난감",
+        "track": "expert",
+        "votes": 71,
+        "rank": 7
+      },
+      {
+        "weekId": "2026-w44",
+        "title": "어제 뉴스로 만드는 무언가 · 하루 만에 만든 도구",
+        "track": "expert",
+        "votes": 90,
+        "rank": 5
+      },
+      {
+        "weekId": "2026-w43",
+        "title": "흑백 두 가지 색만 허용 · 하루 만에 만든 도구",
+        "track": "expert",
+        "votes": 44,
+        "rank": 8
+      },
+      {
+        "weekId": "2026-w41",
+        "title": "코드 100줄 이하 · 작은 실험 하나",
+        "track": "expert",
+        "votes": 16,
+        "rank": 9
+      },
+      {
+        "weekId": "2026-w38",
+        "title": "한 손 리듬 게임",
+        "track": "expert",
+        "votes": 74,
+        "rank": 9
+      },
+      {
+        "weekId": "2026-w37",
+        "title": "실시간 스파크라인",
+        "track": "expert",
+        "votes": 46,
+        "rank": 14
+      },
+      {
+        "weekId": "2026-w35",
+        "title": "과제 마감 역산 플래너",
+        "track": "expert",
+        "votes": 28,
+        "rank": 11
+      },
+      {
+        "weekId": "2026-w33",
+        "title": "한글 단위 변환기",
+        "track": "beginner",
+        "votes": 109,
+        "rank": 9
+      },
+      {
+        "weekId": "2026-w29",
+        "title": "커서로 노는 물리 장난감",
+        "track": "expert",
+        "votes": 30,
+        "rank": 5
+      },
+      {
+        "weekId": "2026-w27",
+        "title": "친절한 404 페이지",
+        "track": "beginner",
+        "votes": 70,
+        "rank": 2
+      },
+      {
+        "weekId": "2026-w26",
+        "title": "반년 지출 분석",
+        "track": "expert",
+        "votes": 41,
+        "rank": 11
+      },
+      {
+        "weekId": "2026-w21",
+        "title": "코드 조각 퍼지 검색",
+        "track": "expert",
+        "votes": 18,
+        "rank": 1
+      },
+      {
+        "weekId": "2026-w20",
+        "title": "마주 보고 하는 2인 게임",
+        "track": "expert",
+        "votes": 43,
+        "rank": 7
+      },
+      {
+        "weekId": "2026-w17",
+        "title": "여러 구간을 재는 스톱워치",
+        "track": "expert",
+        "votes": 97,
+        "rank": 11
+      },
+      {
+        "weekId": "2026-w16",
+        "title": "라우터까지 직접 만든 블로그",
+        "track": "expert",
+        "votes": 35,
+        "rank": 9
+      },
+      {
+        "weekId": "2026-w12",
+        "title": "기상 데이터로 만드는 음악",
+        "track": "expert",
+        "votes": 46,
+        "rank": 6
+      },
+      {
+        "weekId": "2026-w11",
+        "title": "숫자로 쓰는 암호 메신저",
+        "track": "expert",
+        "votes": 82,
+        "rank": 13
+      }
+    ],
+    "feedbacks": []
+  },
+  {
+    "handle": "seoyeon",
+    "name": "정서연",
+    "bio": "결정 장애를 코드로 고치는 중이에요.",
+    "links": {
+      "github": "https://github.com/seoyeon",
+      "blog": null
+    },
+    "joinedAt": "2026-05-04T10:00:00+09:00",
+    "followers": 32,
+    "following": 7,
+    "history": [
+      {
+        "weekId": "2026-w45",
+        "title": "API 하나만 써서 만들기 · 72시간 프로토타입",
+        "track": "regular",
+        "votes": 95,
+        "rank": 4
+      },
+      {
+        "weekId": "2026-w44",
+        "title": "어제 뉴스로 만드는 무언가 · 작은 실험 하나",
+        "track": "beginner",
+        "votes": 68,
+        "rank": 4
+      },
+      {
+        "weekId": "2026-w43",
+        "title": "흑백 두 가지 색만 허용 · 끝까지 만든 장난감",
+        "track": "regular",
+        "votes": 99,
+        "rank": 7
+      },
+      {
+        "weekId": "2026-w42",
+        "title": "로그인 없는 SNS · 작은 실험 하나",
+        "track": "regular",
+        "votes": 16,
+        "rank": 13
+      },
+      {
+        "weekId": "2026-w41",
+        "title": "코드 100줄 이하 · 하루 만에 만든 도구",
+        "track": "regular",
+        "votes": 71,
+        "rank": 10
+      },
+      {
+        "weekId": "2026-w38",
+        "title": "한 손 계산기",
+        "track": "beginner",
+        "votes": 12,
+        "rank": 10
+      },
+      {
+        "weekId": "2026-w37",
+        "title": "공공 데이터 지도",
+        "track": "regular",
+        "votes": 38,
+        "rank": 12
+      },
+      {
+        "weekId": "2026-w36",
+        "title": "같이 듣는 플레이리스트",
+        "track": "regular",
+        "votes": 69,
+        "rank": 7
+      },
+      {
+        "weekId": "2026-w35",
+        "title": "급식 메뉴 보기",
+        "track": "regular",
+        "votes": 62,
+        "rank": 3
+      },
+      {
+        "weekId": "2026-w33",
+        "title": "순우리말 사전",
+        "track": "regular",
+        "votes": 21,
+        "rank": 14
+      },
+      {
+        "weekId": "2026-w30",
+        "title": "표정 대신 글꼴",
+        "track": "regular",
+        "votes": 17,
+        "rank": 1
+      },
+      {
+        "weekId": "2026-w28",
+        "title": "1분 타자 게임",
+        "track": "regular",
+        "votes": 74,
+        "rank": 12
+      },
+      {
+        "weekId": "2026-w26",
+        "title": "커밋 기록 회고",
+        "track": "regular",
+        "votes": 94,
+        "rank": 8
+      },
+      {
+        "weekId": "2026-w21",
+        "title": "자주 쓰는 문장 검색",
+        "track": "regular",
+        "votes": 14,
+        "rank": 8
+      }
+    ],
+    "feedbacks": []
+  },
+  {
+    "handle": "yuna_b",
+    "name": "배유나",
+    "bio": "외국어 공부용 도구를 만들어요.",
+    "links": {
+      "github": "https://github.com/yuna-b",
+      "blog": null
+    },
+    "joinedAt": "2026-07-06T10:00:00+09:00",
+    "followers": 40,
+    "following": 20,
+    "history": [
+      {
+        "weekId": "2026-w45",
+        "title": "API 하나만 써서 만들기 · 72시간 프로토타입",
+        "track": "beginner",
+        "votes": 105,
+        "rank": 8
+      },
+      {
+        "weekId": "2026-w44",
+        "title": "어제 뉴스로 만드는 무언가 · 72시간 프로토타입",
+        "track": "beginner",
+        "votes": 51,
+        "rank": 4
+      },
+      {
+        "weekId": "2026-w43",
+        "title": "흑백 두 가지 색만 허용 · 작은 실험 하나",
+        "track": "beginner",
+        "votes": 68,
+        "rank": 8
+      },
+      {
+        "weekId": "2026-w42",
+        "title": "로그인 없는 SNS · 작은 실험 하나",
+        "track": "beginner",
+        "votes": 75,
+        "rank": 10
+      },
+      {
+        "weekId": "2026-w41",
+        "title": "코드 100줄 이하 · 72시간 프로토타입",
+        "track": "beginner",
+        "votes": 14,
+        "rank": 7
+      },
+      {
+        "weekId": "2026-w40",
+        "title": "60초 안에 끝나는 앱 · 작은 실험 하나",
+        "track": "beginner",
+        "votes": 94,
+        "rank": 8
+      },
+      {
+        "weekId": "2026-w35",
+        "title": "시간표 위젯",
+        "track": "beginner",
+        "votes": 55,
+        "rank": 7
+      },
+      {
+        "weekId": "2026-w34",
+        "title": "숨 참기 타이머",
+        "track": "beginner",
+        "votes": 39,
+        "rank": 8
+      },
+      {
+        "weekId": "2026-w33",
+        "title": "한글 단위 변환기",
+        "track": "beginner",
+        "votes": 31,
+        "rank": 6
+      },
+      {
+        "weekId": "2026-w31",
+        "title": "짐 체크리스트",
+        "track": "beginner",
+        "votes": 57,
+        "rank": 6
+      },
+      {
+        "weekId": "2026-w29",
+        "title": "커서를 따라오는 고양이",
+        "track": "beginner",
+        "votes": 51,
+        "rank": 14
+      },
+      {
+        "weekId": "2026-w28",
+        "title": "1분 로그라이크",
+        "track": "expert",
+        "votes": 45,
+        "rank": 3
+      }
+    ],
+    "feedbacks": []
+  },
+  {
+    "handle": "taeho",
+    "name": "최태호",
+    "bio": "실시간 협업 도구에 관심이 많아요.",
+    "links": {
+      "github": "https://github.com/taeho",
+      "blog": null
+    },
+    "joinedAt": "2026-02-02T10:00:00+09:00",
+    "followers": 82,
+    "following": 54,
+    "history": [
+      {
+        "weekId": "2026-w45",
+        "title": "API 하나만 써서 만들기 · 72시간 프로토타입",
+        "track": "expert",
+        "votes": 96,
+        "rank": 7
+      },
+      {
+        "weekId": "2026-w44",
+        "title": "어제 뉴스로 만드는 무언가 · 72시간 프로토타입",
+        "track": "expert",
+        "votes": 74,
+        "rank": 3
+      },
+      {
+        "weekId": "2026-w43",
+        "title": "흑백 두 가지 색만 허용 · 끝까지 만든 장난감",
+        "track": "expert",
+        "votes": 81,
+        "rank": 7
+      },
+      {
+        "weekId": "2026-w42",
+        "title": "로그인 없는 SNS · 하루 만에 만든 도구",
+        "track": "expert",
+        "votes": 34,
+        "rank": 3
+      },
+      {
+        "weekId": "2026-w41",
+        "title": "코드 100줄 이하 · 끝까지 만든 장난감",
+        "track": "expert",
+        "votes": 46,
+        "rank": 13
+      },
+      {
+        "weekId": "2026-w40",
+        "title": "60초 안에 끝나는 앱 · 하루 만에 만든 도구",
+        "track": "expert",
+        "votes": 78,
+        "rank": 4
+      },
+      {
+        "weekId": "2026-w38",
+        "title": "엄지로 넘기는 단어장",
+        "track": "regular",
+        "votes": 100,
+        "rank": 11
+      },
+      {
+        "weekId": "2026-w37",
+        "title": "실시간 스파크라인",
+        "track": "expert",
+        "votes": 34,
+        "rank": 2
+      },
+      {
+        "weekId": "2026-w36",
+        "title": "멀티플레이 그림 맞히기",
+        "track": "expert",
+        "votes": 68,
+        "rank": 12
+      },
+      {
+        "weekId": "2026-w34",
+        "title": "모스 메신저",
+        "track": "expert",
+        "votes": 74,
+        "rank": 1
+      },
+      {
+        "weekId": "2026-w31",
+        "title": "오프라인 여행 지도",
+        "track": "expert",
+        "votes": 60,
+        "rank": 5
+      },
+      {
+        "weekId": "2026-w29",
+        "title": "커서로 노는 물리 장난감",
+        "track": "expert",
+        "votes": 42,
+        "rank": 8
+      },
+      {
+        "weekId": "2026-w28",
+        "title": "1분 로그라이크",
+        "track": "expert",
+        "votes": 48,
+        "rank": 9
+      },
+      {
+        "weekId": "2026-w27",
+        "title": "날아가지 않는 입력 폼",
+        "track": "expert",
+        "votes": 30,
+        "rank": 9
+      },
+      {
+        "weekId": "2026-w26",
+        "title": "반년 지출 분석",
+        "track": "expert",
+        "votes": 27,
+        "rank": 10
+      },
+      {
+        "weekId": "2026-w25",
+        "title": "거북이 경주 게임",
+        "track": "expert",
+        "votes": 105,
+        "rank": 11
+      },
+      {
+        "weekId": "2026-w24",
+        "title": "점 입자 시뮬레이션",
+        "track": "expert",
+        "votes": 87,
+        "rank": 3
+      },
+      {
+        "weekId": "2026-w23",
+        "title": "하루 한 수 두는 바둑",
+        "track": "expert",
+        "votes": 30,
+        "rank": 9
+      },
+      {
+        "weekId": "2026-w21",
+        "title": "코드 조각 퍼지 검색",
+        "track": "expert",
+        "votes": 28,
+        "rank": 10
+      },
+      {
+        "weekId": "2026-w19",
+        "title": "손글씨가 써지는 편지",
+        "track": "expert",
+        "votes": 49,
+        "rank": 6
+      },
+      {
+        "weekId": "2026-w18",
+        "title": "그림으로 고르는 하루 일과표",
+        "track": "expert",
+        "votes": 95,
+        "rank": 9
+      },
+      {
+        "weekId": "2026-w15",
+        "title": "100KB 안에 든 게임",
+        "track": "expert",
+        "votes": 44,
+        "rank": 6
+      },
+      {
+        "weekId": "2026-w13",
+        "title": "진지한 척하는 운세",
+        "track": "expert",
+        "votes": 29,
+        "rank": 9
+      },
+      {
+        "weekId": "2026-w12",
+        "title": "기상 데이터로 만드는 음악",
+        "track": "expert",
+        "votes": 65,
+        "rank": 13
+      },
+      {
+        "weekId": "2026-w11",
+        "title": "더치페이 계산기",
+        "track": "regular",
+        "votes": 97,
+        "rank": 10
+      },
+      {
+        "weekId": "2026-w09",
+        "title": "히스토리가 가지 치는 텍스트 에디터",
+        "track": "expert",
+        "votes": 96,
+        "rank": 12
+      },
+      {
+        "weekId": "2026-w07",
+        "title": "귀성길 교대 운전 타이머",
+        "track": "expert",
+        "votes": 13,
+        "rank": 9
+      }
+    ],
+    "feedbacks": []
+  }
+]

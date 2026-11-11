@@ -1,17 +1,7 @@
 import { Marquee } from '../../../shared/ui'
 import { useNow } from '../../../shared/hooks/useNow.ts'
+import { timeAgo } from '../../../shared/lib/time.ts'
 import submissions from '../../../../mocks/submissions.json'
-
-const rtf = new Intl.RelativeTimeFormat('ko')
-
-/** "방금", "5분 전", "3시간 전", "2일 전" */
-function timeAgo(at: number, now: Date) {
-  const min = Math.floor((now.getTime() - at) / 60_000)
-  if (min < 1) return '방금'
-  if (min < 60) return rtf.format(-min, 'minute')
-  if (min < 60 * 24) return rtf.format(-Math.floor(min / 60), 'hour')
-  return rtf.format(-Math.floor(min / (60 * 24)), 'day')
-}
 
 /** 받침이 있으면 "을", 없으면 "를". 한글이 아니면 "을". */
 function objectParticle(word: string) {

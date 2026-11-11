@@ -1,5 +1,7 @@
 export * from "./SiteHeader"
 export * from "./Avatar"
+export * from "./StampBadge"
+export * from "./StreakGrid"
 export * from "./SiteFooter"
 export * from "./Button"
 export * from "./Countdown"

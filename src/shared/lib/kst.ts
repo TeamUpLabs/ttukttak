@@ -18,6 +18,11 @@ export function kstMonthDay(date: Date) {
   return `${p.month}.${p.day}`
 }
 
+/** "2026년 1월" */
+export function kstYearMonth(date: Date) {
+  return new Intl.DateTimeFormat('ko-KR', { timeZone: 'Asia/Seoul', year: 'numeric', month: 'long' }).format(date)
+}
+
 /** "목" */
 export function kstWeekday(date: Date) {
   return kstParts(date).weekday

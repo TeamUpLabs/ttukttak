@@ -10,7 +10,9 @@ type ProjectCardProps = {
   handleHref: string
   trackLabel: string
   /** 썸네일 오른쪽 위 순위 */
-  rank: number
+  rank?: number
+  /** 썸네일 왼쪽 위 표시. "고수 1위". gold면 주황 */
+  medal?: { label: string; gold?: boolean }
   thumb: { tone: ThumbTone; caption: string }
   /** 투표 자리. 페이지가 VoteButton 등을 꽂아줘요. */
   vote?: ReactNode
@@ -26,13 +28,24 @@ const TONES: Record<ThumbTone, { bg: string; key: string; text: string }> = {
 }
 
 /** 제출작 하나. 위엔 키캡 썸네일, 아래엔 작성자·제목·소개·투표. */
-function ProjectCard({ href, title, summary, handle, handleHref, trackLabel, rank, thumb, vote }: ProjectCardProps) {
+function ProjectCard({ href, title, summary, handle, handleHref, trackLabel, rank, medal, thumb, vote }: ProjectCardProps) {
   const tone = TONES[thumb.tone]
 
   return (
     <article className="group flex flex-col bg-(--tt-surface) border-(length:--tt-stroke-bold) border-(--tt-ink) rounded-(--tt-radius-lg) overflow-hidden transition-[translate,rotate,box-shadow] duration-(--tt-dur-lift) ease-(--tt-ease-lift) hover:-translate-y-2 hover:-rotate-[.4deg] hover:shadow-(--tt-shadow-lift)">
       <div className={`relative h-55 flex items-center justify-center border-b-(length:--tt-stroke-bold) border-(--tt-ink) overflow-hidden ${tone.bg}`}>
-        <span className={`mono absolute right-4.5 top-4 text-xs ${tone.text}`}>#{String(rank).padStart(2, '0')}</span>
+        {medal && (
+          <span
+            className={`mono absolute left-4 top-3.5 text-xs px-2.5 py-1.25 rounded-(--tt-radius-xs) border-(length:--tt-stroke-bold) border-(--tt-ink) ${
+              medal.gold ? 'bg-(--tt-signal) text-(--tt-ink)' : 'bg-(--tt-ink) text-(--tt-ground)'
+            }`}
+          >
+            {medal.label}
+          </span>
+        )}
+        {rank !== undefined && (
+          <span className={`mono absolute right-4.5 top-4 text-xs ${tone.text}`}>#{String(rank).padStart(2, '0')}</span>
+        )}
         <span
           aria-hidden="true"
           className={`size-22 rounded-full border-(length:--tt-stroke-bold) border-(--tt-ink) shadow-(--tt-shadow-key) transition-[translate,box-shadow] duration-(--tt-dur-quick) ease-(--tt-ease-lift) group-hover:translate-y-2 group-hover:shadow-none ${tone.key}`}
