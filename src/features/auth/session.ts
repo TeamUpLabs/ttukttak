@@ -45,7 +45,7 @@ export function useSession(): Session | null {
 
 // ponytail: 목 로그인. Supabase 붙이면 supabase.auth.signInWithOAuth({ provider: 'github' })로 바꿔요.
 export async function signInWithGithub(): Promise<void> {
-  write(JSON.stringify({ handle: 'guest' } satisfies Session))
+  write(JSON.stringify({ handle: 'jh.park' } satisfies Session))
 }
 
 export function signOut() {
