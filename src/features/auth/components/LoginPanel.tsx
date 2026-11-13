@@ -1,28 +1,30 @@
 import { useState } from 'react'
-import { useNavigate, useSearchParams } from 'react-router'
+import { useSearchParams } from 'react-router'
 import { Button, Tag } from '../../../shared/ui'
-import { safeNext, signInWithGithub, signOut, useSession } from '../session.ts'
+import { safeNext, signInWithGithub, useSession, useSignOut } from '../session.ts'
 
 const CAN_DO = ['이번 주 참가', '결과물 제출', '투표', '피드백']
 
 /** GitHub 로그인. ?next=/submit 이면 로그인 뒤 그곳으로 돌아가요. */
 function LoginPanel() {
   const session = useSession()
-  const navigate = useNavigate()
+  const signOut = useSignOut()
   const [params] = useSearchParams()
   const next = safeNext(params.get('next'))
   const [pending, setPending] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
-  async function login() {
+  function login() {
     setPending(true)
+    signInWithGithub(next)
+  }
+
+  async function logout() {
     setError(null)
     try {
-      await signInWithGithub()
-      navigate(next, { replace: true })
+      await signOut()
     } catch {
-      setError('GitHub로 연결하지 못했어요. 잠시 뒤 다시 눌러 주세요.')
-      setPending(false)
+      setError('로그아웃하지 못했어요. 잠시 뒤 다시 눌러 주세요.')
     }
   }
 
@@ -33,14 +35,19 @@ function LoginPanel() {
       {session ? (
         <>
           <h1 className="m-0 text-[clamp(40px,6vw,88px)] leading-[1.05] tracking-[-0.045em] font-bold">
-            {session.handle}로
+            @{session.handle}로
             <br />
             로그인돼 있어요.
           </h1>
           <div className="flex flex-wrap gap-4">
             <Button variant="secondary" href={next} label="계속하기" hasArrow />
-            <Button variant="primary" label="로그아웃하기" onClick={signOut} />
+            <Button variant="primary" label="로그아웃하기" onClick={logout} />
           </div>
+          {error && (
+            <p role="alert" className="m-0 text-sm text-(--tt-ink)">
+              {error}
+            </p>
+          )}
         </>
       ) : (
         <>
@@ -66,9 +73,9 @@ function LoginPanel() {
               hasArrow={!pending}
               onClick={login}
             />
-            {error && (
+            {params.get('login') === 'failed' && (
               <p role="alert" className="m-0 text-sm text-(--tt-ink)">
-                {error}
+                GitHub로 연결하지 못했어요. 잠시 뒤 다시 눌러 주세요.
               </p>
             )}
           </div>

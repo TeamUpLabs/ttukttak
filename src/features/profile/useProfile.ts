@@ -1,28 +1,38 @@
 import { useNow } from '../../shared/hooks/useNow.ts'
 import type { FeedbackType } from '../../shared/ui/FeedbackType/types.ts'
-import users from '../../../mocks/users.json'
+import { useQuery } from '@tanstack/react-query'
+import { ApiError } from '../../api/client.ts'
+import { usersApi } from '../../api/users.ts'
 import weekData from '../../../mocks/weeks.json'
 import submissions from '../../../mocks/submissions.json'
 import feedback from '../../../mocks/feedback.json'
-import { profileStats, type Entry, type Feedback, type Track, type User, type WeekLite } from './profile.ts'
+import { profileStats, type Entry, type Feedback, type Track, type WeekLite } from './profile.ts'
 
-// ponytail: 목 데이터 고정. Supabase 붙이면 profiles·submissions·feedback 쿼리로 바꿔요.
+// 프로필은 서버(GET /users/:handle)에서 받아요.
+// ponytail: 제출 기록·피드백·팔로우는 아직 서버에 없어서 목 데이터로 채워요. 해당 API가 생기면 바꿔요.
 const weeks = weekData.weeks as WeekLite[]
 const weekById = new Map(weeks.map((w) => [w.id, w]))
 const submissionById = new Map(submissions.map((s) => [s.id, s]))
 export const trackLabels = weekData.labels.track as Record<Track, string>
 
-/** 핸들("jh.park")로 프로필과 통계를 찾아요. 없으면 null. */
+/** 핸들("jh.park")로 프로필과 통계를 찾아요. 불러오는 중이면 undefined, 없으면 null. */
 export function useProfile(handle: string) {
   const now = useNow(60_000)
-  const user = (users as User[]).find((u) => u.handle === handle)
-  if (!user) return null
+  const { data, isPending } = useQuery({
+    queryKey: ['users', handle],
+    queryFn: () => usersApi.get(handle),
+    enabled: handle !== '',
+    // 없는 사람은 다시 물어봐도 없어요.
+    retry: (count, e) => !(e instanceof ApiError && e.status === 404) && count < 2,
+  })
+  if (isPending) return undefined
+  if (!data) return null
+  const user = { ...data.user, followers: 0, following: 0 }
 
   // 이번 주처럼 아직 집계 전인 제출은 submissions에서 가져와요.
-  const live: Entry[] = submissions
-    .filter((s) => s.handle.replace(/^@/, '') === handle && !user.history.some((h) => h.weekId === s.weekId))
+  const entries: Entry[] = submissions
+    .filter((s) => s.handle.replace(/^@/, '') === handle)
     .map((s) => ({ weekId: s.weekId, title: s.title, track: s.track as Track, votes: s.voteCount, rank: null, submissionId: s.id }))
-  const entries = [...live, ...user.history]
 
   const feedbacks: Feedback[] = feedback
     .filter((f) => f.handle === handle)

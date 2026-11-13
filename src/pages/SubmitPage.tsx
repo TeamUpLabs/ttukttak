@@ -16,7 +16,9 @@ function SubmitPage() {
   const profile = useProfile(session?.handle ?? "");
 
   let body;
-  if (!session) {
+  if (session === undefined) {
+    body = null;
+  } else if (!session) {
     body = (
       <div className="flex flex-col items-start gap-6 max-w-200">
         <span className="mono text-[13px] text-(--tt-muted)">결과물 제출하기</span>

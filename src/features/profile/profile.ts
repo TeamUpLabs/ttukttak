@@ -25,17 +25,6 @@ export type Feedback = {
   createdAt: string
 }
 
-export type User = {
-  handle: string
-  name: string
-  bio: string
-  links: { github: string | null; blog: string | null }
-  joinedAt: string
-  followers: number
-  following: number
-  history: Entry[]
-}
-
 /** 통계에 필요한 주차 정보만 */
 export type WeekLite = { id: string; type: string; code: string; title: string; schedule: { opensAt: string } }
 

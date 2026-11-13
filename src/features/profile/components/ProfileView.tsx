@@ -14,6 +14,7 @@ function ProfileView({ handle, isMe = false }: { handle: string; isMe?: boolean 
   const [following, setFollowing] = useState(false)
   const [tab, setTab] = useState<'works' | 'acts'>('works')
 
+  if (profile === undefined) return null
   if (!profile) {
     return (
       <section className="max-w-7xl mx-auto px-8 max-sm:px-4 py-30 flex flex-col items-start gap-6">

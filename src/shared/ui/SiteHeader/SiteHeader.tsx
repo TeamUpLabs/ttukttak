@@ -1,6 +1,6 @@
 import { Avatar, Button, Dropdown, DROPDOWN_ITEM, LiveDot } from "../";
 import { useThisWeek } from "../../../features/week/useThisWeek";
-import { signOut, useSession } from '../../../features/auth/session'
+import { useSession, useSignOut } from '../../../features/auth/session'
 
 function SiteHeader() {
   const { week: current, next, phase } = useThisWeek(60_000)
@@ -9,7 +9,8 @@ function SiteHeader() {
   // 주제 주가 열려 있고 결과 발표 전이면 LIVE. 휴식 주·결과 발표 뒤·시즌 밖은 END.
   const live = current?.type === 'theme' && (phase === '제출 마감까지' || phase === '투표 마감까지' || phase === '결과 발표까지')
   const session = useSession()
-  const handle = session?.handle.replace(/^@/, '')
+  const signOut = useSignOut()
+  const handle = session?.handle
 
   return (
     <header className="bg-(--tt-ground)/70 backdrop-blur-md w-full border-b border-(--tt-line) sticky top-0 z-50">
@@ -38,7 +39,8 @@ function SiteHeader() {
               </Dropdown>
               <Button variant="secondary" href="/submit" label="제출 하기" hasArrow />
             </div>
-          ) :
+          ) : session === null &&
+            // 확인 중(undefined)엔 비워 둬서 로그인 버튼이 잠깐 보였다 사라지지 않게 해요.
             <Button variant="secondary" href="/login" label="GitHub로 시작하기" hasArrow />
           }
         </div>

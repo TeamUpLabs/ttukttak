@@ -1,55 +1,44 @@
-import { useSyncExternalStore } from 'react'
+import { queryOptions, useQuery, useQueryClient } from '@tanstack/react-query'
+import { ApiError } from '../../api/client.ts'
+import { authApi, type MeResponse } from '../../api/auth.ts'
 
-export type Session = { handle: string }
+export type Session = MeResponse['user'] & Pick<MeResponse, 'role' | 'points'>
 
-const KEY = 'tt-session'
-const listeners = new Set<() => void>()
+// 로그인 여부는 세션 쿠키로 서버가 알아요. 401이면 로그아웃 상태로 봐요.
+const meQuery = queryOptions({
+  queryKey: ['me'],
+  queryFn: async (): Promise<Session | null> => {
+    try {
+      const { user, role, points } = await authApi.me()
+      return { ...user, role, points }
+    } catch (e) {
+      if (e instanceof ApiError && e.status === 401) return null
+      throw e
+    }
+  },
+  retry: false,
+})
 
-function subscribe(listener: () => void) {
-  listeners.add(listener)
-  window.addEventListener('storage', listener) // 다른 탭에서 로그인·로그아웃해도 맞춰요
-  return () => {
-    listeners.delete(listener)
-    window.removeEventListener('storage', listener)
+/**
+ * 지금 로그인한 사람. 로그아웃 상태면 null, 아직 확인 중이면 undefined.
+ * 서버에 닿지 않을 때도 로그아웃 상태로 보여 줘요.
+ */
+export function useSession(): Session | null | undefined {
+  const { data, isError } = useQuery(meQuery)
+  return isError ? null : data
+}
+
+/** GitHub를 거쳐 next로 돌아와요. 페이지를 떠나요. */
+export function signInWithGithub(next: string) {
+  window.location.assign(authApi.githubLoginUrl(next))
+}
+
+export function useSignOut() {
+  const queryClient = useQueryClient()
+  return async () => {
+    await authApi.logout()
+    queryClient.setQueryData(meQuery.queryKey, null)
   }
-}
-
-function snapshot() {
-  try {
-    return localStorage.getItem(KEY)
-  } catch {
-    return null
-  }
-}
-
-function write(value: string | null) {
-  try {
-    if (value === null) localStorage.removeItem(KEY)
-    else localStorage.setItem(KEY, value)
-  } catch {
-    // 저장이 막힌 브라우저에선 로그인이 유지되지 않아요
-  }
-  listeners.forEach((listener) => listener())
-}
-
-/** 지금 로그인한 사람. 없으면 null. */
-export function useSession(): Session | null {
-  const raw = useSyncExternalStore(subscribe, snapshot, () => null)
-  if (!raw) return null
-  try {
-    return JSON.parse(raw) as Session
-  } catch {
-    return null
-  }
-}
-
-// ponytail: 목 로그인. Supabase 붙이면 supabase.auth.signInWithOAuth({ provider: 'github' })로 바꿔요.
-export async function signInWithGithub(): Promise<void> {
-  write(JSON.stringify({ handle: 'jh.park' } satisfies Session))
-}
-
-export function signOut() {
-  write(null)
 }
 
 /**
