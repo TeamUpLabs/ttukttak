@@ -4,7 +4,7 @@ import { useThisWeek, weekLabels } from '../useThisWeek.ts'
 import ThemeDemo from './ThemeDemo.tsx'
 
 function ThisWeekCard() {
-  const { now, week: current, next, phase, deadline } = useThisWeek()
+  const { now, isPending, week: current, next, phase, deadline } = useThisWeek()
   // 시즌 시작 전엔 첫 주 주제를 미리 보여줘요.
   const week = current ?? next
 
@@ -41,7 +41,7 @@ function ThisWeekCard() {
             seconds={(deadline.getTime() - now.getTime()) / 1000}
           />
         ) : (
-          <span className="mono text-[13px] text-(--tt-on-night-muted)">이번 시즌이 끝났어요</span>
+          !isPending && <span className="mono text-[13px] text-(--tt-on-night-muted)">이번 시즌이 끝났어요</span>
         )}
         {phase === '제출 마감까지' && <Button variant="primary" href="/submit" label="결과물 제출하기" className="hover:bg-white! hover:text-black!" hasArrow />}
       </div>

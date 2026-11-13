@@ -12,11 +12,11 @@ const H1 = "m-0 text-[clamp(40px,6vw,88px)] leading-[1.05] tracking-[-0.045em] f
 /** 제출하기: 로그인 · 제출 기간을 확인하고 폼을 보여줘요. */
 function SubmitPage() {
   const session = useSession();
-  const { now, week, next, phase, deadline } = useThisWeek();
+  const { now, isPending, week, next, phase, deadline } = useThisWeek();
   const profile = useProfile(session?.handle ?? "");
 
   let body;
-  if (session === undefined) {
+  if (session === undefined || isPending) {
     body = null;
   } else if (!session) {
     body = (

@@ -1,7 +1,6 @@
 import { useNow } from '../../shared/hooks/useNow.ts'
 import type { FeedbackType } from '../../shared/ui/FeedbackType/types.ts'
 import { useQuery } from '@tanstack/react-query'
-import { ApiError } from '../../api/client.ts'
 import { usersApi } from '../../api/users.ts'
 import weekData from '../../../mocks/weeks.json'
 import submissions from '../../../mocks/submissions.json'
@@ -22,8 +21,6 @@ export function useProfile(handle: string) {
     queryKey: ['users', handle],
     queryFn: () => usersApi.get(handle),
     enabled: handle !== '',
-    // 없는 사람은 다시 물어봐도 없어요.
-    retry: (count, e) => !(e instanceof ApiError && e.status === 404) && count < 2,
   })
   if (isPending) return undefined
   if (!data) return null

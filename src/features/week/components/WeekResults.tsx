@@ -3,7 +3,7 @@ import { Avatar, Button, Tabs, Tag } from '../../../shared/ui'
 import { useCountUp } from '../../../shared/hooks/useCountUp.ts'
 import { kstDate, kstDayTime, kstMonthDay } from '../../../shared/lib/kst.ts'
 import { STATUS_LABELS, weekStats, type ResultEntry } from '../results.ts'
-import type { Week } from '../thisWeek.ts'
+import type { WeekNeighbor } from '../../../api/weeks.ts'
 import { useWeekResults } from '../useWeekResults.ts'
 import { weekLabels } from '../useThisWeek.ts'
 import Podium from './Podium.tsx'
@@ -21,6 +21,7 @@ function WeekResults({ id }: { id: string }) {
   const data = useWeekResults(id)
   const [sort, setSort] = useState<'votes' | 'recent'>('votes')
 
+  if (data === undefined) return null
   if (!data) {
     return (
       <section className={`${WRAP} py-30 flex flex-col items-start gap-6`}>
@@ -30,7 +31,7 @@ function WeekResults({ id }: { id: string }) {
     )
   }
 
-  const { week, prev, next, now, status, entries } = data
+  const { week, prev, next, status, entries } = data
   const opensAt = new Date(week.schedule.opensAt)
   const hidden = status === 'upcoming'
   const showResults = week.type === 'theme' && !hidden
@@ -38,7 +39,7 @@ function WeekResults({ id }: { id: string }) {
   const max = Math.max(...entries.map((e) => e.votes), 1)
   const sorted = [...entries].sort((a, b) => (sort === 'votes' ? b.votes - a.votes : Date.parse(b.submittedAt) - Date.parse(a.submittedAt)))
   const retros = entries.filter((e) => e.retro)
-  const tags = week.rule?.split(' + ') ?? []
+  const tags = week.constraints ?? []
 
   return (
     <>
@@ -141,8 +142,8 @@ function WeekResults({ id }: { id: string }) {
 
       {/* 이전 / 다음 주 */}
       <nav aria-label="주차 이동" className="grid grid-cols-2 max-sm:grid-cols-1 border-t-(length:--tt-stroke-bold) border-(--tt-ink)">
-        {prev ? <WeekLink week={prev} dir="prev" now={now} /> : <span />}
-        {next ? <WeekLink week={next} dir="next" now={now} /> : <span />}
+        {prev ? <WeekLink week={prev} dir="prev" /> : <span />}
+        {next ? <WeekLink week={next} dir="next" /> : <span />}
       </nav>
     </>
   )
@@ -198,9 +199,9 @@ function Tile({ entry: e, no, max }: { entry: ResultEntry; no: number; max: numb
 }
 
 /** 이전·다음 주 링크. hover하면 주황 면이 바깥쪽부터 차올라요. */
-function WeekLink({ week, dir, now }: { week: Week; dir: 'prev' | 'next'; now: Date }) {
-  const upcoming = now.getTime() < Date.parse(week.schedule.opensAt)
-  const current = !upcoming && now.getTime() < Date.parse(week.schedule.opensAt) + 7 * DAY
+function WeekLink({ week, dir }: { week: WeekNeighbor; dir: 'prev' | 'next' }) {
+  const upcoming = week.phase === 'upcoming'
+  const current = week.phase === 'building' || week.phase === 'voting' || week.phase === 'tallying'
   const caption = dir === 'prev' ? '← 이전 주' : `다음 주${current ? ' · 진행 중' : upcoming ? ' · 공개 전' : ''} →`
 
   return (
@@ -213,7 +214,7 @@ function WeekLink({ week, dir, now }: { week: Week; dir: 'prev' | 'next'; now: D
     >
       <span className="mono text-[13px]">{caption}</span>
       <span className="tt-numeral-xl max-sm:text-[60px]">{week.code}</span>
-      <span className="text-lg">{upcoming ? '주제 공개 전' : week.title}</span>
+      <span className="text-lg">{week.title ?? '주제 공개 전'}</span>
     </a>
   )
 }

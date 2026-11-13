@@ -9,6 +9,7 @@ export type Week = {
   title: string
   announcement: string
   rule: string | null
+  constraints?: string[]
   difficulty: Difficulty | null
   examples: Record<Track, string> | null
   schedule: {
@@ -52,11 +53,4 @@ export function getThisWeek(weeks: Week[], now: Date) {
     phase: step?.[0],
     deadline: step?.[1] ? new Date(step[1]) : undefined,
   }
-}
-
-/** 결과까지 발표된 주제 주. 최근 주가 먼저. */
-export function getPastWeeks(weeks: Week[], now: Date) {
-  return weeks
-    .filter((w) => w.type === 'theme' && w.schedule.resultsAt && Date.parse(w.schedule.resultsAt) <= now.getTime())
-    .sort((a, b) => Date.parse(b.schedule.opensAt) - Date.parse(a.schedule.opensAt))
 }

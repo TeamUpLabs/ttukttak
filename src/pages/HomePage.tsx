@@ -11,7 +11,7 @@ import { useThisWeek } from "../features/week/useThisWeek";
 
 function HomePage() {
   // 주가 바뀌면 갤러리도 그 주 제출작으로 넘어가요. 분 단위면 충분해요.
-  const { week: current, next } = useThisWeek(60_000);
+  const { week: current, next, stats } = useThisWeek(60_000);
   const week = current ?? next;
 
   return (
@@ -39,11 +39,11 @@ function HomePage() {
               <div className="w-full pt-10 border-t border-(--tt-line)">
                 <div className="w-full flex gap-12 justify-center">
                   <div className="flex flex-col">
-                    <span className="text-4xl font-stretch-extra-condensed font-extrabold leading-none">46</span>
+                    <span className="text-4xl font-stretch-extra-condensed font-extrabold leading-none">{stats?.participants ?? 0}</span>
                     <span className="text-[#5E5E58] text-sm">지금 만드는 중</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-4xl font-stretch-extra-condensed font-extrabold leading-none">23</span>
+                    <span className="text-4xl font-stretch-extra-condensed font-extrabold leading-none">{stats?.submissions ?? 0}</span>
                     <span className="text-[#5E5E58] text-sm">제출 완료</span>
                   </div>
                 </div>

@@ -1,17 +1,11 @@
-import { useNow } from '../../../shared/hooks/useNow.ts'
 import { kstMonthDay } from '../../../shared/lib/kst.ts'
-import submissions from '../../../../mocks/submissions.json'
-import { getPastWeeks, type Week } from '../thisWeek.ts'
-import { weeks } from '../useThisWeek.ts'
-
-const countOf = (w: Week) => w.submissionCount ?? submissions.filter((s) => s.weekId === w.id).length
+import { usePastWeeks } from '../useThisWeek.ts'
 
 const SUB = 'mono text-[13px] text-(--tt-muted) transition-colors duration-(--tt-dur-lift) group-hover:text-(--tt-on-night-muted) group-focus-visible:text-(--tt-on-night-muted) max-sm:hidden'
 
 /** 결과가 나온 주제 최근 5개. 주가 끝나면 자동으로 한 줄씩 쌓여요. */
 function PastWeeks() {
-  const now = useNow(60_000)
-  const past = getPastWeeks(weeks, now).slice(0, 5)
+  const past = usePastWeeks(5)
   if (past.length === 0) return null
 
   return (
@@ -35,7 +29,7 @@ function PastWeeks() {
               >
                 <span className="tt-numeral-m max-sm:text-[28px]">{w.code}</span>
                 <span className="text-[clamp(22px,2.4vw,34px)] font-bold tracking-[-0.04em]">{w.title}</span>
-                <span className={SUB}>{countOf(w)}개 제출</span>
+                <span className={SUB}>{w.submissionCount ?? 0}개 제출</span>
                 <span className={SUB}>
                   {kstMonthDay(start)} — {kstMonthDay(end)}
                 </span>

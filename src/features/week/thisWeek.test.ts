@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
 import data from '../../../mocks/weeks.json' with { type: 'json' }
-import { getPastWeeks, getThisWeek, type Week } from './thisWeek.ts'
+import { getThisWeek, type Week } from './thisWeek.ts'
 
 const weeks = data.weeks as Week[]
 const at = (iso: string) => getThisWeek(weeks, new Date(iso))
@@ -40,14 +40,4 @@ test('데이터가 끝나면 phase가 없어요', () => {
   const r = at('2027-03-01T00:00:00+09:00')
   assert.equal(r.week?.id, '2027-w07')
   assert.equal(r.phase, undefined)
-})
-
-test('지난 주제는 결과가 나온 주만, 최근 순으로 모여요', () => {
-  const before = getPastWeeks(weeks, new Date('2026-11-12T03:00:00+09:00'))
-  assert.equal(before[0].id, '2026-w45')
-  assert.ok(before.every((w) => w.type === 'theme'))
-  assert.ok(before.every((w, i) => i === 0 || w.schedule.opensAt < before[i - 1].schedule.opensAt))
-
-  const after = getPastWeeks(weeks, new Date('2026-11-16T10:00:00+09:00'))
-  assert.equal(after[0].code, 'W46')
 })

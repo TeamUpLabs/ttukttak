@@ -4,7 +4,7 @@ import type { UserSummary } from './types.ts'
 /** GET /me */
 export type MeResponse = {
   user: UserSummary
-  role: 'user' | 'admin'
+  role: 'member' | 'admin'
   /** 주차 도메인이 생기면 채워져요 */
   currentWeek: unknown
   points: number
