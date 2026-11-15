@@ -1,0 +1,31 @@
+version: 2
+
+# PR 제목이 "chore(deps): …", "ci(deps): …"가 돼서 PR 제목 검사를 통과해요.
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+      time: "09:00"
+      timezone: Asia/Seoul
+    commit-message:
+      prefix: chore
+      include: scope
+    # 마이너·패치는 한 PR로 묶어요. 메이저는 깨질 수 있어서 따로 열어요.
+    groups:
+      minor-and-patch:
+        update-types: [minor, patch]
+    open-pull-requests-limit: 5
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+      timezone: Asia/Seoul
+    commit-message:
+      prefix: ci
+      include: scope
+    groups:
+      actions:
+        patterns: ["*"]

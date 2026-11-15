@@ -1,0 +1,37 @@
+name: 기능 제안
+description: 새 화면, 기능, 바꿨으면 하는 동작
+title: "feat: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 어떤 점이 불편한가요?
+      placeholder: 지난 주제 결과를 보려면 매번 아래까지 내려가야 해요.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 어떻게 바뀌면 좋을까요?
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: 어디에 해당하나요?
+      multiple: true
+      options:
+        - 메인 · 이번 주
+        - 제출하기
+        - 제출작 상세
+        - 투표 · 피드백
+        - 주차 결과
+        - 프로필
+        - 로그인
+        - 기타
+  - type: textarea
+    id: server
+    attributes:
+      label: 서버 작업도 필요한가요?
+      description: 필요한 API가 있으면 적어요. 예) GET /users/:handle/submissions
