@@ -40,7 +40,7 @@ function FeedbackSection({ submissionId, viewer, isOwner, loginHref, now }: Feed
   const [body, setBody] = useState('')
   const [notice, setNotice] = useState<string | null>(null)
   const queryClient = useQueryClient()
-  const { data } = useQuery({
+  const { data, error, refetch, isFetching } = useQuery({
     queryKey: ['feedback', submissionId, { type: filter }],
     queryFn: () => feedbackApi.list(submissionId, { limit: 50, ...(filter === 'all' ? {} : { type: filter }) }),
   })
@@ -77,7 +77,7 @@ function FeedbackSection({ submissionId, viewer, isOwner, loginHref, now }: Feed
     <div className="flex flex-col gap-10">
       <div className="flex justify-between items-end flex-wrap gap-5">
         <h2 className="m-0 text-[clamp(32px,3.6vw,52px)] leading-[1.1] tracking-[-0.045em] font-bold">
-          피드백 <span className="tt-numeral-m text-[1em]">{counts?.all ?? 0}</span>
+          피드백 {counts && <span className="tt-numeral-m text-[1em]">{counts.all}</span>}
         </h2>
         <Tabs label="피드백 종류 필터" options={filters} value={filter} onChange={setFilter} />
       </div>
@@ -121,7 +121,12 @@ function FeedbackSection({ submissionId, viewer, isOwner, loginHref, now }: Feed
         </form>
       )}
 
-      {!data ? null : items.length === 0 ? (
+      {!data && error ? (
+        <div role="alert" className="flex flex-col items-center gap-4 py-12 text-center">
+          <p className="m-0 text-(--tt-ink-soft)">피드백을 불러오지 못했어요. {messageOf(error)}</p>
+          <Button variant={isFetching ? 'disabled' : 'secondary'} label={isFetching ? '불러오는 중' : '다시 불러오기'} onClick={() => refetch()} />
+        </div>
+      ) : !data ? null : items.length === 0 ? (
         <p className="m-0 py-12 text-center text-(--tt-muted)">
           {filter === 'all' ? '아직 피드백이 없어요. 첫 피드백을 남겨 보세요.' : '이 종류 피드백은 아직 없어요.'}
         </p>
