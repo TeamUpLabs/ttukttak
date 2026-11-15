@@ -1,4 +1,5 @@
 import { request } from './client.ts'
+import type { SubmissionCard } from './submissions.ts'
 
 export type Track = 'beginner' | 'regular' | 'expert'
 export type WeekType = 'theme' | 'break'
@@ -56,8 +57,8 @@ export type WeekNeighbor = { id: string; code: string; title: string | null; pha
 export type WeekDetailResponse = {
   week: WeekSummary & { announcement: string | null; intent: string | null; constraints: string[] | null }
   stats: { submissions: number; participants: number; votes: number; completionRate: number }
-  /** 제출작 도메인이 생기면 채워져요 */
-  podium: unknown
+  /** 트랙별 상위 3개. 결과 발표(closed) 전엔 null */
+  podium: Record<Track, SubmissionCard[]> | null
   prev: WeekNeighbor | null
   next: WeekNeighbor | null
 }

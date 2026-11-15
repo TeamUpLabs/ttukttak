@@ -5,7 +5,7 @@ import type { Track, WeekSummary } from './weeks.ts'
 export type KeycapTint = 'sage' | 'sky' | 'sand' | 'butter' | 'night' | 'signal'
 export type SubmissionSort = 'votes' | 'recent' | 'random'
 
-/** 목록 카드. 비로그인이면 viewer가 null, 투표 전이면 rank가 모두 null */
+/** 목록 카드. 비로그인이면 viewer가 null, 투표가 끝나기 전엔 rank 값이 null */
 export type SubmissionCard = {
   id: string
   weekId: string
@@ -63,6 +63,8 @@ export type SubmitResponse = {
   streak: { current: number; best: number; isNewBest: boolean }
 }
 
+export type VoteResponse = { voted: boolean; voteCount: number }
+
 export type ListParams = { track?: Track; sort?: SubmissionSort; exclude?: string; cursor?: string; limit?: number }
 
 export const submissionsApi = {
@@ -79,4 +81,7 @@ export const submissionsApi = {
   update: (id: string, body: Partial<SubmitBody>) =>
     request<SubmissionDetailResponse>(`/submissions/${encodeURIComponent(id)}`, { method: 'PATCH', body: JSON.stringify(body) }),
   withdraw: (id: string) => request<void>(`/submissions/${encodeURIComponent(id)}`, { method: 'DELETE' }),
+  /** 투표 기간에만, 로그인 필요. 여러 번 불러도 한 표. 내 제출작이면 403 own_submission, 기간 밖이면 409 voting_closed */
+  vote: (id: string) => request<VoteResponse>(`/submissions/${encodeURIComponent(id)}/vote`, { method: 'PUT' }),
+  unvote: (id: string) => request<VoteResponse>(`/submissions/${encodeURIComponent(id)}/vote`, { method: 'DELETE' }),
 }

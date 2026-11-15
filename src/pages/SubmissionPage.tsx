@@ -16,7 +16,7 @@ function SubmissionPage() {
           key={id}
           id={id}
           viewer={session?.handle ?? null}
-          renderVote={(s, size) => <VoteToggle target={s.title} count={s.voteCount} size={size} />}
+          renderVote={(s, size, votingOpen) => <VoteToggle submission={s} votingOpen={votingOpen} size={size} />}
         />
       </main>
       <SiteFooter />

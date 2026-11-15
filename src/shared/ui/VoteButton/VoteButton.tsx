@@ -6,6 +6,8 @@ type VoteButtonProps = {
   onToggle: () => void
   /** big: 제출작 상세 머리용. 56px, 도장 그림자, 누르면 내려앉아요. */
   size?: 'md' | 'big'
+  /** 투표 기간이 아니거나 내 제출작일 때. 수만 보여줘요. */
+  disabled?: boolean
 }
 
 const SIZES = {
@@ -14,7 +16,7 @@ const SIZES = {
 }
 
 /** 위쪽 화살표 + 투표 수 토글. 켜지면 잉크로 채워지고 화살표가 튀어요. */
-function VoteButton({ target, count, pressed, onToggle, size = 'md' }: VoteButtonProps) {
+function VoteButton({ target, count, pressed, onToggle, size = 'md', disabled = false }: VoteButtonProps) {
   const icon = size === 'big' ? 18 : 14
   return (
     <button
@@ -22,7 +24,8 @@ function VoteButton({ target, count, pressed, onToggle, size = 'md' }: VoteButto
       aria-pressed={pressed}
       aria-label={`${target} 투표${pressed ? ' 취소' : ''}`}
       onClick={onToggle}
-      className={`mono inline-flex items-center rounded-full border-(length:--tt-stroke-bold) border-(--tt-ink) font-medium cursor-pointer transition-colors duration-(--tt-dur-quick) ${SIZES[size]} ${
+      disabled={disabled}
+      className={`mono inline-flex items-center rounded-full border-(length:--tt-stroke-bold) border-(--tt-ink) font-medium cursor-pointer transition-colors duration-(--tt-dur-quick) disabled:pointer-events-none disabled:border-transparent disabled:shadow-none ${SIZES[size]} ${
         pressed ? 'bg-(--tt-ink) text-(--tt-ground)' : size === 'big' ? 'bg-(--tt-surface)' : 'hover:bg-(--tt-fill-quiet)'
       }`}
     >
