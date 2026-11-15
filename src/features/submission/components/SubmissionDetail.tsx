@@ -28,7 +28,7 @@ const STORY = [
 type SubmissionDetailProps = {
   id: string
   /** 투표 자리. 페이지가 vote feature를 꽂아줘요. */
-  renderVote?: (s: SubmissionCard, size: 'md' | 'big') => ReactNode
+  renderVote?: (s: SubmissionCard, size: 'md' | 'big', votingOpen: boolean) => ReactNode
   viewer: string | null
 }
 
@@ -51,9 +51,10 @@ function SubmissionDetail({ id, renderVote, viewer }: SubmissionDetailProps) {
 
   const { submission: s, week, author, checks } = data
   const track = TRACK_LABELS[s.track]
-  // 투표 집계 전이면 순위가 null이에요.
+  // 투표가 끝나기 전엔 순위가 null이에요.
   const trackRank = s.rank.track
   const votingOpen = !week.schedule.votingClosesAt || now.getTime() < Date.parse(week.schedule.votingClosesAt)
+  const canVote = week.phase === 'voting'
   const others = rest?.items ?? []
   const feedback = feedbackFor(s.id)
   const handle = author.handle
@@ -70,13 +71,13 @@ function SubmissionDetail({ id, renderVote, viewer }: SubmissionDetailProps) {
           <li><Tag><span className="mono">{week.code}</span></Tag></li>
           <li><Tag>{week.title}</Tag></li>
           <li><Tag>{track} 트랙</Tag></li>
-          {votingOpen && trackRank && <li><Tag tone="hot">현재 트랙 {trackRank}위</Tag></li>}
+          {trackRank && <li><Tag tone="hot">{track} 트랙 {trackRank}위</Tag></li>}
         </ul>
         <h1 className="m-0 text-[clamp(48px,7vw,104px)] leading-none tracking-[-0.055em] font-bold">{s.title}</h1>
         <div className="flex justify-between items-end flex-wrap gap-6">
           <p className="m-0 max-w-160 text-xl leading-[1.65] text-(--tt-ink-soft)">{s.summary}</p>
           <div className="flex items-center flex-wrap gap-3">
-            {renderVote?.(s, 'big')}
+            {renderVote?.(s, 'big', canVote)}
             {demoUrl && <Button variant="secondary" href={demoUrl} target="_blank" rel="noreferrer" label="데모 열기 ↗" />}
             {repoUrl && <Button variant="primary" href={repoUrl} target="_blank" rel="noreferrer" label="GitHub 레포" />}
           </div>
@@ -135,12 +136,12 @@ function SubmissionDetail({ id, renderVote, viewer }: SubmissionDetailProps) {
           <div className={`${SIDE} bg-(--tt-surface)`}>
             <div className="flex justify-between items-start gap-3">
               <div className="flex flex-col gap-1">
-                <span className="mono text-[13px] text-(--tt-muted)">{track} 트랙 {votingOpen ? '현재' : '최종'} 순위</span>
+                <span className="mono text-[13px] text-(--tt-muted)">{track} 트랙 {votingOpen ? '' : '최종 '}순위</span>
                 <span className={`tt-numeral-l ${trackRank === 1 ? 'text-(--tt-signal)' : ''}`}>
                   {trackRank ?? '–'}<span className="text-[0.5em] text-(--tt-ink)">{trackRank ? '위' : ''}</span>
                 </span>
               </div>
-              <span className="mono text-xs text-(--tt-muted)">{votingOpen ? '투표 진행 중' : '투표 마감'}</span>
+              <span className="mono text-xs text-(--tt-muted)">{canVote ? '투표 진행 중' : votingOpen ? '투표 전' : '투표 마감'}</span>
             </div>
             <dl className="m-0 grid grid-cols-3 gap-3 pt-5 border-t-(length:--tt-stroke-bold) border-(--tt-ink)">
               {[
@@ -217,7 +218,7 @@ function SubmissionDetail({ id, renderVote, viewer }: SubmissionDetailProps) {
                 handleHref={`/@${o.author.handle}`}
                 trackLabel={TRACK_LABELS[o.track]}
                 thumb={{ tone: o.thumbnail.tint, caption: o.thumbnail.caption }}
-                vote={renderVote?.(o, 'md')}
+                vote={renderVote?.(o, 'md', canVote)}
               />
             ))}
           </div>

@@ -8,11 +8,13 @@ import PastWeeks from "../features/week/components/PastWeeks";
 import SubmissionGallery from "../features/submission/components/SubmissionGallery";
 import VoteToggle from "../features/vote/components/VoteToggle";
 import { useThisWeek } from "../features/week/useThisWeek";
+import { weekStatus } from "../features/week/results";
 
 function HomePage() {
   // 주가 바뀌면 갤러리도 그 주 제출작으로 넘어가요. 분 단위면 충분해요.
-  const { week: current, next, stats } = useThisWeek(60_000);
+  const { week: current, next, stats, now } = useThisWeek(60_000);
   const week = current ?? next;
+  const votingOpen = !!week && weekStatus(week, now) === "voting";
 
   return (
     <>
@@ -66,7 +68,7 @@ function HomePage() {
               <SubmissionGallery
                 weekId={week.id}
                 weekCode={week.code}
-                renderVote={(s) => <VoteToggle target={s.title} count={s.voteCount} />}
+                renderVote={(s) => <VoteToggle submission={s} votingOpen={votingOpen} />}
               />
             </div>
           </section>
