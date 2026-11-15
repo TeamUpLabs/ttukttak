@@ -2,15 +2,15 @@ import { queryOptions, useQuery, useQueryClient } from '@tanstack/react-query'
 import { ApiError } from '../../api/client.ts'
 import { authApi, type MeResponse } from '../../api/auth.ts'
 
-export type Session = MeResponse['user'] & Pick<MeResponse, 'role' | 'points'>
+export type Session = MeResponse['user'] & Pick<MeResponse, 'role' | 'points' | 'currentWeek'>
 
 // 로그인 여부는 세션 쿠키로 서버가 알아요. 401이면 로그아웃 상태로 봐요.
 const meQuery = queryOptions({
   queryKey: ['me'],
   queryFn: async (): Promise<Session | null> => {
     try {
-      const { user, role, points } = await authApi.me()
-      return { ...user, role, points }
+      const { user, ...rest } = await authApi.me()
+      return { ...user, ...rest }
     } catch (e) {
       if (e instanceof ApiError && e.status === 401) return null
       throw e

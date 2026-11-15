@@ -1,10 +1,9 @@
 import { Button, SiteFooter, SiteHeader } from "../shared/ui";
 import { kstDayTime, kstMonthDay } from "../shared/lib/kst";
 import SubmitForm from "../features/submission/components/SubmitForm";
-import { allSubmissions } from "../features/submission/data";
+import { useSubmission } from "../features/submission/useSubmissions";
 import { useSession } from "../features/auth/session";
 import { useThisWeek } from "../features/week/useThisWeek";
-import { useProfile } from "../features/profile/useProfile";
 
 const WRAP = "max-w-7xl mx-auto px-8 max-sm:px-4";
 const H1 = "m-0 text-[clamp(40px,6vw,88px)] leading-[1.05] tracking-[-0.045em] font-bold";
@@ -12,11 +11,13 @@ const H1 = "m-0 text-[clamp(40px,6vw,88px)] leading-[1.05] tracking-[-0.045em] f
 /** 제출하기: 로그인 · 제출 기간을 확인하고 폼을 보여줘요. */
 function SubmitPage() {
   const session = useSession();
-  const { now, isPending, week, next, phase, deadline } = useThisWeek();
-  const profile = useProfile(session?.handle ?? "");
+  const { now, isPending, week, next, phase, deadline, stats } = useThisWeek();
+  // 이번 주에 이미 냈으면 수정 모드로 열어요.
+  const existingId = session?.currentWeek?.submissionId ?? "";
+  const existing = useSubmission(existingId);
 
   let body;
-  if (session === undefined || isPending) {
+  if (session === undefined || isPending || (existingId && existing.isPending)) {
     body = null;
   } else if (!session) {
     body = (
@@ -47,9 +48,9 @@ function SubmitPage() {
         week={week}
         deadline={deadline}
         now={now}
-        submittedCount={allSubmissions.filter((s) => s.weekId === week.id).length}
+        submittedCount={stats?.submissions ?? 0}
         viewer={session.handle}
-        streakBefore={profile?.streak ?? 0}
+        existing={existing.data?.submission}
       />
     );
   }
