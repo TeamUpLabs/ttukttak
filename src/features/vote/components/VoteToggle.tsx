@@ -11,6 +11,11 @@ type VoteToggleProps = {
   size?: 'md' | 'big'
 }
 
+function goLogin() {
+  const here = window.location.pathname + window.location.search + window.location.hash
+  window.location.assign(`/login?next=${encodeURIComponent(here)}`)
+}
+
 // ponytail: 누른 결과는 이 버튼 안에만 남아요. 목록을 다시 받으면 무작위 순서가 다시 섞여서 캐시는 건드리지 않아요.
 // 다른 화면은 들어갈 때 서버에서 다시 받으니 맞춰져요.
 function VoteToggle({ submission: s, votingOpen, size }: VoteToggleProps) {
@@ -28,17 +33,15 @@ function VoteToggle({ submission: s, votingOpen, size }: VoteToggleProps) {
     onSuccess: (res) => setState({ voted: res.voted, count: res.voteCount }),
     onError: (e, _vote, before) => {
       if (before) setState(before)
+      // 카드의 viewer는 받아 온 때 값이라, 그 뒤 로그아웃·세션 만료는 401로 알아요.
+      if (e instanceof ApiError && e.status === 401) return goLogin()
       // 409 voting_closed 같은 건 서버 문구를, 네트워크 오류는 다시 시도를 안내해요.
       setError(e instanceof ApiError && e.status < 500 ? e.message : '다시 눌러 주세요')
     },
   })
 
   function toggle() {
-    if (!s.viewer) {
-      const here = window.location.pathname + window.location.search + window.location.hash
-      window.location.assign(`/login?next=${encodeURIComponent(here)}`)
-      return
-    }
+    if (!s.viewer) return goLogin()
     if (!save.isPending) save.mutate(!state.voted)
   }
 
