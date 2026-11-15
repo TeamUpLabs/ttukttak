@@ -3,7 +3,7 @@ import { Avatar, Button, ProjectCard, Tag } from '../../../shared/ui'
 import { useNow } from '../../../shared/hooks/useNow.ts'
 import { kstDayTime, kstMonthDay } from '../../../shared/lib/kst.ts'
 import type { SubmissionCard } from '../../../api/submissions.ts'
-import { feedbackFor, safeHttps, TRACK_LABELS } from '../data.ts'
+import { safeHttps, TRACK_LABELS } from '../data.ts'
 import { useSubmission, useSubmissions } from '../useSubmissions.ts'
 import DemoFrame from './DemoFrame.tsx'
 import FeedbackSection from './FeedbackSection.tsx'
@@ -56,7 +56,6 @@ function SubmissionDetail({ id, renderVote, viewer }: SubmissionDetailProps) {
   const votingOpen = !week.schedule.votingClosesAt || now.getTime() < Date.parse(week.schedule.votingClosesAt)
   const canVote = week.phase === 'voting'
   const others = rest?.items ?? []
-  const feedback = feedbackFor(s.id)
   const handle = author.handle
   const demoUrl = safeHttps(s.demoUrl)
   const repoUrl = safeHttps(s.repoUrl)
@@ -192,7 +191,8 @@ function SubmissionDetail({ id, renderVote, viewer }: SubmissionDetailProps) {
         <div className={`${WRAP} pt-24 pb-26`}>
           <FeedbackSection
             key={s.id}
-            initial={feedback}
+            submissionId={s.id}
+            isOwner={!!s.viewer?.isAuthor}
             viewer={viewer}
             loginHref={`/login?next=${encodeURIComponent(`/p/${s.id}#feedback`)}`}
             now={now}
