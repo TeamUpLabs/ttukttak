@@ -42,6 +42,16 @@ function SubmitPage() {
         <Button variant="secondary" href="/#submit" label="이번 주 제출작 구경하기" hasArrow />
       </div>
     );
+  } else if (existingId && !existing.data) {
+    // 빈 폼을 열면 POST가 나가 already_submitted로 막혀요. 다시 불러오게 해요.
+    body = (
+      <div className="flex flex-col items-start gap-6 max-w-200">
+        <span className="mono text-[13px] text-(--tt-muted)">결과물 고치기</span>
+        <h1 className={H1}>낸 제출작을 불러오지 못했어요.</h1>
+        <p className="m-0 text-xl leading-[1.65] text-(--tt-ink-soft)">잠시 후 다시 시도해 주세요.</p>
+        <Button variant="secondary" href="/submit" label="다시 불러오기" hasArrow />
+      </div>
+    );
   } else {
     body = (
       <SubmitForm
