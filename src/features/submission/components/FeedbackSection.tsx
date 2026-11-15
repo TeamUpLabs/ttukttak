@@ -3,7 +3,7 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { Button, FEEDBACK_TYPE_LABELS, FeedbackTypeLabel, Tabs, type FeedbackType } from '../../../shared/ui'
 import { timeAgo } from '../../../shared/lib/time.ts'
 import { ApiError } from '../../../api/client.ts'
-import { feedbackApi, type FeedbackItem } from '../../../api/feedback.ts'
+import { feedbackApi, type FeedbackItem, type FeedbackListResponse } from '../../../api/feedback.ts'
 
 const MAX = 500
 const MIN = 10
@@ -153,6 +153,7 @@ function FeedbackCard({ f, viewer, isOwner, loginHref, now, onChange }: Feedback
   const [confirming, setConfirming] = useState(false)
   const [replyDraft, setReplyDraft] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const queryClient = useQueryClient()
   const fail = (e: unknown) => {
     if (!goLogin(loginHref, e)) setError(messageOf(e))
   }
@@ -165,7 +166,16 @@ function FeedbackCard({ f, viewer, isOwner, loginHref, now, onChange }: Feedback
       setHelpful({ on, count: helpful.count + (on ? 1 : -1) })
       return before
     },
-    onSuccess: (res) => setHelpful({ on: res.helpful, count: res.helpfulCount }),
+    onSuccess: (res) => {
+      setHelpful({ on: res.helpful, count: res.helpfulCount })
+      // 다른 종류 탭의 캐시에도 같은 피드백이 있어요. 다시 받으면 도움순이 바뀌어 카드가 움직이니 값만 고쳐 넣어요.
+      queryClient.setQueriesData<FeedbackListResponse>({ queryKey: ['feedback'] }, (list) => list && {
+        ...list,
+        items: list.items.map((x) => x.id === f.id
+          ? { ...x, helpfulCount: res.helpfulCount, viewer: x.viewer && { ...x.viewer, helpful: res.helpful } }
+          : x),
+      })
+    },
     onError: (e, _on, before) => {
       if (before) setHelpful(before)
       fail(e)
