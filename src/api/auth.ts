@@ -5,8 +5,8 @@ import type { UserSummary } from './types.ts'
 export type MeResponse = {
   user: UserSummary
   role: 'member' | 'admin'
-  /** 주차 도메인이 생기면 채워져요 */
-  currentWeek: unknown
+  /** 진행 중인 주차가 없으면 null. submissionId가 있으면 제출하기를 수정 모드로 열어요. */
+  currentWeek: { weekId: string; joined: boolean; submissionId: string | null; streak: number } | null
   points: number
 }
 

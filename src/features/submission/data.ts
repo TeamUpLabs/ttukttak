@@ -1,13 +1,10 @@
 import type { FeedbackType } from '../../shared/ui/FeedbackType/types.ts'
-import submissions from '../../../mocks/submissions.json'
 import weekData from '../../../mocks/weeks.json'
-import users from '../../../mocks/users.json'
 import feedback from '../../../mocks/feedback.json'
 
-// ponytail: 목 데이터 고정. Supabase 붙이면 이 파일을 api.ts 쿼리로 바꿔요.
+// ponytail: 피드백은 아직 서버에 없어서 목 데이터예요. 피드백 API가 생기면 api/로 옮겨요.
 
 export type Track = 'beginner' | 'regular' | 'expert'
-export type Submission = (typeof submissions)[number]
 export type SubmissionFeedback = {
   id: string
   handle: string
@@ -20,14 +17,7 @@ export type SubmissionFeedback = {
 }
 
 export const TRACK_LABELS = weekData.labels.track as Record<Track, string>
-export const allSubmissions = submissions
 
-const weekById = new Map(weekData.weeks.map((w) => [w.id, w]))
-const nameByHandle = new Map(users.map((u) => [u.handle, u.name]))
-
-export const findSubmission = (id: string) => submissions.find((s) => s.id === id)
-export const weekOf = (id: string) => weekById.get(id)
-export const nameOf = (handle: string) => nameByHandle.get(handle.replace(/^@/, ''))
 export const feedbackFor = (submissionId: string) =>
   feedback.filter((f) => f.submissionId === submissionId) as (SubmissionFeedback & { submissionId: string })[]
 

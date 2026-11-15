@@ -1,4 +1,7 @@
 import { useState, type FormEvent, type KeyboardEvent, type ReactNode } from 'react'
+import { useMutation, useQueryClient } from '@tanstack/react-query'
+import { ApiError } from '../../../api/client.ts'
+import { submissionsApi, type SubmissionDetail, type SubmitBody } from '../../../api/submissions.ts'
 import { Countdown, LiveDot, ProjectCard, Tabs, type ThumbTone } from '../../../shared/ui'
 import { kstDayTime } from '../../../shared/lib/kst.ts'
 import { TRACK_LABELS, type Track } from '../data.ts'
@@ -21,6 +24,7 @@ const MODES = [
   { value: 'image' as const, label: '스크린샷 올리기' },
   { value: 'key' as const, label: '키캡 썸네일 만들기' },
 ]
+const CAN_UPLOAD = false
 const SUGGESTIONS = ['React', 'Svelte', 'Vue', 'Supabase', 'WebSocket', 'Canvas', 'Web Audio']
 const STORY = [
   { key: 'what', label: '무엇을', placeholder: '주제를 어떻게 해석했나요?' },
@@ -34,19 +38,25 @@ const TEXTAREA = `${INPUT} min-h-24 py-3.5 leading-[1.6] resize-y`
 const BAD = 'border-2 border-(--tt-signal)'
 
 type SubmitFormProps = {
-  week: { code: string; title: string; rule: string | null }
+  week: { id: string; code: string; title: string; rule: string | null }
   deadline: Date
   now: Date
   /** 이번 주 지금까지 제출한 사람 수 */
   submittedCount: number
   viewer: string
-  /** 이번 제출 전까지의 연속 제출 주 수 */
-  streakBefore: number
+  /** 이미 낸 제출작. 있으면 수정 모드로 열어요. */
+  existing?: SubmissionDetail
 }
 
 /** 결과물 제출: 마감 띠 · 7단계 폼 · 실시간 카드 미리보기와 준비 체크 · 완료 화면 */
-function SubmitForm({ week, deadline, now, submittedCount, viewer, streakBefore }: SubmitFormProps) {
-  const [v, setV] = useState<SubmitValues>({
+function SubmitForm({ week, deadline, now, submittedCount, viewer, existing }: SubmitFormProps) {
+  const [v, setV] = useState<SubmitValues>(() => existing ? {
+    track: existing.track, title: existing.title, summary: existing.summary, demoUrl: existing.demoUrl, repoUrl: existing.repoUrl,
+    thumbMode: 'key', image: null, tone: existing.thumbnail.tint, caption: existing.thumbnail.caption,
+    stack: existing.stack,
+    story: { what: existing.story?.what ?? '', how: existing.story?.how ?? '', retro: existing.story?.retro ?? '' },
+    okRule: true, okOpen: existing.demoWithoutLogin,
+  } : {
     track: 'regular', title: '', summary: '', demoUrl: '', repoUrl: '',
     thumbMode: 'key', image: null, tone: 'sky', caption: '',
     stack: [], story: { what: '', how: '', retro: '' }, okRule: false, okOpen: false,
@@ -55,7 +65,29 @@ function SubmitForm({ week, deadline, now, submittedCount, viewer, streakBefore 
   const [imageName, setImageName] = useState('')
   const [imageProblem, setImageProblem] = useState<string | null>(null)
   const [stackDraft, setStackDraft] = useState('')
-  const [done, setDone] = useState(false)
+  // 제출하면 연속 제출 주 수, 고치면 null
+  const [done, setDone] = useState<{ streak: number | null } | null>(null)
+  const [savedId, setSavedId] = useState(existing?.id ?? null)
+  const queryClient = useQueryClient()
+  const save = useMutation({
+    mutationFn: async (body: SubmitBody) => {
+      if (savedId) {
+        const res = await submissionsApi.update(savedId, body)
+        return { id: res.submission.id, streak: null }
+      }
+      const res = await submissionsApi.submit(week.id, body)
+      return { id: res.submission.id, streak: res.streak.current }
+    },
+    onSuccess: ({ id, streak }) => {
+      setSavedId(id)
+      setDone({ streak })
+      window.scrollTo(0, 0)
+      // 제출 수·내 제출작·목록이 바뀌어요. ['me']는 건드리지 않아요: submissionId가 생기면
+      // SubmitPage가 수정할 제출작을 다시 불러오느라 이 완료 화면을 내려요. 이 화면 안에선 savedId로 충분해요.
+      for (const queryKey of [['submissions'], ['submission', id], ['weeks']]) queryClient.invalidateQueries({ queryKey })
+    },
+  })
+  const saveError = save.error instanceof ApiError ? save.error : save.error && new ApiError(0, null)
 
   const set = <K extends keyof SubmitValues>(key: K, value: SubmitValues[K]) => setV({ ...v, [key]: value })
   const checks = readiness(v)
@@ -92,10 +124,12 @@ function SubmitForm({ week, deadline, now, submittedCount, viewer, streakBefore 
 
   function submit(e: FormEvent) {
     e.preventDefault()
-    if (!ready) return
-    // ponytail: 저장소가 없어서 화면에만 반영해요. Supabase 붙이면 submissions 테이블 + Storage에 썸네일 업로드.
-    setDone(true)
-    window.scrollTo(0, 0)
+    if (!ready || save.isPending) return
+    save.mutate({
+      track: v.track, title: v.title, summary: v.summary, demoUrl: v.demoUrl, repoUrl: v.repoUrl,
+      thumbnail: { kind: 'keycap', tint: v.tone, caption: v.caption },
+      stack: v.stack, story: v.story, confirmsRule: v.okRule, demoWithoutLogin: v.okOpen,
+    })
   }
 
   const card = (
@@ -115,21 +149,21 @@ function SubmitForm({ week, deadline, now, submittedCount, viewer, streakBefore 
   )
 
   if (done) {
-    const filled = Math.min(streakBefore, 7)
+    const filled = Math.min((done.streak ?? 1) - 1, 7)
     return (
       <div className="grid grid-cols-[minmax(0,7fr)_minmax(0,5fr)] max-lg:grid-cols-1 gap-16 items-center pt-6">
         <div className="flex flex-col gap-7">
           <span className="mono flex items-center gap-2.5 text-[13px] text-(--tt-muted) tt-fade">
             <LiveDot />
-            {week.code} · 제출 완료
+            {week.code} · {done.streak === null ? '수정 완료' : '제출 완료'}
           </span>
           <h1 className="m-0 text-[clamp(56px,8vw,120px)] leading-none tracking-[-0.055em] font-bold">
-            <span className="tt-line"><span className="tt-line__in">제출했어요.</span></span>
+            <span className="tt-line"><span className="tt-line__in">{done.streak === null ? '고쳤어요.' : '제출했어요.'}</span></span>
           </h1>
           <p className="m-0 max-w-150 text-xl leading-[1.65] text-(--tt-ink-soft) tt-fade">
             투표는 {deadlineLabel}부터 열려요. 그 전까지는 언제든 고칠 수 있고, 다른 사람의 제출작에 피드백을 남기면 다음 주 노출 포인트가 쌓여요.
           </p>
-          <div className="flex items-center flex-wrap gap-5 tt-fade">
+          {done.streak !== null && <div className="flex items-center flex-wrap gap-5 tt-fade">
             <div className="flex gap-2" aria-hidden="true">
               {Array.from({ length: filled }, (_, i) => (
                 <span key={i} className="size-9 rounded-(--tt-radius-sm) bg-(--tt-ink) animate-[tt-cell_.45s_var(--tt-ease-lift)_both]" style={{ animationDelay: `${300 + i * 60}ms` }} />
@@ -137,14 +171,14 @@ function SubmitForm({ week, deadline, now, submittedCount, viewer, streakBefore 
               <span className="size-9 rounded-(--tt-radius-sm) bg-(--tt-signal) border-(length:--tt-stroke-bold) border-(--tt-ink) animate-[tt-cell_.45s_var(--tt-ease-lift)_both]" style={{ animationDelay: `${300 + filled * 60 + 200}ms` }} />
             </div>
             <span>
-              <strong className="tt-numeral-m text-[32px]">{streakBefore + 1}주</strong> 연속 제출이에요.
+              <strong className="tt-numeral-m text-[32px]">{done.streak}주</strong> 연속 제출이에요.
             </span>
-          </div>
+          </div>}
           <div className="flex flex-wrap gap-3 tt-fade">
             <a href="/#submit" className="inline-flex items-center min-h-12 px-5.5 rounded-full bg-(--tt-ink) text-(--tt-ground) font-medium no-underline transition-colors hover:bg-(--tt-signal) hover:text-(--tt-ink)">
               다른 제출작 구경하기 →
             </a>
-            <button type="button" onClick={() => setDone(false)} className="min-h-12 px-5.5 rounded-full border-(length:--tt-stroke-bold) border-(--tt-ink) font-medium cursor-pointer transition-colors hover:bg-(--tt-ink) hover:text-(--tt-ground)">
+            <button type="button" onClick={() => setDone(null)} className="min-h-12 px-5.5 rounded-full border-(length:--tt-stroke-bold) border-(--tt-ink) font-medium cursor-pointer transition-colors hover:bg-(--tt-ink) hover:text-(--tt-ground)">
               고치기
             </button>
           </div>
@@ -223,9 +257,12 @@ function SubmitForm({ week, deadline, now, submittedCount, viewer, streakBefore 
           </Block>
 
           <Block n="04" title="썸네일">
-            <div className="self-start">
-              <Tabs label="썸네일 방식" options={MODES} value={v.thumbMode} onChange={(m) => set('thumbMode', m)} />
-            </div>
+            {/* ponytail: 서버에 이미지 업로드 API가 없어서 키캡만 받아요. POST /uploads/thumbnail이 생기면 탭을 다시 보여줘요. */}
+            {CAN_UPLOAD && (
+              <div className="self-start">
+                <Tabs label="썸네일 방식" options={MODES} value={v.thumbMode} onChange={(m) => set('thumbMode', m)} />
+              </div>
+            )}
             {v.thumbMode === 'image' ? (
               <div className="flex flex-col gap-2">
                 <label
@@ -375,16 +412,22 @@ function SubmitForm({ week, deadline, now, submittedCount, viewer, streakBefore 
                 </li>
               ))}
             </ul>
+            {saveError && (
+              <div role="alert" className="flex flex-col gap-1 text-[15px]">
+                <strong>{saveError.message}</strong>
+                {Object.values(saveError.fields).map((m) => <span key={m} className="text-(--tt-ink-soft)">{m}</span>)}
+              </div>
+            )}
             <button
               type="submit"
               form="submit-form"
-              disabled={!ready}
+              disabled={!ready || save.isPending}
               className={`w-full min-h-16 rounded-full text-[17px] font-bold transition-[translate,box-shadow,background-color,color] duration-(--tt-dur-press) focus-visible:shadow-[0_0_0_4px_var(--tt-focus)] ${ready
                   ? 'bg-(--tt-signal) text-(--tt-ink) cursor-pointer shadow-(--tt-shadow-press) animate-[tt-breathe_2.2s_ease-in-out_infinite] active:translate-y-2.5 active:shadow-none active:animate-none'
                   : 'bg-(--tt-fill-quiet) text-(--tt-muted) cursor-not-allowed'
                 }`}
             >
-              {ready ? '제출하기' : `${checks.length - doneCount}개 남았어요`}
+              {save.isPending ? '보내는 중' : !ready ? `${checks.length - doneCount}개 남았어요` : savedId ? '고친 내용 저장하기' : '제출하기'}
             </button>
             <span className="text-[13px] text-(--tt-muted) text-center">제출 후에도 마감({deadlineLabel}) 전까지 고칠 수 있어요.</span>
           </div>

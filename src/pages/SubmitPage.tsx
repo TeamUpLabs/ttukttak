@@ -1,10 +1,9 @@
 import { Button, SiteFooter, SiteHeader } from "../shared/ui";
 import { kstDayTime, kstMonthDay } from "../shared/lib/kst";
 import SubmitForm from "../features/submission/components/SubmitForm";
-import { allSubmissions } from "../features/submission/data";
+import { useSubmission } from "../features/submission/useSubmissions";
 import { useSession } from "../features/auth/session";
 import { useThisWeek } from "../features/week/useThisWeek";
-import { useProfile } from "../features/profile/useProfile";
 
 const WRAP = "max-w-7xl mx-auto px-8 max-sm:px-4";
 const H1 = "m-0 text-[clamp(40px,6vw,88px)] leading-[1.05] tracking-[-0.045em] font-bold";
@@ -12,11 +11,13 @@ const H1 = "m-0 text-[clamp(40px,6vw,88px)] leading-[1.05] tracking-[-0.045em] f
 /** 제출하기: 로그인 · 제출 기간을 확인하고 폼을 보여줘요. */
 function SubmitPage() {
   const session = useSession();
-  const { now, isPending, week, next, phase, deadline } = useThisWeek();
-  const profile = useProfile(session?.handle ?? "");
+  const { now, isPending, week, next, phase, deadline, stats } = useThisWeek();
+  // 이번 주에 이미 냈으면 수정 모드로 열어요.
+  const existingId = session?.currentWeek?.submissionId ?? "";
+  const existing = useSubmission(existingId);
 
   let body;
-  if (session === undefined || isPending) {
+  if (session === undefined || isPending || (existingId && existing.isPending)) {
     body = null;
   } else if (!session) {
     body = (
@@ -41,15 +42,25 @@ function SubmitPage() {
         <Button variant="secondary" href="/#submit" label="이번 주 제출작 구경하기" hasArrow />
       </div>
     );
+  } else if (existingId && !existing.data) {
+    // 빈 폼을 열면 POST가 나가 already_submitted로 막혀요. 다시 불러오게 해요.
+    body = (
+      <div className="flex flex-col items-start gap-6 max-w-200">
+        <span className="mono text-[13px] text-(--tt-muted)">결과물 고치기</span>
+        <h1 className={H1}>낸 제출작을 불러오지 못했어요.</h1>
+        <p className="m-0 text-xl leading-[1.65] text-(--tt-ink-soft)">잠시 후 다시 시도해 주세요.</p>
+        <Button variant="secondary" href="/submit" label="다시 불러오기" hasArrow />
+      </div>
+    );
   } else {
     body = (
       <SubmitForm
         week={week}
         deadline={deadline}
         now={now}
-        submittedCount={allSubmissions.filter((s) => s.weekId === week.id).length}
+        submittedCount={stats?.submissions ?? 0}
         viewer={session.handle}
-        streakBefore={profile?.streak ?? 0}
+        existing={existing.data?.submission}
       />
     );
   }

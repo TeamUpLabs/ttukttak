@@ -54,7 +54,7 @@ function HomePage() {
           </div>
         </section>
 
-        <RecentSubmissionsMarquee />
+        {current && <RecentSubmissionsMarquee weekId={current.id} />}
 
         <section id="rules" className="max-w-7xl mx-auto py-30">
           <WeekFlow />
