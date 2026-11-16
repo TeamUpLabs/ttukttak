@@ -1,5 +1,6 @@
 import { Button, SiteFooter, SiteHeader } from "../shared/ui";
 import NextThemeNotify from "../features/week/components/NextThemeNotify";
+import SubscriptionResult from "../features/week/components/SubscriptionResult";
 import ThisWeekCard from "../features/week/components/ThisWeekCard";
 import RecentSubmissionsMarquee from "../features/submission/components/RecentSubmissionsMarquee";
 import WeekFlow from "../features/week/components/WeekFlow";
@@ -20,6 +21,7 @@ function HomePage() {
     <>
       <main className="min-h-screen">
         <SiteHeader />
+        <SubscriptionResult />
         <section id="theme" className="max-w-7xl mx-auto py-20 flex flex-col gap-30">
           <div className="mono tt-fade flex justify-between items-center flex-wrap">
             <WeekRange />
