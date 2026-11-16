@@ -1,14 +1,12 @@
 import { useState, type ReactNode } from 'react'
 import { ProjectCard, Tabs } from '../../../shared/ui'
 import type { SubmissionCard } from '../../../api/submissions.ts'
-import { TRACK_LABELS, type Track } from '../data.ts'
+import { TRACK_LABELS, type Track } from '../../../api/weeks.ts'
 import { useSubmissions } from '../useSubmissions.ts'
 
 const FILTERS: { value: Track | 'all'; label: string }[] = [
   { value: 'all', label: '전체' },
-  { value: 'beginner', label: '입문' },
-  { value: 'regular', label: '일반' },
-  { value: 'expert', label: '고수' },
+  ...(Object.keys(TRACK_LABELS) as Track[]).map((value) => ({ value, label: TRACK_LABELS[value] })),
 ]
 
 type SubmissionGalleryProps = {

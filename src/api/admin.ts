@@ -1,4 +1,4 @@
-import { request } from './client.ts'
+import { query, request } from './client.ts'
 import type { ThemeSuggestion } from './themeSuggestions.ts'
 import type { Difficulty, Track, WeekDetailResponse, WeekSchedule } from './weeks.ts'
 
@@ -41,5 +41,5 @@ export const adminApi = {
   hideFeedback: (id: string) => request<void>(`/admin/feedback/${enc(id)}`, { method: 'DELETE' }),
   /** 최신순, limit 기본 20 */
   suggestions: (cursor?: string) =>
-    request<ThemeSuggestionListResponse>(`/admin/theme-suggestions?${new URLSearchParams(cursor ? { cursor } : {})}`),
+    request<ThemeSuggestionListResponse>(`/admin/theme-suggestions${query({ cursor })}`),
 }

@@ -1,10 +1,10 @@
 import { useState, type FormEvent, type KeyboardEvent, type ReactNode } from 'react'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
-import { ApiError } from '../../../api/client.ts'
+import { ApiError, errorMessage } from '../../../api/client.ts'
 import { submissionsApi, type SubmissionDetail, type SubmitBody } from '../../../api/submissions.ts'
 import { Countdown, LiveDot, ProjectCard, Tabs, type ThumbTone } from '../../../shared/ui'
 import { kstDayTime } from '../../../shared/lib/kst.ts'
-import { TRACK_LABELS, type Track } from '../data.ts'
+import { TRACK_LABELS, type Track } from '../../../api/weeks.ts'
 import { addStack, imageError, isDemoUrl, isRepoUrl, LIMITS, readiness, type SubmitValues } from '../submitForm.ts'
 
 const TRACKS: { value: Track; desc: string }[] = [
@@ -87,7 +87,7 @@ function SubmitForm({ week, deadline, now, submittedCount, viewer, existing }: S
       for (const queryKey of [['submissions'], ['submission', id], ['weeks']]) queryClient.invalidateQueries({ queryKey })
     },
   })
-  const saveError = save.error instanceof ApiError ? save.error : save.error && new ApiError(0, null)
+  const saveFields = save.error instanceof ApiError ? Object.values(save.error.fields) : []
 
   const set = <K extends keyof SubmitValues>(key: K, value: SubmitValues[K]) => setV({ ...v, [key]: value })
   const checks = readiness(v)
@@ -412,10 +412,10 @@ function SubmitForm({ week, deadline, now, submittedCount, viewer, existing }: S
                 </li>
               ))}
             </ul>
-            {saveError && (
+            {save.error && (
               <div role="alert" className="flex flex-col gap-1 text-[15px]">
-                <strong>{saveError.message}</strong>
-                {Object.values(saveError.fields).map((m) => <span key={m} className="text-(--tt-ink-soft)">{m}</span>)}
+                <strong>{errorMessage(save.error)}</strong>
+                {saveFields.map((m) => <span key={m} className="text-(--tt-ink-soft)">{m}</span>)}
               </div>
             )}
             <button

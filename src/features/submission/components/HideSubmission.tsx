@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useMutation, useQueryClient } from '@tanstack/react-query'
-import { ApiError } from '../../../api/client.ts'
+import { errorMessage, fieldError } from '../../../api/client.ts'
 import { adminApi } from '../../../api/admin.ts'
 
 const MAX = 300
@@ -16,9 +16,7 @@ function HideSubmission({ id }: { id: string }) {
       for (const queryKey of [['submissions'], ['weeks']]) queryClient.invalidateQueries({ queryKey })
     },
   })
-  const error = hide.error instanceof ApiError && hide.error.status < 500
-    ? hide.error.fields.reason ?? hide.error.message
-    : hide.error && '잠시 후 다시 시도해 주세요.'
+  const error = hide.error && (fieldError(hide.error, 'reason') ?? errorMessage(hide.error))
 
   if (hide.isSuccess) {
     return <p role="status" className="m-0 text-[15px]">숨겼어요. 작성자에게 이유를 메일로 보냈어요.</p>

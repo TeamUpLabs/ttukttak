@@ -1,15 +1,14 @@
-import { ApiError } from '../../api/client.ts'
+import { ApiError, errorMessage } from '../../api/client.ts'
 import type { UpdateWeekBody, WeekStatus } from '../../api/admin.ts'
 import type { Difficulty, WeekDetailResponse, WeekSchedule } from '../../api/weeks.ts'
 
 export const INPUT =
   'w-full min-h-12 px-4 rounded-(--tt-radius-md) border-(length:--tt-stroke-bold) border-(--tt-ink) bg-(--tt-surface) text-base placeholder:text-(--tt-muted) focus:outline-none focus:shadow-[0_0_0_4px_var(--tt-focus)]'
 
-/** 4xx는 서버 문구와 칸별 오류를 붙여서, 나머지는 다시 시도를 안내해요. */
+/** 오류 문구에 칸별 오류를 붙여요. 운영자는 어느 칸이 틀렸는지 알아야 해서요. */
 export function messageOf(e: unknown) {
-  if (!(e instanceof ApiError) || e.status >= 500) return '잠시 후 다시 시도해 주세요.'
-  const fields = Object.entries(e.fields).map(([k, m]) => `${k}: ${m}`)
-  return [e.message, ...fields].join(' · ')
+  const fields = e instanceof ApiError ? Object.entries(e.fields).map(([k, m]) => `${k}: ${m}`) : []
+  return [errorMessage(e), ...fields].join(' · ')
 }
 
 /** 서버는 "+09:00" 시각을 줘요. datetime-local 칸은 "2026-11-23T10:00" 모양이에요. */

@@ -1,4 +1,4 @@
-import { request } from './client.ts'
+import { query, request } from './client.ts'
 import type { UserSummary } from './types.ts'
 import type { Track, WeekSummary } from './weeks.ts'
 
@@ -69,10 +69,8 @@ export type ListParams = { track?: Track; sort?: SubmissionSort; exclude?: strin
 
 export const submissionsApi = {
   /** sort가 없으면 제작 기간엔 random, 이후엔 votes. limit 기본 12, 최대 50 */
-  list: (weekId: string, params: ListParams = {}) => {
-    const query = new URLSearchParams(Object.entries(params).filter(([, v]) => v !== undefined).map(([k, v]) => [k, String(v)]))
-    return request<SubmissionListResponse>(`/weeks/${encodeURIComponent(weekId)}/submissions?${query}`)
-  },
+  list: (weekId: string, params: ListParams = {}) =>
+    request<SubmissionListResponse>(`/weeks/${encodeURIComponent(weekId)}/submissions${query(params)}`),
   get: (id: string) => request<SubmissionDetailResponse>(`/submissions/${encodeURIComponent(id)}`),
   /** 제작 기간에만, 한 주 한 번. 이미 냈으면 409 already_submitted, 검사에 걸리면 422 validation_failed */
   submit: (weekId: string, body: SubmitBody) =>

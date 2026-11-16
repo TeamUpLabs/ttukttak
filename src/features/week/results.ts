@@ -1,6 +1,7 @@
+import type { Track } from '../../api/weeks.ts'
 import type { Week } from './thisWeek.ts'
 
-export type Track = 'beginner' | 'regular' | 'expert'
+export type { Track }
 
 /** 한 주의 제출 하나. 지금 주(투표 집계 중)든 지난 주든 같은 모양으로 맞춰요. */
 export type ResultEntry = {

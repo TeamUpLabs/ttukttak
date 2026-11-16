@@ -1,5 +1,6 @@
-export type Track = 'beginner' | 'regular' | 'expert'
-export type Difficulty = 'low' | 'medium' | 'high'
+import type { Difficulty, Track } from '../../api/weeks.ts'
+
+export type { Difficulty, Track }
 
 export type Week = {
   id: string
