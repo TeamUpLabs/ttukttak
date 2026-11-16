@@ -1,9 +1,9 @@
 import { FeedbackTypeLabel } from '../../../shared/ui'
 import { timeAgo } from '../../../shared/lib/time.ts'
-import type { Feedback } from '../profile.ts'
+import type { ProfileFeedbackListResponse } from '../../../api/users.ts'
 
 /** 남긴 피드백 목록. 굵은 선으로 나눈 행. */
-function FeedbackList({ feedbacks, now }: { feedbacks: Feedback[]; now: Date }) {
+function FeedbackList({ feedbacks, now }: { feedbacks: ProfileFeedbackListResponse['items']; now: Date }) {
   if (feedbacks.length === 0) {
     return <p className="m-0 py-16 text-center text-(--tt-muted)">아직 남긴 피드백이 없어요.</p>
   }
@@ -20,12 +20,12 @@ function FeedbackList({ feedbacks, now }: { feedbacks: Feedback[]; now: Date }) 
             <span className="mono text-xs text-(--tt-muted)">{timeAgo(Date.parse(f.createdAt), now)}</span>
           </span>
           <span className="flex flex-col gap-2">
-            <a href={`/p/${f.targetId}`} className="text-lg font-bold tracking-[-0.03em] no-underline">
-              {f.targetTitle} · @{f.targetHandle}
+            <a href={`/p/${f.submission.id}#feedback`} className="text-lg font-bold tracking-[-0.03em] no-underline">
+              {f.submission.title} · @{f.submission.author.handle}
             </a>
             <span className="leading-[1.7] text-(--tt-ink-soft)">{f.body}</span>
           </span>
-          <span className="mono text-[13px] whitespace-nowrap">도움돼요 {f.helpful}</span>
+          <span className="mono text-[13px] whitespace-nowrap">도움돼요 {f.helpfulCount}</span>
         </li>
       ))}
     </ul>

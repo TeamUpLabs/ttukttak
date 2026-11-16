@@ -1,71 +1,34 @@
-import type { FeedbackType } from '../../shared/ui/FeedbackType/types.ts'
-
-export type Track = 'beginner' | 'regular' | 'expert'
-
-/** 한 주에 낸 제출 하나. rank는 트랙 순위, 이번 주처럼 아직 집계 전이면 null. */
-export type Entry = {
-  weekId: string
-  title: string
-  track: Track
-  votes: number
-  rank: number | null
-  /** 이번 주 제출작처럼 상세 페이지가 있는 경우 */
-  submissionId?: string
-}
-
-/** 이 사람이 남긴 피드백. 대상 제출작 정보를 붙여서 보여줘요. */
-export type Feedback = {
-  id: string
-  type: FeedbackType
-  targetTitle: string
-  targetHandle: string
-  targetId: string
-  body: string
-  helpful: number
-  createdAt: string
-}
-
-/** 통계에 필요한 주차 정보만 */
-export type WeekLite = { id: string; type: string; code: string; title: string; schedule: { opensAt: string } }
+import type { BadgeKind, StreakResponse } from '../../api/users.ts'
 
 export type Cell = { kind: 0 | 1 | 2; label: string; isNow: boolean }
 
-const isTop3 = (e: Entry) => e.rank !== null && e.rank <= 3
+const STATE: Record<StreakResponse['weeks'][number]['state'], { kind: Cell['kind']; what: string }> = {
+  none: { kind: 0, what: '쉼' },
+  ongoing: { kind: 0, what: '진행 중' },
+  break: { kind: 0, what: '휴식 주' },
+  submitted: { kind: 1, what: '제출' },
+  top3: { kind: 2, what: '제출 · 트랙 TOP 3' },
+}
 
-/**
- * 52주 격자와 통계. 휴식 주는 연속 기록을 끊지 않고,
- * 아직 진행 중인 이번 주에 안 냈어도 연속 기록은 지난주까지로 세요.
- */
-export function profileStats(weeks: WeekLite[], entries: Entry[], now: Date) {
-  const t = now.getTime()
-  const nowIndex = weeks.findLastIndex((w) => Date.parse(w.schedule.opensAt) <= t)
-  const byWeek = new Map(entries.map((e) => [e.weekId, e]))
+/** "2026 W45" */
+export const weekLabel = (w: { weekId: string; code: string }) => `${w.weekId.slice(0, 4)} ${w.code}`
 
-  const recent = weeks.slice(Math.max(0, nowIndex - 51), nowIndex + 1)
-  const cells: Cell[] = [
+/** 서버 격자를 52칸으로 맞춰요. 주차가 모자라면 앞을 빈칸으로 채우고, 마지막 칸이 이번 주예요. */
+export function toCells(weeks: StreakResponse['weeks']): Cell[] {
+  const recent = weeks.slice(-52)
+  return [
     ...Array.from({ length: 52 - recent.length }, () => ({ kind: 0 as const, label: '기록 없음', isNow: false })),
-    ...recent.map((w, i) => {
-      const e = byWeek.get(w.id)
-      const kind = !e ? 0 : isTop3(e) ? 2 : 1
-      const what = w.type === 'break' ? '휴식 주' : ['쉼', '제출', '제출 · 트랙 TOP 3'][kind]
-      return { kind, label: `${w.id.slice(0, 4)} ${w.code} · ${what}`, isNow: i === recent.length - 1 } as Cell
-    }),
+    ...recent.map((w, i) => ({
+      kind: STATE[w.state].kind,
+      label: `${weekLabel(w)} · ${STATE[w.state].what}`,
+      isNow: i === recent.length - 1,
+    })),
   ]
+}
 
-  let streak = 0
-  for (let i = nowIndex; i >= 0; i--) {
-    const w = weeks[i]
-    if (w.type !== 'theme') continue
-    if (byWeek.has(w.id)) streak++
-    else if (i === nowIndex) continue
-    else break
-  }
-
-  return {
-    cells,
-    streak,
-    recentCount: recent.filter((w) => byWeek.has(w.id)).length,
-    top3: entries.filter(isTop3).length,
-    votes: entries.reduce((sum, e) => sum + e.votes, 0),
-  }
+/** 배지 이름·설명·색은 서버가 주는 kind와 value로 정해요. */
+export const BADGES: Record<BadgeKind, { ring: string; tone: 'signal' | 'night' | 'sage'; name: (n: number) => string; desc: string }> = {
+  streak: { ring: 'WEEK STREAK · 연속 제출 · ', tone: 'signal', name: (n) => `연속 ${n}주`, desc: '쉬지 않고 제출했어요' },
+  podium: { ring: 'TOP THREE FINISH · 트랙 시상대 · ', tone: 'night', name: (n) => `시상대 ${n}회`, desc: '트랙 TOP 3에 올랐어요' },
+  feedback: { ring: 'FEEDBACK GIVER · 피드백 장인 · ', tone: 'sage', name: (n) => `피드백 ${n}개`, desc: '다른 사람 작업에 피드백을 남겼어요' },
 }
