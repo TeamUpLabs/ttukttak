@@ -3,6 +3,7 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { Button, FEEDBACK_TYPE_LABELS, FeedbackTypeLabel, Tabs, type FeedbackType } from '../../../shared/ui'
 import { timeAgo } from '../../../shared/lib/time.ts'
 import { ApiError } from '../../../api/client.ts'
+import { adminApi } from '../../../api/admin.ts'
 import { feedbackApi, type FeedbackItem, type FeedbackListResponse } from '../../../api/feedback.ts'
 
 const MAX = 500
@@ -17,6 +18,8 @@ type FeedbackSectionProps = {
   viewer: string | null
   /** 내 제출작이면 작성 대신 답글을 달아요. */
   isOwner: boolean
+  /** 운영자면 남의 피드백도 숨길 수 있어요. */
+  isAdmin: boolean
   loginHref: string
   now: Date
 }
@@ -34,7 +37,7 @@ const messageOf = (e: unknown) => (e instanceof ApiError && e.status < 500 ? e.m
 
 /** 피드백: 종류 필터 · 작성 폼 · 카드 2열 */
 // ponytail: 도움순 50개까지만 받아요. 한 제출작에 50개를 넘기면 nextCursor로 더 보기를 붙여요.
-function FeedbackSection({ submissionId, viewer, isOwner, loginHref, now }: FeedbackSectionProps) {
+function FeedbackSection({ submissionId, viewer, isOwner, isAdmin, loginHref, now }: FeedbackSectionProps) {
   const [filter, setFilter] = useState<FeedbackType | 'all'>('all')
   const [type, setType] = useState<FeedbackType>('ux')
   const [body, setBody] = useState('')
@@ -133,7 +136,7 @@ function FeedbackSection({ submissionId, viewer, isOwner, loginHref, now }: Feed
       ) : (
         <ul className="m-0 p-0 list-none grid grid-cols-2 max-sm:grid-cols-1 gap-5">
           {items.map((f) => (
-            <FeedbackCard key={f.id} f={f} viewer={viewer} isOwner={isOwner} loginHref={loginHref} now={now} onChange={refresh} />
+            <FeedbackCard key={f.id} f={f} viewer={viewer} isOwner={isOwner} isAdmin={isAdmin} loginHref={loginHref} now={now} onChange={refresh} />
           ))}
         </ul>
       )}
@@ -145,13 +148,14 @@ type FeedbackCardProps = {
   f: FeedbackItem
   viewer: string | null
   isOwner: boolean
+  isAdmin: boolean
   loginHref: string
   now: Date
   /** 지우거나 답글이 바뀌면 목록을 다시 받아요. */
   onChange: () => void
 }
 
-function FeedbackCard({ f, viewer, isOwner, loginHref, now, onChange }: FeedbackCardProps) {
+function FeedbackCard({ f, viewer, isOwner, isAdmin, loginHref, now, onChange }: FeedbackCardProps) {
   const mine = !!f.viewer?.isAuthor
   // 도움돼요는 바로 바꿔 보여주고, 서버 값으로 맞추거나 실패하면 되돌려요.
   const [helpful, setHelpful] = useState({ on: f.viewer?.helpful ?? false, count: f.helpfulCount })
@@ -186,7 +190,8 @@ function FeedbackCard({ f, viewer, isOwner, loginHref, now, onChange }: Feedback
       fail(e)
     },
   })
-  const remove = useMutation({ mutationFn: () => feedbackApi.remove(f.id), onSuccess: onChange, onError: fail })
+  // 내 건 지우고, 운영자는 남의 것을 숨겨요.
+  const remove = useMutation({ mutationFn: () => (mine ? feedbackApi.remove(f.id) : adminApi.hideFeedback(f.id)), onSuccess: onChange, onError: fail })
   const reply = useMutation({
     mutationFn: (body: string | null) => (body === null ? feedbackApi.deleteReply(f.id) : feedbackApi.reply(f.id, body)),
     onSuccess: () => {
@@ -258,9 +263,9 @@ function FeedbackCard({ f, viewer, isOwner, loginHref, now, onChange }: Feedback
 
       <div className="flex items-center justify-between flex-wrap gap-3">
         <span className="flex flex-wrap gap-1">
-          {mine && (
+          {(mine || isAdmin) && (
             <SmallButton onClick={onRemove} disabled={remove.isPending}>
-              {confirming ? '한 번 더 누르면 지워요' : '지우기'}
+              {mine ? (confirming ? '한 번 더 누르면 지워요' : '지우기') : confirming ? '한 번 더 누르면 숨겨요' : '숨기기 (운영자)'}
             </SmallButton>
           )}
           {isOwner && replyDraft === null && (

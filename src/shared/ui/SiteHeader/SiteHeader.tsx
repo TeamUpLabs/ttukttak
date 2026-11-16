@@ -35,6 +35,7 @@ function SiteHeader() {
               <Dropdown trigger={<Avatar handle={session.handle} />} label={`@${handle} 계정 메뉴`}>
                 <p className="mono m-0 px-3 pt-1.5 pb-2.5 mb-1 border-b border-(--tt-line) text-xs text-(--tt-muted)">@{handle}</p>
                 <a href={`/@${handle}`} className={DROPDOWN_ITEM}>내 프로필</a>
+                {session.role === 'admin' && <a href="/admin" className={DROPDOWN_ITEM}>운영자 화면</a>}
                 <button type="button" onClick={signOut} className={DROPDOWN_ITEM}>로그아웃하기</button>
               </Dropdown>
               <Button variant="secondary" href="/submit" label="제출 하기" hasArrow />
