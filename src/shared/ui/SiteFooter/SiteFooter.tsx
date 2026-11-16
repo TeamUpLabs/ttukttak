@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 
 const LINKS = [
-  { href: '#', label: '주제 제안하기' },
+  { href: '/suggest', label: '주제 제안하기' },
   { href: '#', label: '디스코드' },
   { href: '#', label: '운영 원칙' },
 ]
