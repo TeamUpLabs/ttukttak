@@ -1,4 +1,4 @@
-import { request } from './client.ts'
+import { query, request } from './client.ts'
 import type { UserSummary } from './types.ts'
 
 export type FeedbackType = 'bug' | 'ux' | 'code' | 'kudo'
@@ -34,10 +34,8 @@ const at = (id: string) => `/feedback/${encodeURIComponent(id)}`
 
 export const feedbackApi = {
   /** sort 기본 helpful, limit 기본 20, 최대 50 */
-  list: (submissionId: string, params: FeedbackListParams = {}) => {
-    const query = new URLSearchParams(Object.entries(params).filter(([, v]) => v !== undefined).map(([k, v]) => [k, String(v)]))
-    return request<FeedbackListResponse>(`/submissions/${encodeURIComponent(submissionId)}/feedback?${query}`)
-  },
+  list: (submissionId: string, params: FeedbackListParams = {}) =>
+    request<FeedbackListResponse>(`/submissions/${encodeURIComponent(submissionId)}/feedback${query(params)}`),
   /** body 10–500자. 내 제출작이면 403 own_submission */
   create: (submissionId: string, body: { type: FeedbackType; body: string }) =>
     request<CreateFeedbackResponse>(`/submissions/${encodeURIComponent(submissionId)}/feedback`, { method: 'POST', body: JSON.stringify(body) }),

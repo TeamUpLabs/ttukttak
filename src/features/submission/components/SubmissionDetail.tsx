@@ -3,7 +3,8 @@ import { Avatar, Button, ProjectCard, Tag } from '../../../shared/ui'
 import { useNow } from '../../../shared/hooks/useNow.ts'
 import { kstDayTime, kstMonthDay } from '../../../shared/lib/kst.ts'
 import type { SubmissionCard } from '../../../api/submissions.ts'
-import { safeHttps, TRACK_LABELS } from '../data.ts'
+import { TRACK_LABELS } from '../../../api/weeks.ts'
+import { safeHttps } from '../data.ts'
 import { useSubmission, useSubmissions } from '../useSubmissions.ts'
 import DemoFrame from './DemoFrame.tsx'
 import FeedbackSection from './FeedbackSection.tsx'
@@ -205,7 +206,7 @@ function SubmissionDetail({ id, renderVote, viewer, isAdmin }: SubmissionDetailP
             isOwner={!!s.viewer?.isAuthor}
             isAdmin={isAdmin}
             viewer={viewer}
-            loginHref={`/login?next=${encodeURIComponent(`/p/${s.id}#feedback`)}`}
+            loginNext={`/p/${s.id}#feedback`}
             now={now}
           />
         </div>

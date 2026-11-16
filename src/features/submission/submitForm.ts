@@ -1,5 +1,5 @@
 import type { ThumbTone } from '../../shared/ui/ProjectCard/ProjectCard.tsx'
-import type { Track } from './data.ts'
+import type { Track } from '../../api/weeks.ts'
 
 export type SubmitValues = {
   track: Track

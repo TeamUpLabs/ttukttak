@@ -1,4 +1,4 @@
-import { request } from './client.ts'
+import { query, request } from './client.ts'
 import type { FeedbackType } from './feedback.ts'
 import type { SubmissionCard } from './submissions.ts'
 import type { UserSummary } from './types.ts'
@@ -67,8 +67,6 @@ export type ProfileFeedbackListResponse = {
 export type FollowResponse = { following: boolean; followers: number }
 
 const at = (handle: string) => `/users/${encodeURIComponent(handle)}`
-const page = (cursor?: string, limit?: number) =>
-  new URLSearchParams({ ...(cursor ? { cursor } : {}), ...(limit ? { limit: String(limit) } : {}) })
 
 export const usersApi = {
   /** 없는 사람이면 404 ApiError */
@@ -76,11 +74,11 @@ export const usersApi = {
   streak: (handle: string) => request<StreakResponse>(`${at(handle)}/streak`),
   badges: (handle: string) => request<BadgeListResponse>(`${at(handle)}/badges`),
   /** limit 기본 12 */
-  submissions: (handle: string, { cursor, limit }: { cursor?: string; limit?: number } = {}) =>
-    request<ProfileSubmissionListResponse>(`${at(handle)}/submissions?${page(cursor, limit)}`),
+  submissions: (handle: string, page: { cursor?: string; limit?: number } = {}) =>
+    request<ProfileSubmissionListResponse>(`${at(handle)}/submissions${query(page)}`),
   /** limit 기본 20 */
-  feedback: (handle: string, { cursor, limit }: { cursor?: string; limit?: number } = {}) =>
-    request<ProfileFeedbackListResponse>(`${at(handle)}/feedback?${page(cursor, limit)}`),
+  feedback: (handle: string, page: { cursor?: string; limit?: number } = {}) =>
+    request<ProfileFeedbackListResponse>(`${at(handle)}/feedback${query(page)}`),
   /** 로그인 필요. 나 자신은 403 */
   follow: (handle: string) => request<FollowResponse>(`${at(handle)}/follow`, { method: 'PUT' }),
   unfollow: (handle: string) => request<FollowResponse>(`${at(handle)}/follow`, { method: 'DELETE' }),

@@ -3,14 +3,14 @@ import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { Avatar, Button, ProjectCard, StampBadge, StreakGrid, Tabs } from '../../../shared/ui'
 import { useNow } from '../../../shared/hooks/useNow.ts'
 import { kstMonthDay, kstYearMonth } from '../../../shared/lib/kst.ts'
-import { ApiError } from '../../../api/client.ts'
+import { errorMessage, isUnauthorized } from '../../../api/client.ts'
+import { goLogin } from '../../../shared/lib/login.ts'
 import { usersApi, type UserResponse } from '../../../api/users.ts'
-import type { Track } from '../../../api/weeks.ts'
+import { TRACK_LABELS } from '../../../api/weeks.ts'
 import { BADGES, toCells, weekLabel } from '../profile.ts'
 import { useBadges, useProfile, useProfileFeedback, useProfileSubmissions, useStreak } from '../useProfile.ts'
 import FeedbackList from './FeedbackList.tsx'
 
-const TRACK_LABELS: Record<Track, string> = { beginner: '입문', regular: '일반', expert: '고수' }
 const SECTION_TITLE = 'm-0 text-[clamp(32px,3.6vw,52px)] leading-[1.1] tracking-[-0.045em] font-bold'
 
 /** 프로필 전체: 머리 · 통계 · 52주 기록 · 배지 · 제출작/피드백 */
@@ -180,7 +180,6 @@ function ProfileView({ handle }: { handle: string }) {
 function FollowButton({ handle, profile }: { handle: string; profile: UserResponse }) {
   const queryClient = useQueryClient()
   const [error, setError] = useState<string | null>(null)
-  const goLogin = () => window.location.assign(`/login?next=${encodeURIComponent(`/@${handle}`)}`)
   const follow = useMutation({
     mutationFn: (on: boolean) => (on ? usersApi.follow(handle) : usersApi.unfollow(handle)),
     onMutate: () => setError(null),
@@ -192,8 +191,8 @@ function FollowButton({ handle, profile }: { handle: string; profile: UserRespon
         viewer: p.viewer && { ...p.viewer, following: res.following },
       }),
     onError: (e) => {
-      if (e instanceof ApiError && e.status === 401) return goLogin()
-      setError(e instanceof ApiError && e.status < 500 ? e.message : '잠시 후 다시 시도해 주세요.')
+      if (isUnauthorized(e)) return goLogin()
+      setError(errorMessage(e))
     },
   })
   const following = !!profile.viewer?.following

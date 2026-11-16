@@ -2,7 +2,8 @@ import { useState, type FormEvent } from 'react'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { Button, FEEDBACK_TYPE_LABELS, FeedbackTypeLabel, Tabs, type FeedbackType } from '../../../shared/ui'
 import { timeAgo } from '../../../shared/lib/time.ts'
-import { ApiError } from '../../../api/client.ts'
+import { errorMessage, isUnauthorized } from '../../../api/client.ts'
+import { goLogin, loginHref } from '../../../shared/lib/login.ts'
 import { adminApi } from '../../../api/admin.ts'
 import { feedbackApi, type FeedbackItem, type FeedbackListResponse } from '../../../api/feedback.ts'
 
@@ -20,24 +21,14 @@ type FeedbackSectionProps = {
   isOwner: boolean
   /** 운영자면 남의 피드백도 숨길 수 있어요. */
   isAdmin: boolean
-  loginHref: string
+  /** 로그인 뒤 돌아올 곳 */
+  loginNext: string
   now: Date
 }
 
-/** 카드의 viewer는 받아 온 때 값이라, 로그아웃·세션 만료는 401로 알아요. */
-function goLogin(loginHref: string, e?: unknown) {
-  if (e === undefined || (e instanceof ApiError && e.status === 401)) {
-    window.location.assign(loginHref)
-    return true
-  }
-  return false
-}
-
-const messageOf = (e: unknown) => (e instanceof ApiError && e.status < 500 ? e.message : '잠시 후 다시 시도해 주세요.')
-
 /** 피드백: 종류 필터 · 작성 폼 · 카드 2열 */
 // ponytail: 도움순 50개까지만 받아요. 한 제출작에 50개를 넘기면 nextCursor로 더 보기를 붙여요.
-function FeedbackSection({ submissionId, viewer, isOwner, isAdmin, loginHref, now }: FeedbackSectionProps) {
+function FeedbackSection({ submissionId, viewer, isOwner, isAdmin, loginNext, now }: FeedbackSectionProps) {
   const [filter, setFilter] = useState<FeedbackType | 'all'>('all')
   const [type, setType] = useState<FeedbackType>('ux')
   const [body, setBody] = useState('')
@@ -59,7 +50,8 @@ function FeedbackSection({ submissionId, viewer, isOwner, isAdmin, loginHref, no
       setNotice(res.pointsEarned > 0 ? `남겼어요. 노출 포인트 ${res.pointsEarned}점이 쌓였어요.` : '남겼어요.')
       refresh()
     },
-    onError: (e) => goLogin(loginHref, e),
+    // 카드의 viewer는 받아 온 때 값이라, 로그아웃·세션 만료는 401로 알아요.
+    onError: (e) => isUnauthorized(e) && goLogin(loginNext),
   })
 
   const counts = data?.counts
@@ -72,7 +64,7 @@ function FeedbackSection({ submissionId, viewer, isOwner, isAdmin, loginHref, no
 
   function submit(e: FormEvent) {
     e.preventDefault()
-    if (!viewer) return void goLogin(loginHref)
+    if (!viewer) return goLogin(loginNext)
     if (ready && !create.isPending) create.mutate()
   }
 
@@ -88,7 +80,7 @@ function FeedbackSection({ submissionId, viewer, isOwner, isAdmin, loginHref, no
       {!viewer ? (
         <div className="flex justify-between items-center flex-wrap gap-4 p-6 rounded-(--tt-radius-lg) border-(length:--tt-stroke-bold) border-(--tt-ink) bg-(--tt-surface)">
           <p className="m-0 text-[15px]">로그인하면 피드백을 남길 수 있어요. 남긴 피드백은 내 프로필에도 쌓여요.</p>
-          <Button variant="secondary" href={loginHref} label="로그인하고 남기기" hasArrow />
+          <Button variant="secondary" href={loginHref(loginNext)} label="로그인하고 남기기" hasArrow />
         </div>
       ) : isOwner ? (
         <p className="m-0 p-6 rounded-(--tt-radius-lg) border-(length:--tt-stroke-bold) border-(--tt-ink) bg-(--tt-surface) text-[15px]">
@@ -117,8 +109,8 @@ function FeedbackSection({ submissionId, viewer, isOwner, isAdmin, loginHref, no
             </span>
             <Button type="submit" variant={ready && !create.isPending ? 'secondary' : 'disabled'} label={create.isPending ? '남기는 중' : '피드백 남기기'} hasArrow />
           </div>
-          {create.error && !(create.error instanceof ApiError && create.error.status === 401) && (
-            <p role="alert" className="m-0 text-[15px]">{messageOf(create.error)}</p>
+          {create.error && !isUnauthorized(create.error) && (
+            <p role="alert" className="m-0 text-[15px]">{errorMessage(create.error)}</p>
           )}
           {notice && !create.error && <p role="status" className="m-0 text-[15px] text-(--tt-ink-soft)">{notice}</p>}
         </form>
@@ -126,7 +118,7 @@ function FeedbackSection({ submissionId, viewer, isOwner, isAdmin, loginHref, no
 
       {!data && error ? (
         <div role="alert" className="flex flex-col items-center gap-4 py-12 text-center">
-          <p className="m-0 text-(--tt-ink-soft)">피드백을 불러오지 못했어요. {messageOf(error)}</p>
+          <p className="m-0 text-(--tt-ink-soft)">피드백을 불러오지 못했어요. {errorMessage(error)}</p>
           <Button variant={isFetching ? 'disabled' : 'secondary'} label={isFetching ? '불러오는 중' : '다시 불러오기'} onClick={() => refetch()} />
         </div>
       ) : !data ? null : items.length === 0 ? (
@@ -136,7 +128,7 @@ function FeedbackSection({ submissionId, viewer, isOwner, isAdmin, loginHref, no
       ) : (
         <ul className="m-0 p-0 list-none grid grid-cols-2 max-sm:grid-cols-1 gap-5">
           {items.map((f) => (
-            <FeedbackCard key={f.id} f={f} viewer={viewer} isOwner={isOwner} isAdmin={isAdmin} loginHref={loginHref} now={now} onChange={refresh} />
+            <FeedbackCard key={f.id} f={f} viewer={viewer} isOwner={isOwner} isAdmin={isAdmin} loginNext={loginNext} now={now} onChange={refresh} />
           ))}
         </ul>
       )}
@@ -149,13 +141,13 @@ type FeedbackCardProps = {
   viewer: string | null
   isOwner: boolean
   isAdmin: boolean
-  loginHref: string
+  loginNext: string
   now: Date
   /** 지우거나 답글이 바뀌면 목록을 다시 받아요. */
   onChange: () => void
 }
 
-function FeedbackCard({ f, viewer, isOwner, isAdmin, loginHref, now, onChange }: FeedbackCardProps) {
+function FeedbackCard({ f, viewer, isOwner, isAdmin, loginNext, now, onChange }: FeedbackCardProps) {
   const mine = !!f.viewer?.isAuthor
   // 도움돼요는 바로 바꿔 보여주고, 서버 값으로 맞추거나 실패하면 되돌려요.
   const [helpful, setHelpful] = useState({ on: f.viewer?.helpful ?? false, count: f.helpfulCount })
@@ -164,7 +156,8 @@ function FeedbackCard({ f, viewer, isOwner, isAdmin, loginHref, now, onChange }:
   const [error, setError] = useState<string | null>(null)
   const queryClient = useQueryClient()
   const fail = (e: unknown) => {
-    if (!goLogin(loginHref, e)) setError(messageOf(e))
+    if (isUnauthorized(e)) goLogin(loginNext)
+    else setError(errorMessage(e))
   }
 
   const toggleHelpful = useMutation({
@@ -202,7 +195,7 @@ function FeedbackCard({ f, viewer, isOwner, isAdmin, loginHref, now, onChange }:
   })
 
   function onHelpful() {
-    if (!viewer) return void goLogin(loginHref)
+    if (!viewer) return goLogin(loginNext)
     if (!toggleHelpful.isPending) toggleHelpful.mutate(!helpful.on)
   }
 

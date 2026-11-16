@@ -1,11 +1,11 @@
 import { queryOptions, useQuery } from '@tanstack/react-query'
-import { weeksApi, type CurrentWeekResponse, type WeekSummary } from '../../api/weeks.ts'
+import { TRACK_LABELS, weeksApi, type CurrentWeekResponse, type WeekSummary } from '../../api/weeks.ts'
 import { useNow } from '../../shared/hooks/useNow.ts'
-import { getThisWeek, type Difficulty, type Track, type Week } from './thisWeek.ts'
+import { getThisWeek, type Difficulty, type Week } from './thisWeek.ts'
 
 export const weekLabels = {
   difficulty: { low: '낮음', medium: '보통', high: '높음' } satisfies Record<Difficulty, string>,
-  track: { beginner: '입문', regular: '일반', expert: '고수' } satisfies Record<Track, string>,
+  track: TRACK_LABELS,
 }
 
 /** 결과가 나온 주제 주(GET /weeks)를 화면용 Week로. 목록엔 주제 문구가 없어요. */

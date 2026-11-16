@@ -1,7 +1,8 @@
 import { useState, type FormEvent, type ReactNode } from 'react'
 import { useMutation } from '@tanstack/react-query'
 import { Button } from '../../../shared/ui'
-import { ApiError } from '../../../api/client.ts'
+import { ApiError, errorMessage, isUnauthorized } from '../../../api/client.ts'
+import { goLogin } from '../../../shared/lib/login.ts'
 import { themeSuggestionsApi } from '../../../api/themeSuggestions.ts'
 
 const LIMITS = { title: 30, constraint: 80, why: 300 }
@@ -10,7 +11,7 @@ const INPUT =
 const EMPTY = { title: '', constraint: '', why: '' }
 
 /** 주제 제안: 주제 · 제약 · 이유. 시즌 후반 주제 투표 후보가 돼요. */
-function SuggestForm({ loginHref }: { loginHref: string }) {
+function SuggestForm() {
   const [v, setV] = useState(EMPTY)
   const [done, setDone] = useState<string | null>(null)
   const save = useMutation({
@@ -22,10 +23,10 @@ function SuggestForm({ loginHref }: { loginHref: string }) {
     },
     // 세션이 끝났으면 로그인으로 보내요.
     onError: (e) => {
-      if (e instanceof ApiError && e.status === 401) window.location.assign(loginHref)
+      if (isUnauthorized(e)) goLogin()
     },
   })
-  const error = save.error instanceof ApiError ? save.error : save.error && new ApiError(0, null)
+  const fields = save.error instanceof ApiError ? save.error.fields : {}
   const ready = v.title.trim() !== '' && v.constraint.trim() !== ''
 
   function submit(e: FormEvent) {
@@ -55,18 +56,18 @@ function SuggestForm({ loginHref }: { loginHref: string }) {
         <p className="m-0 text-xl leading-[1.65] text-(--tt-ink-soft)">주제 하나와 제약 하나면 돼요. 72시간 안에 끝낼 수 있을 만큼 작게요.</p>
       </div>
 
-      <Field id="s-title" label="주제" count={`${v.title.length} / ${LIMITS.title}`} error={error?.fields.title}>
+      <Field id="s-title" label="주제" count={`${v.title.length} / ${LIMITS.title}`} error={fields.title}>
         <input id="s-title" value={v.title} maxLength={LIMITS.title} onChange={(e) => setV({ ...v, title: e.target.value })} placeholder="예: 버튼이 딱 하나뿐인 앱" autoComplete="off" className={INPUT} />
       </Field>
-      <Field id="s-constraint" label="제약" count={`${v.constraint.length} / ${LIMITS.constraint}`} error={error?.fields.constraint}>
+      <Field id="s-constraint" label="제약" count={`${v.constraint.length} / ${LIMITS.constraint}`} error={fields.constraint}>
         <input id="s-constraint" value={v.constraint} maxLength={LIMITS.constraint} onChange={(e) => setV({ ...v, constraint: e.target.value })} placeholder="예: 화면에 버튼은 하나만, 다른 입력은 없음" autoComplete="off" className={INPUT} />
       </Field>
-      <Field id="s-why" label="왜 이 주제인가요? (선택)" count={`${v.why.length} / ${LIMITS.why}`} error={error?.fields.why}>
+      <Field id="s-why" label="왜 이 주제인가요? (선택)" count={`${v.why.length} / ${LIMITS.why}`} error={fields.why}>
         <textarea id="s-why" value={v.why} maxLength={LIMITS.why} onChange={(e) => setV({ ...v, why: e.target.value })} placeholder="이 제약이 어떤 고민을 하게 만드는지" className={`${INPUT} min-h-30 py-3.5 leading-[1.6] resize-y`} />
       </Field>
 
-      {error && error.status !== 401 && Object.keys(error.fields).length === 0 && (
-        <p role="alert" className="m-0 text-[15px]">{error.status < 500 && error.status > 0 ? error.message : '잠시 후 다시 시도해 주세요.'}</p>
+      {save.error && !isUnauthorized(save.error) && Object.keys(fields).length === 0 && (
+        <p role="alert" className="m-0 text-[15px]">{errorMessage(save.error)}</p>
       )}
       <div>
         <Button type="submit" variant={ready && !save.isPending ? 'secondary' : 'disabled'} label={save.isPending ? '보내는 중' : '제안하기'} hasArrow />

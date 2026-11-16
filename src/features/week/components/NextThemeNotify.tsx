@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useMutation } from '@tanstack/react-query'
 import { kstDayTime, kstMonthDay } from '../../../shared/lib/kst.ts'
-import { ApiError } from '../../../api/client.ts'
+import { errorMessage, fieldError } from '../../../api/client.ts'
 import { subscriptionsApi } from '../../../api/subscriptions.ts'
 import { useThisWeek } from '../useThisWeek.ts'
 
@@ -10,9 +10,7 @@ function NextThemeNotify() {
   const { next } = useThisWeek(60_000)
   const [sentTo, setSentTo] = useState<string | null>(null)
   const subscribe = useMutation({ mutationFn: subscriptionsApi.subscribe, onSuccess: (_res, email) => setSentTo(email) })
-  const error = subscribe.error instanceof ApiError && subscribe.error.status < 500
-    ? subscribe.error.fields.email ?? subscribe.error.message
-    : subscribe.error && '잠시 후 다시 시도해 주세요.'
+  const error = subscribe.error && (fieldError(subscribe.error, 'email') ?? errorMessage(subscribe.error))
   const opensAt = next ? new Date(next.schedule.opensAt) : null
   const when = opensAt ? `${kstMonthDay(opensAt)} ${kstDayTime(opensAt)}` : null
 

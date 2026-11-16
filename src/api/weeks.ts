@@ -1,7 +1,9 @@
-import { request } from './client.ts'
+import { query, request } from './client.ts'
 import type { SubmissionCard } from './submissions.ts'
 
 export type Track = 'beginner' | 'regular' | 'expert'
+/** 화면에 보이는 트랙 이름 */
+export const TRACK_LABELS: Record<Track, string> = { beginner: '입문', regular: '일반', expert: '고수' }
 export type WeekType = 'theme' | 'break'
 export type Difficulty = 'low' | 'medium' | 'high'
 /** 서버가 지금 시각으로 계산한 단계 */
@@ -67,7 +69,7 @@ export const weeksApi = {
   current: () => request<CurrentWeekResponse>('/weeks/current'),
   /** 결과가 나온 주제 주, 최신순 */
   archive: ({ limit = 12, cursor }: { limit?: number; cursor?: string } = {}) =>
-    request<WeekListResponse>(`/weeks?${new URLSearchParams({ limit: String(limit), ...(cursor ? { cursor } : {}) })}`),
+    request<WeekListResponse>(`/weeks${query({ limit, cursor })}`),
   /** 없는 주차면 404 ApiError */
   get: (weekId: string) => request<WeekDetailResponse>(`/weeks/${encodeURIComponent(weekId)}`),
   /** 1초 동안 모은 횟수(1–20)를 한 번에 보내요 */

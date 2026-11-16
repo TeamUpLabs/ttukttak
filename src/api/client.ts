@@ -17,6 +17,23 @@ export class ApiError extends Error {
   }
 }
 
+/** 화면에 띄울 오류 문구. 4xx는 서버가 준 문구, 네트워크·5xx는 다시 시도를 안내해요. */
+export function errorMessage(e: unknown, fallback = '잠시 후 다시 시도해 주세요.') {
+  return e instanceof ApiError && e.status >= 400 && e.status < 500 ? e.message : fallback
+}
+
+/** 서버가 그 칸에 단 검사 오류(422 fields) */
+export const fieldError = (e: unknown, field: string) => (e instanceof ApiError ? e.fields[field] : undefined)
+
+/** 로그아웃했거나 세션이 끝났을 때 */
+export const isUnauthorized = (e: unknown) => e instanceof ApiError && e.status === 401
+
+/** undefined는 빼고 쿼리 문자열로 만들어요. 비면 빈 문자열이에요. */
+export function query(params: Record<string, string | number | undefined>) {
+  const q = new URLSearchParams(Object.entries(params).flatMap(([k, v]) => (v === undefined ? [] : [[k, String(v)]])))
+  return q.size ? `?${q}` : ''
+}
+
 export async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
   const res = await fetch(`${API_BASE}${path}`, {
     ...init,
