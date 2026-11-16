@@ -16,6 +16,7 @@ function SubmissionPage() {
           key={id}
           id={id}
           viewer={session?.handle ?? null}
+          isAdmin={session?.role === "admin"}
           renderVote={(s, size, votingOpen) => <VoteToggle submission={s} votingOpen={votingOpen} size={size} />}
         />
       </main>

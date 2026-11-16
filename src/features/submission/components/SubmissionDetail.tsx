@@ -7,6 +7,7 @@ import { safeHttps, TRACK_LABELS } from '../data.ts'
 import { useSubmission, useSubmissions } from '../useSubmissions.ts'
 import DemoFrame from './DemoFrame.tsx'
 import FeedbackSection from './FeedbackSection.tsx'
+import HideSubmission from './HideSubmission.tsx'
 
 const WRAP = 'max-w-7xl mx-auto px-8 max-sm:px-4'
 const H2 = 'm-0 text-[clamp(32px,3.6vw,52px)] leading-[1.1] tracking-[-0.045em] font-bold'
@@ -30,11 +31,13 @@ type SubmissionDetailProps = {
   /** 투표 자리. 페이지가 vote feature를 꽂아줘요. */
   renderVote?: (s: SubmissionCard, size: 'md' | 'big', votingOpen: boolean) => ReactNode
   viewer: string | null
+  /** 운영자면 숨기기 도구를 보여줘요. */
+  isAdmin: boolean
 }
 
 /** 제출작 상세: 머리 · 작성자 · 데모 · 만든 이야기 · 피드백 · 같은 주제 다른 작품 */
 // ponytail: 작업 리듬과 주요 커밋은 서버에 커밋 API(GET /submissions/:id/commits)가 생기면 다시 붙여요.
-function SubmissionDetail({ id, renderVote, viewer }: SubmissionDetailProps) {
+function SubmissionDetail({ id, renderVote, viewer, isAdmin }: SubmissionDetailProps) {
   const now = useNow(60_000)
   const { data, isPending } = useSubmission(id)
   const { data: rest } = useSubmissions(data?.submission.weekId ?? '', { exclude: id, sort: 'votes', limit: 3 })
@@ -183,6 +186,13 @@ function SubmissionDetail({ id, renderVote, viewer }: SubmissionDetailProps) {
             <p className="m-0 text-lg leading-[1.6]">써보고 느낀 점을 남겨주세요. 피드백을 남기면 다음 주 내 제출작 노출 포인트가 쌓여요.</p>
             <Button variant="primary" href="#feedback" label="피드백 남기기" hasArrow className="self-start" />
           </div>
+
+          {isAdmin && (
+            <div className={`${SIDE} bg-(--tt-surface)`}>
+              <span className="mono text-[13px] text-(--tt-muted)">운영자</span>
+              <HideSubmission id={s.id} />
+            </div>
+          )}
         </aside>
       </section>
 
@@ -193,6 +203,7 @@ function SubmissionDetail({ id, renderVote, viewer }: SubmissionDetailProps) {
             key={s.id}
             submissionId={s.id}
             isOwner={!!s.viewer?.isAuthor}
+            isAdmin={isAdmin}
             viewer={viewer}
             loginHref={`/login?next=${encodeURIComponent(`/p/${s.id}#feedback`)}`}
             now={now}
